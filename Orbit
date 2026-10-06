@@ -1,0 +1,4567 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local Orbit = {
+	Orbit = Instance.new("ScreenGui"),
+	MainFrame = Instance.new("Frame"),
+	UICorner = Instance.new("UICorner"),
+	Local = Instance.new("TextLabel"),
+	UIPadding = Instance.new("UIPadding"),
+	UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint"),
+	CommandsFrame = Instance.new("Frame"),
+	UICorner_2 = Instance.new("UICorner"),
+	CommandsTitle = Instance.new("TextLabel"),
+	UIPadding_2 = Instance.new("UIPadding"),
+	UIAspectRatioConstraint_2 = Instance.new("UIAspectRatioConstraint"),
+	CommandsClose = Instance.new("TextButton"),
+	UIPadding_3 = Instance.new("UIPadding"),
+	UIAspectRatioConstraint_3 = Instance.new("UIAspectRatioConstraint"),
+	ScrollingFrame = Instance.new("ScrollingFrame"),
+	UICorner_3 = Instance.new("UICorner"),
+	SpeedLabel = Instance.new("TextLabel"),
+	UIPadding_4 = Instance.new("UIPadding"),
+	UIAspectRatioConstraint_4 = Instance.new("UIAspectRatioConstraint"),
+	SpeedBox = Instance.new("TextBox"),
+	UIPadding_5 = Instance.new("UIPadding"),
+	UIAspectRatioConstraint_5 = Instance.new("UIAspectRatioConstraint"),
+	JumpLabel = Instance.new("TextLabel"),
+	UIPadding_6 = Instance.new("UIPadding"),
+	UIAspectRatioConstraint_6 = Instance.new("UIAspectRatioConstraint"),
+	JumpBox = Instance.new("TextBox"),
+	UIPadding_7 = Instance.new("UIPadding"),
+	UIAspectRatioConstraint_7 = Instance.new("UIAspectRatioConstraint"),
+	GravityBox = Instance.new("TextBox"),
+	UIPadding_8 = Instance.new("UIPadding"),
+	UIAspectRatioConstraint_8 = Instance.new("UIAspectRatioConstraint"),
+	GravityLabel = Instance.new("TextLabel"),
+	UIPadding_9 = Instance.new("UIPadding"),
+	UIAspectRatioConstraint_9 = Instance.new("UIAspectRatioConstraint"),
+	HipHeightBox = Instance.new("TextBox"),
+	UIPadding_10 = Instance.new("UIPadding"),
+	UIAspectRatioConstraint_10 = Instance.new("UIAspectRatioConstraint"),
+	HipHeightLabel = Instance.new("TextLabel"),
+	UIPadding_11 = Instance.new("UIPadding"),
+	UIAspectRatioConstraint_11 = Instance.new("UIAspectRatioConstraint"),
+	HealthLabel = Instance.new("TextLabel"),
+	UIPadding_12 = Instance.new("UIPadding"),
+	UIAspectRatioConstraint_12 = Instance.new("UIAspectRatioConstraint"),
+	HealthBox = Instance.new("TextBox"),
+	UIPadding_13 = Instance.new("UIPadding"),
+	UIAspectRatioConstraint_13 = Instance.new("UIAspectRatioConstraint"),
+	NoclipLabel = Instance.new("TextLabel"),
+	UIPadding_14 = Instance.new("UIPadding"),
+	UIAspectRatioConstraint_14 = Instance.new("UIAspectRatioConstraint"),
+	NoclipBox = Instance.new("TextBox"),
+	UIPadding_15 = Instance.new("UIPadding"),
+	UIAspectRatioConstraint_15 = Instance.new("UIAspectRatioConstraint"),
+	SpinBox = Instance.new("TextBox"),
+	UIPadding_16 = Instance.new("UIPadding"),
+	UIAspectRatioConstraint_16 = Instance.new("UIAspectRatioConstraint"),
+	SpinLabel = Instance.new("TextLabel"),
+	UIPadding_17 = Instance.new("UIPadding"),
+	UIAspectRatioConstraint_17 = Instance.new("UIAspectRatioConstraint"),
+	ResetLabel = Instance.new("TextLabel"),
+	UIPadding_18 = Instance.new("UIPadding"),
+	UIAspectRatioConstraint_18 = Instance.new("UIAspectRatioConstraint"),
+	ResetBox = Instance.new("TextBox"),
+	UIPadding_19 = Instance.new("UIPadding"),
+	UIAspectRatioConstraint_19 = Instance.new("UIAspectRatioConstraint"),
+	FlyLabel = Instance.new("TextLabel"),
+	UIPadding_20 = Instance.new("UIPadding"),
+	UIAspectRatioConstraint_20 = Instance.new("UIAspectRatioConstraint"),
+	FlyBox = Instance.new("TextBox"),
+	UIPadding_21 = Instance.new("UIPadding"),
+	UIAspectRatioConstraint_21 = Instance.new("UIAspectRatioConstraint"),
+	TeleportBox = Instance.new("TextBox"),
+	UIPadding_22 = Instance.new("UIPadding"),
+	UIAspectRatioConstraint_22 = Instance.new("UIAspectRatioConstraint"),
+	TeleportLabel = Instance.new("TextLabel"),
+	UIPadding_23 = Instance.new("UIPadding"),
+	UIAspectRatioConstraint_23 = Instance.new("UIAspectRatioConstraint"),
+	ViewLabel = Instance.new("TextLabel"),
+	UIPadding_24 = Instance.new("UIPadding"),
+	UIAspectRatioConstraint_24 = Instance.new("UIAspectRatioConstraint"),
+	ViewBox = Instance.new("TextBox"),
+	UIPadding_25 = Instance.new("UIPadding"),
+	UIAspectRatioConstraint_25 = Instance.new("UIAspectRatioConstraint"),
+	UnViewLabel = Instance.new("TextLabel"),
+	UIPadding_26 = Instance.new("UIPadding"),
+	UIAspectRatioConstraint_26 = Instance.new("UIAspectRatioConstraint"),
+	UnViewBox = Instance.new("TextBox"),
+	UIPadding_27 = Instance.new("UIPadding"),
+	UIAspectRatioConstraint_27 = Instance.new("UIAspectRatioConstraint"),
+	HealLabel = Instance.new("TextLabel"),
+	UIPadding_28 = Instance.new("UIPadding"),
+	UIAspectRatioConstraint_28 = Instance.new("UIAspectRatioConstraint"),
+	HealBox = Instance.new("TextBox"),
+	UIPadding_29 = Instance.new("UIPadding"),
+	UIAspectRatioConstraint_29 = Instance.new("UIAspectRatioConstraint"),
+	FreezeBox = Instance.new("TextBox"),
+	UIPadding_30 = Instance.new("UIPadding"),
+	UIAspectRatioConstraint_30 = Instance.new("UIAspectRatioConstraint"),
+	FreezeLabel = Instance.new("TextLabel"),
+	UIPadding_31 = Instance.new("UIPadding"),
+	UIAspectRatioConstraint_31 = Instance.new("UIAspectRatioConstraint"),
+	UnFreezeLabel = Instance.new("TextLabel"),
+	UIPadding_32 = Instance.new("UIPadding"),
+	UIAspectRatioConstraint_32 = Instance.new("UIAspectRatioConstraint"),
+	UnFreezeBox = Instance.new("TextBox"),
+	UIPadding_33 = Instance.new("UIPadding"),
+	UIAspectRatioConstraint_33 = Instance.new("UIAspectRatioConstraint"),
+	SitBox = Instance.new("TextBox"),
+	UIPadding_34 = Instance.new("UIPadding"),
+	UIAspectRatioConstraint_34 = Instance.new("UIAspectRatioConstraint"),
+	SitLabel = Instance.new("TextLabel"),
+	UIPadding_35 = Instance.new("UIPadding"),
+	UIAspectRatioConstraint_35 = Instance.new("UIAspectRatioConstraint"),
+	FlingLabel = Instance.new("TextLabel"),
+	UIPadding_36 = Instance.new("UIPadding"),
+	UIAspectRatioConstraint_36 = Instance.new("UIAspectRatioConstraint"),
+	FlingBox = Instance.new("TextBox"),
+	UIPadding_37 = Instance.new("UIPadding"),
+	UIAspectRatioConstraint_37 = Instance.new("UIAspectRatioConstraint"),
+	UnFlingLabel = Instance.new("TextLabel"),
+	UIPadding_38 = Instance.new("UIPadding"),
+	UIAspectRatioConstraint_38 = Instance.new("UIAspectRatioConstraint"),
+	UnFlingBox = Instance.new("TextBox"),
+	UIPadding_39 = Instance.new("UIPadding"),
+	UIAspectRatioConstraint_39 = Instance.new("UIAspectRatioConstraint"),
+	StickBox = Instance.new("TextBox"),
+	UIPadding_40 = Instance.new("UIPadding"),
+	UIAspectRatioConstraint_40 = Instance.new("UIAspectRatioConstraint"),
+	StickLabel = Instance.new("TextLabel"),
+	UIPadding_41 = Instance.new("UIPadding"),
+	UIAspectRatioConstraint_41 = Instance.new("UIAspectRatioConstraint"),
+	UnStickBox = Instance.new("TextBox"),
+	UIPadding_42 = Instance.new("UIPadding"),
+	UIAspectRatioConstraint_42 = Instance.new("UIAspectRatioConstraint"),
+	UnStickLabel = Instance.new("TextLabel"),
+	UIPadding_43 = Instance.new("UIPadding"),
+	UIAspectRatioConstraint_43 = Instance.new("UIAspectRatioConstraint"),
+	EspBox = Instance.new("TextBox"),
+	UIPadding_44 = Instance.new("UIPadding"),
+	UIAspectRatioConstraint_44 = Instance.new("UIAspectRatioConstraint"),
+	EspLabel = Instance.new("TextLabel"),
+	UIPadding_45 = Instance.new("UIPadding"),
+	UIAspectRatioConstraint_45 = Instance.new("UIAspectRatioConstraint"),
+	UnEspBox = Instance.new("TextBox"),
+	UIPadding_46 = Instance.new("UIPadding"),
+	UIAspectRatioConstraint_46 = Instance.new("UIAspectRatioConstraint"),
+	UnEspBox_2 = Instance.new("TextLabel"),
+	UIPadding_47 = Instance.new("UIPadding"),
+	UIAspectRatioConstraint_47 = Instance.new("UIAspectRatioConstraint"),
+	UIAspectRatioConstraint_48 = Instance.new("UIAspectRatioConstraint"),
+	UIAspectRatioConstraint_49 = Instance.new("UIAspectRatioConstraint"),
+	Decoration1Label = Instance.new("TextLabel"),
+	UIAspectRatioConstraint_50 = Instance.new("UIAspectRatioConstraint"),
+	ThemesFrame = Instance.new("Frame"),
+	UICorner_4 = Instance.new("UICorner"),
+	ThemesTitle = Instance.new("TextLabel"),
+	UIPadding_48 = Instance.new("UIPadding"),
+	UIAspectRatioConstraint_51 = Instance.new("UIAspectRatioConstraint"),
+	ThemesClose = Instance.new("TextButton"),
+	UIPadding_49 = Instance.new("UIPadding"),
+	UIAspectRatioConstraint_52 = Instance.new("UIAspectRatioConstraint"),
+	ScrollingFrame_2 = Instance.new("ScrollingFrame"),
+	UICorner_5 = Instance.new("UICorner"),
+	RedLabel = Instance.new("TextLabel"),
+	UIPadding_50 = Instance.new("UIPadding"),
+	UIAspectRatioConstraint_53 = Instance.new("UIAspectRatioConstraint"),
+	Red = Instance.new("TextButton"),
+	UICorner_6 = Instance.new("UICorner"),
+	UIPadding_51 = Instance.new("UIPadding"),
+	UIAspectRatioConstraint_54 = Instance.new("UIAspectRatioConstraint"),
+	Orange = Instance.new("TextButton"),
+	UICorner_7 = Instance.new("UICorner"),
+	UIPadding_52 = Instance.new("UIPadding"),
+	UIAspectRatioConstraint_55 = Instance.new("UIAspectRatioConstraint"),
+	OrangeLabel = Instance.new("TextLabel"),
+	UIPadding_53 = Instance.new("UIPadding"),
+	UIAspectRatioConstraint_56 = Instance.new("UIAspectRatioConstraint"),
+	Yellow = Instance.new("TextButton"),
+	UICorner_8 = Instance.new("UICorner"),
+	UIPadding_54 = Instance.new("UIPadding"),
+	UIAspectRatioConstraint_57 = Instance.new("UIAspectRatioConstraint"),
+	YellowLabel = Instance.new("TextLabel"),
+	UIPadding_55 = Instance.new("UIPadding"),
+	UIAspectRatioConstraint_58 = Instance.new("UIAspectRatioConstraint"),
+	Green = Instance.new("TextButton"),
+	UICorner_9 = Instance.new("UICorner"),
+	UIPadding_56 = Instance.new("UIPadding"),
+	UIAspectRatioConstraint_59 = Instance.new("UIAspectRatioConstraint"),
+	GreenLabel = Instance.new("TextLabel"),
+	UIPadding_57 = Instance.new("UIPadding"),
+	UIAspectRatioConstraint_60 = Instance.new("UIAspectRatioConstraint"),
+	Blue = Instance.new("TextButton"),
+	UICorner_10 = Instance.new("UICorner"),
+	UIPadding_58 = Instance.new("UIPadding"),
+	UIAspectRatioConstraint_61 = Instance.new("UIAspectRatioConstraint"),
+	BlueLabel = Instance.new("TextLabel"),
+	UIPadding_59 = Instance.new("UIPadding"),
+	UIAspectRatioConstraint_62 = Instance.new("UIAspectRatioConstraint"),
+	PurpleLabel = Instance.new("TextLabel"),
+	UIPadding_60 = Instance.new("UIPadding"),
+	UIAspectRatioConstraint_63 = Instance.new("UIAspectRatioConstraint"),
+	Purple = Instance.new("TextButton"),
+	UICorner_11 = Instance.new("UICorner"),
+	UIPadding_61 = Instance.new("UIPadding"),
+	UIAspectRatioConstraint_64 = Instance.new("UIAspectRatioConstraint"),
+	Pink = Instance.new("TextButton"),
+	UICorner_12 = Instance.new("UICorner"),
+	UIPadding_62 = Instance.new("UIPadding"),
+	UIAspectRatioConstraint_65 = Instance.new("UIAspectRatioConstraint"),
+	PinkLabel = Instance.new("TextLabel"),
+	UIPadding_63 = Instance.new("UIPadding"),
+	UIAspectRatioConstraint_66 = Instance.new("UIAspectRatioConstraint"),
+	GreyLabel = Instance.new("TextLabel"),
+	UIPadding_64 = Instance.new("UIPadding"),
+	UIAspectRatioConstraint_67 = Instance.new("UIAspectRatioConstraint"),
+	Grey = Instance.new("TextButton"),
+	UICorner_13 = Instance.new("UICorner"),
+	UIPadding_65 = Instance.new("UIPadding"),
+	UIAspectRatioConstraint_68 = Instance.new("UIAspectRatioConstraint"),
+	BlackLabel = Instance.new("TextLabel"),
+	UIPadding_66 = Instance.new("UIPadding"),
+	UIAspectRatioConstraint_69 = Instance.new("UIAspectRatioConstraint"),
+	Black = Instance.new("TextButton"),
+	UICorner_14 = Instance.new("UICorner"),
+	UIPadding_67 = Instance.new("UIPadding"),
+	UIAspectRatioConstraint_70 = Instance.new("UIAspectRatioConstraint"),
+	WhiteLabel = Instance.new("TextLabel"),
+	UIPadding_68 = Instance.new("UIPadding"),
+	UIAspectRatioConstraint_71 = Instance.new("UIAspectRatioConstraint"),
+	White = Instance.new("TextButton"),
+	UICorner_15 = Instance.new("UICorner"),
+	UIPadding_69 = Instance.new("UIPadding"),
+	UIAspectRatioConstraint_72 = Instance.new("UIAspectRatioConstraint"),
+	LightBlue = Instance.new("TextButton"),
+	UICorner_16 = Instance.new("UICorner"),
+	UIPadding_70 = Instance.new("UIPadding"),
+	UIAspectRatioConstraint_73 = Instance.new("UIAspectRatioConstraint"),
+	LightBlueLabel = Instance.new("TextLabel"),
+	UIPadding_71 = Instance.new("UIPadding"),
+	UIAspectRatioConstraint_74 = Instance.new("UIAspectRatioConstraint"),
+	DarkPinkLabel = Instance.new("TextLabel"),
+	UIPadding_72 = Instance.new("UIPadding"),
+	UIAspectRatioConstraint_75 = Instance.new("UIAspectRatioConstraint"),
+	DarkPink = Instance.new("TextButton"),
+	UICorner_17 = Instance.new("UICorner"),
+	UIPadding_73 = Instance.new("UIPadding"),
+	UIAspectRatioConstraint_76 = Instance.new("UIAspectRatioConstraint"),
+	MintLabel = Instance.new("TextLabel"),
+	UIPadding_74 = Instance.new("UIPadding"),
+	UIAspectRatioConstraint_77 = Instance.new("UIAspectRatioConstraint"),
+	Mint = Instance.new("TextButton"),
+	UICorner_18 = Instance.new("UICorner"),
+	UIPadding_75 = Instance.new("UIPadding"),
+	UIAspectRatioConstraint_78 = Instance.new("UIAspectRatioConstraint"),
+	MintLabel_2 = Instance.new("TextLabel"),
+	UIPadding_76 = Instance.new("UIPadding"),
+	UIAspectRatioConstraint_79 = Instance.new("UIAspectRatioConstraint"),
+	Norbit = Instance.new("TextButton"),
+	UICorner_19 = Instance.new("UICorner"),
+	UIPadding_77 = Instance.new("UIPadding"),
+	UIAspectRatioConstraint_80 = Instance.new("UIAspectRatioConstraint"),
+	UIAspectRatioConstraint_81 = Instance.new("UIAspectRatioConstraint"),
+	UIAspectRatioConstraint_82 = Instance.new("UIAspectRatioConstraint"),
+	ProfilePictureImageLabel = Instance.new("ImageLabel"),
+	UICorner_20 = Instance.new("UICorner"),
+	UIAspectRatioConstraint_83 = Instance.new("UIAspectRatioConstraint"),
+	Decoration2Label = Instance.new("TextLabel"),
+	UIAspectRatioConstraint_84 = Instance.new("UIAspectRatioConstraint"),
+	CreditsFrame = Instance.new("Frame"),
+	UICorner_21 = Instance.new("UICorner"),
+	CreditsTitle = Instance.new("TextLabel"),
+	UIPadding_78 = Instance.new("UIPadding"),
+	UIAspectRatioConstraint_85 = Instance.new("UIAspectRatioConstraint"),
+	CreditsClose = Instance.new("TextButton"),
+	UIPadding_79 = Instance.new("UIPadding"),
+	UIAspectRatioConstraint_86 = Instance.new("UIAspectRatioConstraint"),
+	CreditsToKynexl = Instance.new("TextLabel"),
+	UIPadding_80 = Instance.new("UIPadding"),
+	UIAspectRatioConstraint_87 = Instance.new("UIAspectRatioConstraint"),
+	CreditsToKia = Instance.new("TextLabel"),
+	UIPadding_81 = Instance.new("UIPadding"),
+	UIAspectRatioConstraint_88 = Instance.new("UIAspectRatioConstraint"),
+	justsscriptsImageLabel = Instance.new("ImageLabel"),
+	UICorner_22 = Instance.new("UICorner"),
+	UIAspectRatioConstraint_89 = Instance.new("UIAspectRatioConstraint"),
+	Sub2KaiXImageLabel = Instance.new("ImageLabel"),
+	UICorner_23 = Instance.new("UICorner"),
+	UIAspectRatioConstraint_90 = Instance.new("UIAspectRatioConstraint"),
+	J2Y50NImageLabel = Instance.new("ImageLabel"),
+	UICorner_24 = Instance.new("UICorner"),
+	UIAspectRatioConstraint_91 = Instance.new("UIAspectRatioConstraint"),
+	CreditsToJ2Y50N = Instance.new("TextLabel"),
+	UIPadding_82 = Instance.new("UIPadding"),
+	UIAspectRatioConstraint_92 = Instance.new("UIAspectRatioConstraint"),
+	UIAspectRatioConstraint_93 = Instance.new("UIAspectRatioConstraint"),
+	StopwatchFrame = Instance.new("Frame"),
+	UICorner_25 = Instance.new("UICorner"),
+	StopWatchTitle = Instance.new("TextLabel"),
+	UIPadding_83 = Instance.new("UIPadding"),
+	UIAspectRatioConstraint_94 = Instance.new("UIAspectRatioConstraint"),
+	StopWatchClose = Instance.new("TextButton"),
+	UIPadding_84 = Instance.new("UIPadding"),
+	UIAspectRatioConstraint_95 = Instance.new("UIAspectRatioConstraint"),
+	TimeLabel = Instance.new("TextLabel"),
+	UIPadding_85 = Instance.new("UIPadding"),
+	UIAspectRatioConstraint_96 = Instance.new("UIAspectRatioConstraint"),
+	Start = Instance.new("TextButton"),
+	UICorner_26 = Instance.new("UICorner"),
+	UIPadding_86 = Instance.new("UIPadding"),
+	UIAspectRatioConstraint_97 = Instance.new("UIAspectRatioConstraint"),
+	Stop = Instance.new("TextButton"),
+	UICorner_27 = Instance.new("UICorner"),
+	UIPadding_87 = Instance.new("UIPadding"),
+	UIAspectRatioConstraint_98 = Instance.new("UIAspectRatioConstraint"),
+	Reset = Instance.new("TextButton"),
+	UICorner_28 = Instance.new("UICorner"),
+	UIPadding_88 = Instance.new("UIPadding"),
+	UIAspectRatioConstraint_99 = Instance.new("UIAspectRatioConstraint"),
+	UIAspectRatioConstraint_100 = Instance.new("UIAspectRatioConstraint"),
+	BrightnessFrame = Instance.new("Frame"),
+	UICorner_29 = Instance.new("UICorner"),
+	BrightnessTitle = Instance.new("TextLabel"),
+	UIPadding_89 = Instance.new("UIPadding"),
+	UIAspectRatioConstraint_101 = Instance.new("UIAspectRatioConstraint"),
+	BrightnessClose = Instance.new("TextButton"),
+	UIPadding_90 = Instance.new("UIPadding"),
+	UIAspectRatioConstraint_102 = Instance.new("UIAspectRatioConstraint"),
+	BrightnessBar = Instance.new("Frame"),
+	UICorner_30 = Instance.new("UICorner"),
+	BrightnessKnob = Instance.new("TextButton"),
+	UICorner_31 = Instance.new("UICorner"),
+	UIAspectRatioConstraint_103 = Instance.new("UIAspectRatioConstraint"),
+	BrightnessBar_2 = Instance.new("Frame"),
+	UICorner_32 = Instance.new("UICorner"),
+	UIAspectRatioConstraint_104 = Instance.new("UIAspectRatioConstraint"),
+	UIAspectRatioConstraint_105 = Instance.new("UIAspectRatioConstraint"),
+	BrightnessValue = Instance.new("TextLabel"),
+	UIPadding_91 = Instance.new("UIPadding"),
+	UIAspectRatioConstraint_106 = Instance.new("UIAspectRatioConstraint"),
+	UIAspectRatioConstraint_107 = Instance.new("UIAspectRatioConstraint"),
+	CommandsButton = Instance.new("ImageButton"),
+	UIAspectRatioConstraint_108 = Instance.new("UIAspectRatioConstraint"),
+	ThemesButton = Instance.new("ImageButton"),
+	UIAspectRatioConstraint_109 = Instance.new("UIAspectRatioConstraint"),
+	StopWatchButton = Instance.new("ImageButton"),
+	UIAspectRatioConstraint_110 = Instance.new("UIAspectRatioConstraint"),
+	BrightnessButton = Instance.new("ImageButton"),
+	UIAspectRatioConstraint_111 = Instance.new("UIAspectRatioConstraint"),
+	CreditsButton = Instance.new("ImageButton"),
+	UIAspectRatioConstraint_112 = Instance.new("UIAspectRatioConstraint"),
+	UIAspectRatioConstraint_113 = Instance.new("UIAspectRatioConstraint"),
+	Notification = Instance.new("Frame"),
+	UICorner_33 = Instance.new("UICorner"),
+	TextLabel = Instance.new("TextLabel"),
+	UIPadding_92 = Instance.new("UIPadding"),
+	UIAspectRatioConstraint_114 = Instance.new("UIAspectRatioConstraint"),
+	UIAspectRatioConstraint_115 = Instance.new("UIAspectRatioConstraint"),
+}
+
+--Properties:
+
+Orbit.Orbit.Name = "Orbit"
+Orbit.Orbit.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+Orbit.Orbit.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Orbit.MainFrame.Name = "MainFrame"
+Orbit.MainFrame.Parent = Orbit.Orbit
+Orbit.MainFrame.BackgroundColor3 = Color3.fromRGB(19, 19, 19)
+Orbit.MainFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Orbit.MainFrame.BorderSizePixel = 0
+Orbit.MainFrame.Position = UDim2.new(0.341972172, 0, 0.883984864, 0)
+Orbit.MainFrame.Size = UDim2.new(0.316055626, 0, 0.0945775509, 0)
+
+Orbit.UICorner.CornerRadius = UDim.new(1, 0)
+Orbit.UICorner.Parent = Orbit.MainFrame
+
+Orbit.Local.Name = "Local"
+Orbit.Local.Parent = Orbit.MainFrame
+Orbit.Local.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.Local.BackgroundTransparency = 1.000
+Orbit.Local.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Orbit.Local.BorderSizePixel = 0
+Orbit.Local.Position = UDim2.new(0.861999989, 0, 0.159999996, 0)
+Orbit.Local.Size = UDim2.new(0.150000006, 0, 0.666666687, 0)
+Orbit.Local.Font = Enum.Font.SourceSans
+Orbit.Local.Text = "04:30"
+Orbit.Local.TextColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.Local.TextScaled = true
+Orbit.Local.TextSize = 30.000
+Orbit.Local.TextWrapped = true
+Orbit.Local.TextXAlignment = Enum.TextXAlignment.Left
+
+Orbit.UIPadding.Parent = Orbit.Local
+Orbit.UIPadding.PaddingBottom = UDim.new(0.200000003, 0)
+Orbit.UIPadding.PaddingTop = UDim.new(0.200000003, 0)
+
+Orbit.UIAspectRatioConstraint.Parent = Orbit.Local
+Orbit.UIAspectRatioConstraint.AspectRatio = 1.500
+
+Orbit.CommandsFrame.Name = "CommandsFrame"
+Orbit.CommandsFrame.Parent = Orbit.MainFrame
+Orbit.CommandsFrame.BackgroundColor3 = Color3.fromRGB(19, 19, 19)
+Orbit.CommandsFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Orbit.CommandsFrame.BorderSizePixel = 0
+Orbit.CommandsFrame.Position = UDim2.new(0, 0, -3.18666673, 0)
+Orbit.CommandsFrame.Size = UDim2.new(1, 0, 3.01333308, 0)
+Orbit.CommandsFrame.Visible = false
+
+Orbit.UICorner_2.CornerRadius = UDim.new(0.132743359, 0)
+Orbit.UICorner_2.Parent = Orbit.CommandsFrame
+
+Orbit.CommandsTitle.Name = "CommandsTitle"
+Orbit.CommandsTitle.Parent = Orbit.CommandsFrame
+Orbit.CommandsTitle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.CommandsTitle.BackgroundTransparency = 1.000
+Orbit.CommandsTitle.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Orbit.CommandsTitle.BorderSizePixel = 0
+Orbit.CommandsTitle.Position = UDim2.new(0.0460000001, 0, 0.03539823, 0)
+Orbit.CommandsTitle.Size = UDim2.new(0.351999998, 0, 0.137168139, 0)
+Orbit.CommandsTitle.Font = Enum.Font.SourceSansBold
+Orbit.CommandsTitle.Text = "Commands"
+Orbit.CommandsTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.CommandsTitle.TextScaled = true
+Orbit.CommandsTitle.TextSize = 20.000
+Orbit.CommandsTitle.TextWrapped = true
+Orbit.CommandsTitle.TextXAlignment = Enum.TextXAlignment.Left
+
+Orbit.UIPadding_2.Parent = Orbit.CommandsTitle
+Orbit.UIPadding_2.PaddingBottom = UDim.new(0.17741935, 0)
+Orbit.UIPadding_2.PaddingTop = UDim.new(0.17741935, 0)
+
+Orbit.UIAspectRatioConstraint_2.Parent = Orbit.CommandsTitle
+Orbit.UIAspectRatioConstraint_2.AspectRatio = 5.677
+
+Orbit.CommandsClose.Name = "CommandsClose"
+Orbit.CommandsClose.Parent = Orbit.CommandsFrame
+Orbit.CommandsClose.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.CommandsClose.BackgroundTransparency = 1.000
+Orbit.CommandsClose.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Orbit.CommandsClose.BorderSizePixel = 0
+Orbit.CommandsClose.Position = UDim2.new(0.899999976, 0, -0.00884955749, 0)
+Orbit.CommandsClose.Size = UDim2.new(0.100000001, 0, 0.221238926, 0)
+Orbit.CommandsClose.Font = Enum.Font.SourceSansBold
+Orbit.CommandsClose.Text = "x"
+Orbit.CommandsClose.TextColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.CommandsClose.TextScaled = true
+Orbit.CommandsClose.TextSize = 30.000
+Orbit.CommandsClose.TextWrapped = true
+
+Orbit.UIPadding_3.Parent = Orbit.CommandsClose
+Orbit.UIPadding_3.PaddingBottom = UDim.new(0.200000003, 0)
+Orbit.UIPadding_3.PaddingTop = UDim.new(0.200000003, 0)
+
+Orbit.UIAspectRatioConstraint_3.Parent = Orbit.CommandsClose
+Orbit.UIAspectRatioConstraint_3.AspectRatio = 1.000
+
+Orbit.ScrollingFrame.Parent = Orbit.CommandsFrame
+Orbit.ScrollingFrame.Active = true
+Orbit.ScrollingFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.ScrollingFrame.BackgroundTransparency = 1.000
+Orbit.ScrollingFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Orbit.ScrollingFrame.BorderSizePixel = 0
+Orbit.ScrollingFrame.Position = UDim2.new(0, 0, 0.21681416, 0)
+Orbit.ScrollingFrame.Size = UDim2.new(1, 0, 0.78318584, 0)
+Orbit.ScrollingFrame.CanvasSize = UDim2.new(0, 0, 5, 0)
+
+Orbit.UICorner_3.CornerRadius = UDim.new(0.169491529, 0)
+Orbit.UICorner_3.Parent = Orbit.ScrollingFrame
+
+Orbit.SpeedLabel.Name = "SpeedLabel"
+Orbit.SpeedLabel.Parent = Orbit.ScrollingFrame
+Orbit.SpeedLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.SpeedLabel.BackgroundTransparency = 1.000
+Orbit.SpeedLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Orbit.SpeedLabel.BorderSizePixel = 0
+Orbit.SpeedLabel.Position = UDim2.new(0.0460000001, 0, 0, 0)
+Orbit.SpeedLabel.Size = UDim2.new(0.400000006, 0, 0.0442477874, 0)
+Orbit.SpeedLabel.Font = Enum.Font.SourceSansBold
+Orbit.SpeedLabel.Text = "Speed [value]"
+Orbit.SpeedLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.SpeedLabel.TextScaled = true
+Orbit.SpeedLabel.TextSize = 22.000
+Orbit.SpeedLabel.TextWrapped = true
+Orbit.SpeedLabel.TextXAlignment = Enum.TextXAlignment.Left
+
+Orbit.UIPadding_4.Parent = Orbit.SpeedLabel
+Orbit.UIPadding_4.PaddingBottom = UDim.new(0.280000001, 0)
+Orbit.UIPadding_4.PaddingTop = UDim.new(0.280000001, 0)
+
+Orbit.UIAspectRatioConstraint_4.Parent = Orbit.SpeedLabel
+Orbit.UIAspectRatioConstraint_4.AspectRatio = 4.000
+
+Orbit.SpeedBox.Name = "SpeedBox"
+Orbit.SpeedBox.Parent = Orbit.ScrollingFrame
+Orbit.SpeedBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.SpeedBox.BackgroundTransparency = 1.000
+Orbit.SpeedBox.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Orbit.SpeedBox.BorderSizePixel = 0
+Orbit.SpeedBox.Position = UDim2.new(0.526000023, 0, 0, 0)
+Orbit.SpeedBox.Size = UDim2.new(0.419999987, 0, 0.0442477874, 0)
+Orbit.SpeedBox.Font = Enum.Font.SourceSansBold
+Orbit.SpeedBox.Text = "Enter number here..."
+Orbit.SpeedBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.SpeedBox.TextScaled = true
+Orbit.SpeedBox.TextSize = 22.000
+Orbit.SpeedBox.TextWrapped = true
+Orbit.SpeedBox.TextXAlignment = Enum.TextXAlignment.Left
+
+Orbit.UIPadding_5.Parent = Orbit.SpeedBox
+Orbit.UIPadding_5.PaddingBottom = UDim.new(0.280000001, 0)
+Orbit.UIPadding_5.PaddingTop = UDim.new(0.280000001, 0)
+
+Orbit.UIAspectRatioConstraint_5.Parent = Orbit.SpeedBox
+Orbit.UIAspectRatioConstraint_5.AspectRatio = 4.200
+
+Orbit.JumpLabel.Name = "JumpLabel"
+Orbit.JumpLabel.Parent = Orbit.ScrollingFrame
+Orbit.JumpLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.JumpLabel.BackgroundTransparency = 1.000
+Orbit.JumpLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Orbit.JumpLabel.BorderSizePixel = 0
+Orbit.JumpLabel.Position = UDim2.new(0.0460000001, 0, 0.0442477874, 0)
+Orbit.JumpLabel.Size = UDim2.new(0.400000006, 0, 0.0442477874, 0)
+Orbit.JumpLabel.Font = Enum.Font.SourceSansBold
+Orbit.JumpLabel.Text = "Jump [value]"
+Orbit.JumpLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.JumpLabel.TextScaled = true
+Orbit.JumpLabel.TextSize = 22.000
+Orbit.JumpLabel.TextWrapped = true
+Orbit.JumpLabel.TextXAlignment = Enum.TextXAlignment.Left
+
+Orbit.UIPadding_6.Parent = Orbit.JumpLabel
+Orbit.UIPadding_6.PaddingBottom = UDim.new(0.280000001, 0)
+Orbit.UIPadding_6.PaddingTop = UDim.new(0.280000001, 0)
+
+Orbit.UIAspectRatioConstraint_6.Parent = Orbit.JumpLabel
+Orbit.UIAspectRatioConstraint_6.AspectRatio = 4.000
+
+Orbit.JumpBox.Name = "JumpBox"
+Orbit.JumpBox.Parent = Orbit.ScrollingFrame
+Orbit.JumpBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.JumpBox.BackgroundTransparency = 1.000
+Orbit.JumpBox.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Orbit.JumpBox.BorderSizePixel = 0
+Orbit.JumpBox.Position = UDim2.new(0.526000023, 0, 0.0442477874, 0)
+Orbit.JumpBox.Size = UDim2.new(0.419999987, 0, 0.0442477874, 0)
+Orbit.JumpBox.Font = Enum.Font.SourceSansBold
+Orbit.JumpBox.Text = "Enter number here..."
+Orbit.JumpBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.JumpBox.TextScaled = true
+Orbit.JumpBox.TextSize = 22.000
+Orbit.JumpBox.TextWrapped = true
+Orbit.JumpBox.TextXAlignment = Enum.TextXAlignment.Left
+
+Orbit.UIPadding_7.Parent = Orbit.JumpBox
+Orbit.UIPadding_7.PaddingBottom = UDim.new(0.280000001, 0)
+Orbit.UIPadding_7.PaddingTop = UDim.new(0.280000001, 0)
+
+Orbit.UIAspectRatioConstraint_7.Parent = Orbit.JumpBox
+Orbit.UIAspectRatioConstraint_7.AspectRatio = 4.200
+
+Orbit.GravityBox.Name = "GravityBox"
+Orbit.GravityBox.Parent = Orbit.ScrollingFrame
+Orbit.GravityBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.GravityBox.BackgroundTransparency = 1.000
+Orbit.GravityBox.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Orbit.GravityBox.BorderSizePixel = 0
+Orbit.GravityBox.Position = UDim2.new(0.526000023, 0, 0.0884955749, 0)
+Orbit.GravityBox.Size = UDim2.new(0.419999987, 0, 0.0442477874, 0)
+Orbit.GravityBox.Font = Enum.Font.SourceSansBold
+Orbit.GravityBox.Text = "Enter number here..."
+Orbit.GravityBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.GravityBox.TextScaled = true
+Orbit.GravityBox.TextSize = 22.000
+Orbit.GravityBox.TextWrapped = true
+Orbit.GravityBox.TextXAlignment = Enum.TextXAlignment.Left
+
+Orbit.UIPadding_8.Parent = Orbit.GravityBox
+Orbit.UIPadding_8.PaddingBottom = UDim.new(0.280000001, 0)
+Orbit.UIPadding_8.PaddingTop = UDim.new(0.280000001, 0)
+
+Orbit.UIAspectRatioConstraint_8.Parent = Orbit.GravityBox
+Orbit.UIAspectRatioConstraint_8.AspectRatio = 4.200
+
+Orbit.GravityLabel.Name = "GravityLabel"
+Orbit.GravityLabel.Parent = Orbit.ScrollingFrame
+Orbit.GravityLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.GravityLabel.BackgroundTransparency = 1.000
+Orbit.GravityLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Orbit.GravityLabel.BorderSizePixel = 0
+Orbit.GravityLabel.Position = UDim2.new(0.0460000001, 0, 0.0884955749, 0)
+Orbit.GravityLabel.Size = UDim2.new(0.428000003, 0, 0.0442477874, 0)
+Orbit.GravityLabel.Font = Enum.Font.SourceSansBold
+Orbit.GravityLabel.Text = "Gravity [value]"
+Orbit.GravityLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.GravityLabel.TextScaled = true
+Orbit.GravityLabel.TextSize = 22.000
+Orbit.GravityLabel.TextWrapped = true
+Orbit.GravityLabel.TextXAlignment = Enum.TextXAlignment.Left
+
+Orbit.UIPadding_9.Parent = Orbit.GravityLabel
+Orbit.UIPadding_9.PaddingBottom = UDim.new(0.280000001, 0)
+Orbit.UIPadding_9.PaddingTop = UDim.new(0.280000001, 0)
+
+Orbit.UIAspectRatioConstraint_9.Parent = Orbit.GravityLabel
+Orbit.UIAspectRatioConstraint_9.AspectRatio = 4.280
+
+Orbit.HipHeightBox.Name = "HipHeightBox"
+Orbit.HipHeightBox.Parent = Orbit.ScrollingFrame
+Orbit.HipHeightBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.HipHeightBox.BackgroundTransparency = 1.000
+Orbit.HipHeightBox.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Orbit.HipHeightBox.BorderSizePixel = 0
+Orbit.HipHeightBox.Position = UDim2.new(0.526000023, 0, 0.132743359, 0)
+Orbit.HipHeightBox.Size = UDim2.new(0.419999987, 0, 0.0442477874, 0)
+Orbit.HipHeightBox.Font = Enum.Font.SourceSansBold
+Orbit.HipHeightBox.Text = "Enter number here..."
+Orbit.HipHeightBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.HipHeightBox.TextScaled = true
+Orbit.HipHeightBox.TextSize = 22.000
+Orbit.HipHeightBox.TextWrapped = true
+Orbit.HipHeightBox.TextXAlignment = Enum.TextXAlignment.Left
+
+Orbit.UIPadding_10.Parent = Orbit.HipHeightBox
+Orbit.UIPadding_10.PaddingBottom = UDim.new(0.280000001, 0)
+Orbit.UIPadding_10.PaddingTop = UDim.new(0.280000001, 0)
+
+Orbit.UIAspectRatioConstraint_10.Parent = Orbit.HipHeightBox
+Orbit.UIAspectRatioConstraint_10.AspectRatio = 4.200
+
+Orbit.HipHeightLabel.Name = "HipHeightLabel"
+Orbit.HipHeightLabel.Parent = Orbit.ScrollingFrame
+Orbit.HipHeightLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.HipHeightLabel.BackgroundTransparency = 1.000
+Orbit.HipHeightLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Orbit.HipHeightLabel.BorderSizePixel = 0
+Orbit.HipHeightLabel.Position = UDim2.new(0.0460000001, 0, 0.132743359, 0)
+Orbit.HipHeightLabel.Size = UDim2.new(0.428000003, 0, 0.0442477874, 0)
+Orbit.HipHeightLabel.Font = Enum.Font.SourceSansBold
+Orbit.HipHeightLabel.Text = "Hip [value]"
+Orbit.HipHeightLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.HipHeightLabel.TextScaled = true
+Orbit.HipHeightLabel.TextSize = 22.000
+Orbit.HipHeightLabel.TextWrapped = true
+Orbit.HipHeightLabel.TextXAlignment = Enum.TextXAlignment.Left
+
+Orbit.UIPadding_11.Parent = Orbit.HipHeightLabel
+Orbit.UIPadding_11.PaddingBottom = UDim.new(0.280000001, 0)
+Orbit.UIPadding_11.PaddingTop = UDim.new(0.280000001, 0)
+
+Orbit.UIAspectRatioConstraint_11.Parent = Orbit.HipHeightLabel
+Orbit.UIAspectRatioConstraint_11.AspectRatio = 4.280
+
+Orbit.HealthLabel.Name = "HealthLabel"
+Orbit.HealthLabel.Parent = Orbit.ScrollingFrame
+Orbit.HealthLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.HealthLabel.BackgroundTransparency = 1.000
+Orbit.HealthLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Orbit.HealthLabel.BorderSizePixel = 0
+Orbit.HealthLabel.Position = UDim2.new(0.0460000001, 0, 0.17699115, 0)
+Orbit.HealthLabel.Size = UDim2.new(0.428000003, 0, 0.0442477874, 0)
+Orbit.HealthLabel.Font = Enum.Font.SourceSansBold
+Orbit.HealthLabel.Text = "Health [value]"
+Orbit.HealthLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.HealthLabel.TextScaled = true
+Orbit.HealthLabel.TextSize = 22.000
+Orbit.HealthLabel.TextWrapped = true
+Orbit.HealthLabel.TextXAlignment = Enum.TextXAlignment.Left
+
+Orbit.UIPadding_12.Parent = Orbit.HealthLabel
+Orbit.UIPadding_12.PaddingBottom = UDim.new(0.280000001, 0)
+Orbit.UIPadding_12.PaddingTop = UDim.new(0.280000001, 0)
+
+Orbit.UIAspectRatioConstraint_12.Parent = Orbit.HealthLabel
+Orbit.UIAspectRatioConstraint_12.AspectRatio = 4.280
+
+Orbit.HealthBox.Name = "HealthBox"
+Orbit.HealthBox.Parent = Orbit.ScrollingFrame
+Orbit.HealthBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.HealthBox.BackgroundTransparency = 1.000
+Orbit.HealthBox.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Orbit.HealthBox.BorderSizePixel = 0
+Orbit.HealthBox.Position = UDim2.new(0.526000023, 0, 0.17699115, 0)
+Orbit.HealthBox.Size = UDim2.new(0.419999987, 0, 0.0442477874, 0)
+Orbit.HealthBox.Font = Enum.Font.SourceSansBold
+Orbit.HealthBox.Text = "Enter number here..."
+Orbit.HealthBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.HealthBox.TextScaled = true
+Orbit.HealthBox.TextSize = 22.000
+Orbit.HealthBox.TextWrapped = true
+Orbit.HealthBox.TextXAlignment = Enum.TextXAlignment.Left
+
+Orbit.UIPadding_13.Parent = Orbit.HealthBox
+Orbit.UIPadding_13.PaddingBottom = UDim.new(0.280000001, 0)
+Orbit.UIPadding_13.PaddingTop = UDim.new(0.280000001, 0)
+
+Orbit.UIAspectRatioConstraint_13.Parent = Orbit.HealthBox
+Orbit.UIAspectRatioConstraint_13.AspectRatio = 4.200
+
+Orbit.NoclipLabel.Name = "NoclipLabel"
+Orbit.NoclipLabel.Parent = Orbit.ScrollingFrame
+Orbit.NoclipLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.NoclipLabel.BackgroundTransparency = 1.000
+Orbit.NoclipLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Orbit.NoclipLabel.BorderSizePixel = 0
+Orbit.NoclipLabel.Position = UDim2.new(0.0460000001, 0, 0.221238941, 0)
+Orbit.NoclipLabel.Size = UDim2.new(0.428000003, 0, 0.0442477874, 0)
+Orbit.NoclipLabel.Font = Enum.Font.SourceSansBold
+Orbit.NoclipLabel.Text = "Noclip [ON/OFF]"
+Orbit.NoclipLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.NoclipLabel.TextScaled = true
+Orbit.NoclipLabel.TextSize = 22.000
+Orbit.NoclipLabel.TextWrapped = true
+Orbit.NoclipLabel.TextXAlignment = Enum.TextXAlignment.Left
+
+Orbit.UIPadding_14.Parent = Orbit.NoclipLabel
+Orbit.UIPadding_14.PaddingBottom = UDim.new(0.280000001, 0)
+Orbit.UIPadding_14.PaddingTop = UDim.new(0.280000001, 0)
+
+Orbit.UIAspectRatioConstraint_14.Parent = Orbit.NoclipLabel
+Orbit.UIAspectRatioConstraint_14.AspectRatio = 4.280
+
+Orbit.NoclipBox.Name = "NoclipBox"
+Orbit.NoclipBox.Parent = Orbit.ScrollingFrame
+Orbit.NoclipBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.NoclipBox.BackgroundTransparency = 1.000
+Orbit.NoclipBox.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Orbit.NoclipBox.BorderSizePixel = 0
+Orbit.NoclipBox.Position = UDim2.new(0.526000023, 0, 0.221238941, 0)
+Orbit.NoclipBox.Size = UDim2.new(0.419999987, 0, 0.0442477874, 0)
+Orbit.NoclipBox.Font = Enum.Font.SourceSansBold
+Orbit.NoclipBox.Text = "Enter ON/OFF here..."
+Orbit.NoclipBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.NoclipBox.TextScaled = true
+Orbit.NoclipBox.TextSize = 22.000
+Orbit.NoclipBox.TextWrapped = true
+Orbit.NoclipBox.TextXAlignment = Enum.TextXAlignment.Left
+
+Orbit.UIPadding_15.Parent = Orbit.NoclipBox
+Orbit.UIPadding_15.PaddingBottom = UDim.new(0.280000001, 0)
+Orbit.UIPadding_15.PaddingTop = UDim.new(0.280000001, 0)
+
+Orbit.UIAspectRatioConstraint_15.Parent = Orbit.NoclipBox
+Orbit.UIAspectRatioConstraint_15.AspectRatio = 4.200
+
+Orbit.SpinBox.Name = "SpinBox"
+Orbit.SpinBox.Parent = Orbit.ScrollingFrame
+Orbit.SpinBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.SpinBox.BackgroundTransparency = 1.000
+Orbit.SpinBox.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Orbit.SpinBox.BorderSizePixel = 0
+Orbit.SpinBox.Position = UDim2.new(0.526000023, 0, 0.265486717, 0)
+Orbit.SpinBox.Size = UDim2.new(0.419999987, 0, 0.0442477874, 0)
+Orbit.SpinBox.Font = Enum.Font.SourceSansBold
+Orbit.SpinBox.Text = "Enter number/OFF here..."
+Orbit.SpinBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.SpinBox.TextScaled = true
+Orbit.SpinBox.TextSize = 22.000
+Orbit.SpinBox.TextWrapped = true
+Orbit.SpinBox.TextXAlignment = Enum.TextXAlignment.Left
+
+Orbit.UIPadding_16.Parent = Orbit.SpinBox
+Orbit.UIPadding_16.PaddingBottom = UDim.new(0.280000001, 0)
+Orbit.UIPadding_16.PaddingTop = UDim.new(0.280000001, 0)
+
+Orbit.UIAspectRatioConstraint_16.Parent = Orbit.SpinBox
+Orbit.UIAspectRatioConstraint_16.AspectRatio = 4.200
+
+Orbit.SpinLabel.Name = "SpinLabel"
+Orbit.SpinLabel.Parent = Orbit.ScrollingFrame
+Orbit.SpinLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.SpinLabel.BackgroundTransparency = 1.000
+Orbit.SpinLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Orbit.SpinLabel.BorderSizePixel = 0
+Orbit.SpinLabel.Position = UDim2.new(0.0460000001, 0, 0.265486717, 0)
+Orbit.SpinLabel.Size = UDim2.new(0.463999987, 0, 0.0442477874, 0)
+Orbit.SpinLabel.Font = Enum.Font.SourceSansBold
+Orbit.SpinLabel.Text = "Spin [value/OFF]"
+Orbit.SpinLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.SpinLabel.TextScaled = true
+Orbit.SpinLabel.TextSize = 22.000
+Orbit.SpinLabel.TextWrapped = true
+Orbit.SpinLabel.TextXAlignment = Enum.TextXAlignment.Left
+
+Orbit.UIPadding_17.Parent = Orbit.SpinLabel
+Orbit.UIPadding_17.PaddingBottom = UDim.new(0.280000001, 0)
+Orbit.UIPadding_17.PaddingTop = UDim.new(0.280000001, 0)
+
+Orbit.UIAspectRatioConstraint_17.Parent = Orbit.SpinLabel
+Orbit.UIAspectRatioConstraint_17.AspectRatio = 4.640
+
+Orbit.ResetLabel.Name = "ResetLabel"
+Orbit.ResetLabel.Parent = Orbit.ScrollingFrame
+Orbit.ResetLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.ResetLabel.BackgroundTransparency = 1.000
+Orbit.ResetLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Orbit.ResetLabel.BorderSizePixel = 0
+Orbit.ResetLabel.Position = UDim2.new(0.0460000001, 0, 0.309734523, 0)
+Orbit.ResetLabel.Size = UDim2.new(0.463999987, 0, 0.0442477874, 0)
+Orbit.ResetLabel.Font = Enum.Font.SourceSansBold
+Orbit.ResetLabel.Text = "Reset [reset/1]"
+Orbit.ResetLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.ResetLabel.TextScaled = true
+Orbit.ResetLabel.TextSize = 22.000
+Orbit.ResetLabel.TextWrapped = true
+Orbit.ResetLabel.TextXAlignment = Enum.TextXAlignment.Left
+
+Orbit.UIPadding_18.Parent = Orbit.ResetLabel
+Orbit.UIPadding_18.PaddingBottom = UDim.new(0.280000001, 0)
+Orbit.UIPadding_18.PaddingTop = UDim.new(0.280000001, 0)
+
+Orbit.UIAspectRatioConstraint_18.Parent = Orbit.ResetLabel
+Orbit.UIAspectRatioConstraint_18.AspectRatio = 4.640
+
+Orbit.ResetBox.Name = "ResetBox"
+Orbit.ResetBox.Parent = Orbit.ScrollingFrame
+Orbit.ResetBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.ResetBox.BackgroundTransparency = 1.000
+Orbit.ResetBox.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Orbit.ResetBox.BorderSizePixel = 0
+Orbit.ResetBox.Position = UDim2.new(0.526000023, 0, 0.309734523, 0)
+Orbit.ResetBox.Size = UDim2.new(0.419999987, 0, 0.0442477874, 0)
+Orbit.ResetBox.Font = Enum.Font.SourceSansBold
+Orbit.ResetBox.Text = "Enter reset/1 here..."
+Orbit.ResetBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.ResetBox.TextScaled = true
+Orbit.ResetBox.TextSize = 22.000
+Orbit.ResetBox.TextWrapped = true
+Orbit.ResetBox.TextXAlignment = Enum.TextXAlignment.Left
+
+Orbit.UIPadding_19.Parent = Orbit.ResetBox
+Orbit.UIPadding_19.PaddingBottom = UDim.new(0.280000001, 0)
+Orbit.UIPadding_19.PaddingTop = UDim.new(0.280000001, 0)
+
+Orbit.UIAspectRatioConstraint_19.Parent = Orbit.ResetBox
+Orbit.UIAspectRatioConstraint_19.AspectRatio = 4.200
+
+Orbit.FlyLabel.Name = "FlyLabel"
+Orbit.FlyLabel.Parent = Orbit.ScrollingFrame
+Orbit.FlyLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.FlyLabel.BackgroundTransparency = 1.000
+Orbit.FlyLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Orbit.FlyLabel.BorderSizePixel = 0
+Orbit.FlyLabel.Position = UDim2.new(0.0460000001, 0, 0.3539823, 0)
+Orbit.FlyLabel.Size = UDim2.new(0.463999987, 0, 0.0442477874, 0)
+Orbit.FlyLabel.Font = Enum.Font.SourceSansBold
+Orbit.FlyLabel.Text = "Fly [ON/OFF]"
+Orbit.FlyLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.FlyLabel.TextScaled = true
+Orbit.FlyLabel.TextSize = 22.000
+Orbit.FlyLabel.TextWrapped = true
+Orbit.FlyLabel.TextXAlignment = Enum.TextXAlignment.Left
+
+Orbit.UIPadding_20.Parent = Orbit.FlyLabel
+Orbit.UIPadding_20.PaddingBottom = UDim.new(0.280000001, 0)
+Orbit.UIPadding_20.PaddingTop = UDim.new(0.280000001, 0)
+
+Orbit.UIAspectRatioConstraint_20.Parent = Orbit.FlyLabel
+Orbit.UIAspectRatioConstraint_20.AspectRatio = 4.640
+
+Orbit.FlyBox.Name = "FlyBox"
+Orbit.FlyBox.Parent = Orbit.ScrollingFrame
+Orbit.FlyBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.FlyBox.BackgroundTransparency = 1.000
+Orbit.FlyBox.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Orbit.FlyBox.BorderSizePixel = 0
+Orbit.FlyBox.Position = UDim2.new(0.526000023, 0, 0.3539823, 0)
+Orbit.FlyBox.Size = UDim2.new(0.419999987, 0, 0.0442477874, 0)
+Orbit.FlyBox.Font = Enum.Font.SourceSansBold
+Orbit.FlyBox.Text = "Enter ON/OFF here..."
+Orbit.FlyBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.FlyBox.TextScaled = true
+Orbit.FlyBox.TextSize = 22.000
+Orbit.FlyBox.TextWrapped = true
+Orbit.FlyBox.TextXAlignment = Enum.TextXAlignment.Left
+
+Orbit.UIPadding_21.Parent = Orbit.FlyBox
+Orbit.UIPadding_21.PaddingBottom = UDim.new(0.280000001, 0)
+Orbit.UIPadding_21.PaddingTop = UDim.new(0.280000001, 0)
+
+Orbit.UIAspectRatioConstraint_21.Parent = Orbit.FlyBox
+Orbit.UIAspectRatioConstraint_21.AspectRatio = 4.200
+
+Orbit.TeleportBox.Name = "TeleportBox"
+Orbit.TeleportBox.Parent = Orbit.ScrollingFrame
+Orbit.TeleportBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.TeleportBox.BackgroundTransparency = 1.000
+Orbit.TeleportBox.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Orbit.TeleportBox.BorderSizePixel = 0
+Orbit.TeleportBox.Position = UDim2.new(0.526000023, 0, 0.398230076, 0)
+Orbit.TeleportBox.Size = UDim2.new(0.419999987, 0, 0.0442477874, 0)
+Orbit.TeleportBox.Font = Enum.Font.SourceSansBold
+Orbit.TeleportBox.Text = "Enter @username here..."
+Orbit.TeleportBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.TeleportBox.TextScaled = true
+Orbit.TeleportBox.TextSize = 22.000
+Orbit.TeleportBox.TextWrapped = true
+Orbit.TeleportBox.TextXAlignment = Enum.TextXAlignment.Left
+
+Orbit.UIPadding_22.Parent = Orbit.TeleportBox
+Orbit.UIPadding_22.PaddingBottom = UDim.new(0.280000001, 0)
+Orbit.UIPadding_22.PaddingTop = UDim.new(0.280000001, 0)
+
+Orbit.UIAspectRatioConstraint_22.Parent = Orbit.TeleportBox
+Orbit.UIAspectRatioConstraint_22.AspectRatio = 4.200
+
+Orbit.TeleportLabel.Name = "TeleportLabel"
+Orbit.TeleportLabel.Parent = Orbit.ScrollingFrame
+Orbit.TeleportLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.TeleportLabel.BackgroundTransparency = 1.000
+Orbit.TeleportLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Orbit.TeleportLabel.BorderSizePixel = 0
+Orbit.TeleportLabel.Position = UDim2.new(0.0460000001, 0, 0.398230076, 0)
+Orbit.TeleportLabel.Size = UDim2.new(0.463999987, 0, 0.0442477874, 0)
+Orbit.TeleportLabel.Font = Enum.Font.SourceSansBold
+Orbit.TeleportLabel.Text = "Teleport to [@username]"
+Orbit.TeleportLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.TeleportLabel.TextScaled = true
+Orbit.TeleportLabel.TextSize = 22.000
+Orbit.TeleportLabel.TextWrapped = true
+Orbit.TeleportLabel.TextXAlignment = Enum.TextXAlignment.Left
+
+Orbit.UIPadding_23.Parent = Orbit.TeleportLabel
+Orbit.UIPadding_23.PaddingBottom = UDim.new(0.280000001, 0)
+Orbit.UIPadding_23.PaddingTop = UDim.new(0.280000001, 0)
+
+Orbit.UIAspectRatioConstraint_23.Parent = Orbit.TeleportLabel
+Orbit.UIAspectRatioConstraint_23.AspectRatio = 4.640
+
+Orbit.ViewLabel.Name = "ViewLabel"
+Orbit.ViewLabel.Parent = Orbit.ScrollingFrame
+Orbit.ViewLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.ViewLabel.BackgroundTransparency = 1.000
+Orbit.ViewLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Orbit.ViewLabel.BorderSizePixel = 0
+Orbit.ViewLabel.Position = UDim2.new(0.0460000001, 0, 0.442477882, 0)
+Orbit.ViewLabel.Size = UDim2.new(0.463999987, 0, 0.0442477874, 0)
+Orbit.ViewLabel.Font = Enum.Font.SourceSansBold
+Orbit.ViewLabel.Text = "View [@username]"
+Orbit.ViewLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.ViewLabel.TextScaled = true
+Orbit.ViewLabel.TextSize = 22.000
+Orbit.ViewLabel.TextWrapped = true
+Orbit.ViewLabel.TextXAlignment = Enum.TextXAlignment.Left
+
+Orbit.UIPadding_24.Parent = Orbit.ViewLabel
+Orbit.UIPadding_24.PaddingBottom = UDim.new(0.280000001, 0)
+Orbit.UIPadding_24.PaddingTop = UDim.new(0.280000001, 0)
+
+Orbit.UIAspectRatioConstraint_24.Parent = Orbit.ViewLabel
+Orbit.UIAspectRatioConstraint_24.AspectRatio = 4.640
+
+Orbit.ViewBox.Name = "ViewBox"
+Orbit.ViewBox.Parent = Orbit.ScrollingFrame
+Orbit.ViewBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.ViewBox.BackgroundTransparency = 1.000
+Orbit.ViewBox.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Orbit.ViewBox.BorderSizePixel = 0
+Orbit.ViewBox.Position = UDim2.new(0.526000023, 0, 0.442477882, 0)
+Orbit.ViewBox.Size = UDim2.new(0.419999987, 0, 0.0442477874, 0)
+Orbit.ViewBox.Font = Enum.Font.SourceSansBold
+Orbit.ViewBox.Text = "Enter @username here..."
+Orbit.ViewBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.ViewBox.TextScaled = true
+Orbit.ViewBox.TextSize = 22.000
+Orbit.ViewBox.TextWrapped = true
+Orbit.ViewBox.TextXAlignment = Enum.TextXAlignment.Left
+
+Orbit.UIPadding_25.Parent = Orbit.ViewBox
+Orbit.UIPadding_25.PaddingBottom = UDim.new(0.280000001, 0)
+Orbit.UIPadding_25.PaddingTop = UDim.new(0.280000001, 0)
+
+Orbit.UIAspectRatioConstraint_25.Parent = Orbit.ViewBox
+Orbit.UIAspectRatioConstraint_25.AspectRatio = 4.200
+
+Orbit.UnViewLabel.Name = "UnViewLabel"
+Orbit.UnViewLabel.Parent = Orbit.ScrollingFrame
+Orbit.UnViewLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.UnViewLabel.BackgroundTransparency = 1.000
+Orbit.UnViewLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Orbit.UnViewLabel.BorderSizePixel = 0
+Orbit.UnViewLabel.Position = UDim2.new(0.0460000001, 0, 0.486725658, 0)
+Orbit.UnViewLabel.Size = UDim2.new(0.463999987, 0, 0.0442477874, 0)
+Orbit.UnViewLabel.Font = Enum.Font.SourceSansBold
+Orbit.UnViewLabel.Text = "Unview [@username]"
+Orbit.UnViewLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.UnViewLabel.TextScaled = true
+Orbit.UnViewLabel.TextSize = 22.000
+Orbit.UnViewLabel.TextWrapped = true
+Orbit.UnViewLabel.TextXAlignment = Enum.TextXAlignment.Left
+
+Orbit.UIPadding_26.Parent = Orbit.UnViewLabel
+Orbit.UIPadding_26.PaddingBottom = UDim.new(0.280000001, 0)
+Orbit.UIPadding_26.PaddingTop = UDim.new(0.280000001, 0)
+
+Orbit.UIAspectRatioConstraint_26.Parent = Orbit.UnViewLabel
+Orbit.UIAspectRatioConstraint_26.AspectRatio = 4.640
+
+Orbit.UnViewBox.Name = "UnViewBox"
+Orbit.UnViewBox.Parent = Orbit.ScrollingFrame
+Orbit.UnViewBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.UnViewBox.BackgroundTransparency = 1.000
+Orbit.UnViewBox.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Orbit.UnViewBox.BorderSizePixel = 0
+Orbit.UnViewBox.Position = UDim2.new(0.526000023, 0, 0.486725658, 0)
+Orbit.UnViewBox.Size = UDim2.new(0.419999987, 0, 0.0442477874, 0)
+Orbit.UnViewBox.Font = Enum.Font.SourceSansBold
+Orbit.UnViewBox.Text = "Enter STOP/OFF here..."
+Orbit.UnViewBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.UnViewBox.TextScaled = true
+Orbit.UnViewBox.TextSize = 22.000
+Orbit.UnViewBox.TextWrapped = true
+Orbit.UnViewBox.TextXAlignment = Enum.TextXAlignment.Left
+
+Orbit.UIPadding_27.Parent = Orbit.UnViewBox
+Orbit.UIPadding_27.PaddingBottom = UDim.new(0.280000001, 0)
+Orbit.UIPadding_27.PaddingTop = UDim.new(0.280000001, 0)
+
+Orbit.UIAspectRatioConstraint_27.Parent = Orbit.UnViewBox
+Orbit.UIAspectRatioConstraint_27.AspectRatio = 4.200
+
+Orbit.HealLabel.Name = "HealLabel"
+Orbit.HealLabel.Parent = Orbit.ScrollingFrame
+Orbit.HealLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.HealLabel.BackgroundTransparency = 1.000
+Orbit.HealLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Orbit.HealLabel.BorderSizePixel = 0
+Orbit.HealLabel.Position = UDim2.new(0.0460000001, 0, 0.530973434, 0)
+Orbit.HealLabel.Size = UDim2.new(0.463999987, 0, 0.0442477874, 0)
+Orbit.HealLabel.Font = Enum.Font.SourceSansBold
+Orbit.HealLabel.Text = "Heal [heal/100]"
+Orbit.HealLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.HealLabel.TextScaled = true
+Orbit.HealLabel.TextSize = 22.000
+Orbit.HealLabel.TextWrapped = true
+Orbit.HealLabel.TextXAlignment = Enum.TextXAlignment.Left
+
+Orbit.UIPadding_28.Parent = Orbit.HealLabel
+Orbit.UIPadding_28.PaddingBottom = UDim.new(0.280000001, 0)
+Orbit.UIPadding_28.PaddingTop = UDim.new(0.280000001, 0)
+
+Orbit.UIAspectRatioConstraint_28.Parent = Orbit.HealLabel
+Orbit.UIAspectRatioConstraint_28.AspectRatio = 4.640
+
+Orbit.HealBox.Name = "HealBox"
+Orbit.HealBox.Parent = Orbit.ScrollingFrame
+Orbit.HealBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.HealBox.BackgroundTransparency = 1.000
+Orbit.HealBox.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Orbit.HealBox.BorderSizePixel = 0
+Orbit.HealBox.Position = UDim2.new(0.526000023, 0, 0.530973434, 0)
+Orbit.HealBox.Size = UDim2.new(0.419999987, 0, 0.0442477874, 0)
+Orbit.HealBox.Font = Enum.Font.SourceSansBold
+Orbit.HealBox.Text = "Enter heal/100 here..."
+Orbit.HealBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.HealBox.TextScaled = true
+Orbit.HealBox.TextSize = 22.000
+Orbit.HealBox.TextWrapped = true
+Orbit.HealBox.TextXAlignment = Enum.TextXAlignment.Left
+
+Orbit.UIPadding_29.Parent = Orbit.HealBox
+Orbit.UIPadding_29.PaddingBottom = UDim.new(0.280000001, 0)
+Orbit.UIPadding_29.PaddingTop = UDim.new(0.280000001, 0)
+
+Orbit.UIAspectRatioConstraint_29.Parent = Orbit.HealBox
+Orbit.UIAspectRatioConstraint_29.AspectRatio = 4.200
+
+Orbit.FreezeBox.Name = "FreezeBox"
+Orbit.FreezeBox.Parent = Orbit.ScrollingFrame
+Orbit.FreezeBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.FreezeBox.BackgroundTransparency = 1.000
+Orbit.FreezeBox.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Orbit.FreezeBox.BorderSizePixel = 0
+Orbit.FreezeBox.Position = UDim2.new(0.526000023, 0, 0.575221241, 0)
+Orbit.FreezeBox.Size = UDim2.new(0.419999987, 0, 0.0442477874, 0)
+Orbit.FreezeBox.Font = Enum.Font.SourceSansBold
+Orbit.FreezeBox.Text = "Enter ON here..."
+Orbit.FreezeBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.FreezeBox.TextScaled = true
+Orbit.FreezeBox.TextSize = 22.000
+Orbit.FreezeBox.TextWrapped = true
+Orbit.FreezeBox.TextXAlignment = Enum.TextXAlignment.Left
+
+Orbit.UIPadding_30.Parent = Orbit.FreezeBox
+Orbit.UIPadding_30.PaddingBottom = UDim.new(0.280000001, 0)
+Orbit.UIPadding_30.PaddingTop = UDim.new(0.280000001, 0)
+
+Orbit.UIAspectRatioConstraint_30.Parent = Orbit.FreezeBox
+Orbit.UIAspectRatioConstraint_30.AspectRatio = 4.200
+
+Orbit.FreezeLabel.Name = "FreezeLabel"
+Orbit.FreezeLabel.Parent = Orbit.ScrollingFrame
+Orbit.FreezeLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.FreezeLabel.BackgroundTransparency = 1.000
+Orbit.FreezeLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Orbit.FreezeLabel.BorderSizePixel = 0
+Orbit.FreezeLabel.Position = UDim2.new(0.0460000001, 0, 0.575221241, 0)
+Orbit.FreezeLabel.Size = UDim2.new(0.463999987, 0, 0.0442477874, 0)
+Orbit.FreezeLabel.Font = Enum.Font.SourceSansBold
+Orbit.FreezeLabel.Text = "Freeze [ON]"
+Orbit.FreezeLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.FreezeLabel.TextScaled = true
+Orbit.FreezeLabel.TextSize = 22.000
+Orbit.FreezeLabel.TextWrapped = true
+Orbit.FreezeLabel.TextXAlignment = Enum.TextXAlignment.Left
+
+Orbit.UIPadding_31.Parent = Orbit.FreezeLabel
+Orbit.UIPadding_31.PaddingBottom = UDim.new(0.280000001, 0)
+Orbit.UIPadding_31.PaddingTop = UDim.new(0.280000001, 0)
+
+Orbit.UIAspectRatioConstraint_31.Parent = Orbit.FreezeLabel
+Orbit.UIAspectRatioConstraint_31.AspectRatio = 4.640
+
+Orbit.UnFreezeLabel.Name = "UnFreezeLabel"
+Orbit.UnFreezeLabel.Parent = Orbit.ScrollingFrame
+Orbit.UnFreezeLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.UnFreezeLabel.BackgroundTransparency = 1.000
+Orbit.UnFreezeLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Orbit.UnFreezeLabel.BorderSizePixel = 0
+Orbit.UnFreezeLabel.Position = UDim2.new(0.0460000001, 0, 0.619469047, 0)
+Orbit.UnFreezeLabel.Size = UDim2.new(0.463999987, 0, 0.0442477874, 0)
+Orbit.UnFreezeLabel.Font = Enum.Font.SourceSansBold
+Orbit.UnFreezeLabel.Text = "Unfreeze [OFF]"
+Orbit.UnFreezeLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.UnFreezeLabel.TextScaled = true
+Orbit.UnFreezeLabel.TextSize = 22.000
+Orbit.UnFreezeLabel.TextWrapped = true
+Orbit.UnFreezeLabel.TextXAlignment = Enum.TextXAlignment.Left
+
+Orbit.UIPadding_32.Parent = Orbit.UnFreezeLabel
+Orbit.UIPadding_32.PaddingBottom = UDim.new(0.280000001, 0)
+Orbit.UIPadding_32.PaddingTop = UDim.new(0.280000001, 0)
+
+Orbit.UIAspectRatioConstraint_32.Parent = Orbit.UnFreezeLabel
+Orbit.UIAspectRatioConstraint_32.AspectRatio = 4.640
+
+Orbit.UnFreezeBox.Name = "UnFreezeBox"
+Orbit.UnFreezeBox.Parent = Orbit.ScrollingFrame
+Orbit.UnFreezeBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.UnFreezeBox.BackgroundTransparency = 1.000
+Orbit.UnFreezeBox.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Orbit.UnFreezeBox.BorderSizePixel = 0
+Orbit.UnFreezeBox.Position = UDim2.new(0.526000023, 0, 0.619469047, 0)
+Orbit.UnFreezeBox.Size = UDim2.new(0.419999987, 0, 0.0442477874, 0)
+Orbit.UnFreezeBox.Font = Enum.Font.SourceSansBold
+Orbit.UnFreezeBox.Text = "Enter OFF here..."
+Orbit.UnFreezeBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.UnFreezeBox.TextScaled = true
+Orbit.UnFreezeBox.TextSize = 22.000
+Orbit.UnFreezeBox.TextWrapped = true
+Orbit.UnFreezeBox.TextXAlignment = Enum.TextXAlignment.Left
+
+Orbit.UIPadding_33.Parent = Orbit.UnFreezeBox
+Orbit.UIPadding_33.PaddingBottom = UDim.new(0.280000001, 0)
+Orbit.UIPadding_33.PaddingTop = UDim.new(0.280000001, 0)
+
+Orbit.UIAspectRatioConstraint_33.Parent = Orbit.UnFreezeBox
+Orbit.UIAspectRatioConstraint_33.AspectRatio = 4.200
+
+Orbit.SitBox.Name = "SitBox"
+Orbit.SitBox.Parent = Orbit.ScrollingFrame
+Orbit.SitBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.SitBox.BackgroundTransparency = 1.000
+Orbit.SitBox.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Orbit.SitBox.BorderSizePixel = 0
+Orbit.SitBox.Position = UDim2.new(0.526000023, 0, 0.663716793, 0)
+Orbit.SitBox.Size = UDim2.new(0.419999987, 0, 0.0442477874, 0)
+Orbit.SitBox.Font = Enum.Font.SourceSansBold
+Orbit.SitBox.Text = "Enter your @user here..."
+Orbit.SitBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.SitBox.TextScaled = true
+Orbit.SitBox.TextSize = 22.000
+Orbit.SitBox.TextWrapped = true
+Orbit.SitBox.TextXAlignment = Enum.TextXAlignment.Left
+
+Orbit.UIPadding_34.Parent = Orbit.SitBox
+Orbit.UIPadding_34.PaddingBottom = UDim.new(0.280000001, 0)
+Orbit.UIPadding_34.PaddingTop = UDim.new(0.280000001, 0)
+
+Orbit.UIAspectRatioConstraint_34.Parent = Orbit.SitBox
+Orbit.UIAspectRatioConstraint_34.AspectRatio = 4.200
+
+Orbit.SitLabel.Name = "SitLabel"
+Orbit.SitLabel.Parent = Orbit.ScrollingFrame
+Orbit.SitLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.SitLabel.BackgroundTransparency = 1.000
+Orbit.SitLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Orbit.SitLabel.BorderSizePixel = 0
+Orbit.SitLabel.Position = UDim2.new(0.0460000001, 0, 0.663716793, 0)
+Orbit.SitLabel.Size = UDim2.new(0.463999987, 0, 0.0442477874, 0)
+Orbit.SitLabel.Font = Enum.Font.SourceSansBold
+Orbit.SitLabel.Text = "Sit [@yourusername]"
+Orbit.SitLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.SitLabel.TextScaled = true
+Orbit.SitLabel.TextSize = 22.000
+Orbit.SitLabel.TextWrapped = true
+Orbit.SitLabel.TextXAlignment = Enum.TextXAlignment.Left
+
+Orbit.UIPadding_35.Parent = Orbit.SitLabel
+Orbit.UIPadding_35.PaddingBottom = UDim.new(0.280000001, 0)
+Orbit.UIPadding_35.PaddingTop = UDim.new(0.280000001, 0)
+
+Orbit.UIAspectRatioConstraint_35.Parent = Orbit.SitLabel
+Orbit.UIAspectRatioConstraint_35.AspectRatio = 4.640
+
+Orbit.FlingLabel.Name = "FlingLabel"
+Orbit.FlingLabel.Parent = Orbit.ScrollingFrame
+Orbit.FlingLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.FlingLabel.BackgroundTransparency = 1.000
+Orbit.FlingLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Orbit.FlingLabel.BorderSizePixel = 0
+Orbit.FlingLabel.Position = UDim2.new(0.0500000007, 0, 0.707964599, 0)
+Orbit.FlingLabel.Size = UDim2.new(0.463999987, 0, 0.0442477874, 0)
+Orbit.FlingLabel.Font = Enum.Font.SourceSansBold
+Orbit.FlingLabel.Text = "Fling [@username]"
+Orbit.FlingLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.FlingLabel.TextScaled = true
+Orbit.FlingLabel.TextSize = 22.000
+Orbit.FlingLabel.TextWrapped = true
+Orbit.FlingLabel.TextXAlignment = Enum.TextXAlignment.Left
+
+Orbit.UIPadding_36.Parent = Orbit.FlingLabel
+Orbit.UIPadding_36.PaddingBottom = UDim.new(0.280000001, 0)
+Orbit.UIPadding_36.PaddingTop = UDim.new(0.280000001, 0)
+
+Orbit.UIAspectRatioConstraint_36.Parent = Orbit.FlingLabel
+Orbit.UIAspectRatioConstraint_36.AspectRatio = 4.640
+
+Orbit.FlingBox.Name = "FlingBox"
+Orbit.FlingBox.Parent = Orbit.ScrollingFrame
+Orbit.FlingBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.FlingBox.BackgroundTransparency = 1.000
+Orbit.FlingBox.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Orbit.FlingBox.BorderSizePixel = 0
+Orbit.FlingBox.Position = UDim2.new(0.529999971, 0, 0.707964599, 0)
+Orbit.FlingBox.Size = UDim2.new(0.419999987, 0, 0.0442477874, 0)
+Orbit.FlingBox.Font = Enum.Font.SourceSansBold
+Orbit.FlingBox.Text = "Enter @username here..."
+Orbit.FlingBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.FlingBox.TextScaled = true
+Orbit.FlingBox.TextSize = 22.000
+Orbit.FlingBox.TextWrapped = true
+Orbit.FlingBox.TextXAlignment = Enum.TextXAlignment.Left
+
+Orbit.UIPadding_37.Parent = Orbit.FlingBox
+Orbit.UIPadding_37.PaddingBottom = UDim.new(0.280000001, 0)
+Orbit.UIPadding_37.PaddingTop = UDim.new(0.280000001, 0)
+
+Orbit.UIAspectRatioConstraint_37.Parent = Orbit.FlingBox
+Orbit.UIAspectRatioConstraint_37.AspectRatio = 4.200
+
+Orbit.UnFlingLabel.Name = "UnFlingLabel"
+Orbit.UnFlingLabel.Parent = Orbit.ScrollingFrame
+Orbit.UnFlingLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.UnFlingLabel.BackgroundTransparency = 1.000
+Orbit.UnFlingLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Orbit.UnFlingLabel.BorderSizePixel = 0
+Orbit.UnFlingLabel.Position = UDim2.new(0.0460000001, 0, 0.752212405, 0)
+Orbit.UnFlingLabel.Size = UDim2.new(0.463999987, 0, 0.0442477874, 0)
+Orbit.UnFlingLabel.Font = Enum.Font.SourceSansBold
+Orbit.UnFlingLabel.Text = "Unfling [@username]"
+Orbit.UnFlingLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.UnFlingLabel.TextScaled = true
+Orbit.UnFlingLabel.TextSize = 22.000
+Orbit.UnFlingLabel.TextWrapped = true
+Orbit.UnFlingLabel.TextXAlignment = Enum.TextXAlignment.Left
+
+Orbit.UIPadding_38.Parent = Orbit.UnFlingLabel
+Orbit.UIPadding_38.PaddingBottom = UDim.new(0.280000001, 0)
+Orbit.UIPadding_38.PaddingTop = UDim.new(0.280000001, 0)
+
+Orbit.UIAspectRatioConstraint_38.Parent = Orbit.UnFlingLabel
+Orbit.UIAspectRatioConstraint_38.AspectRatio = 4.640
+
+Orbit.UnFlingBox.Name = "UnFlingBox"
+Orbit.UnFlingBox.Parent = Orbit.ScrollingFrame
+Orbit.UnFlingBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.UnFlingBox.BackgroundTransparency = 1.000
+Orbit.UnFlingBox.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Orbit.UnFlingBox.BorderSizePixel = 0
+Orbit.UnFlingBox.Position = UDim2.new(0.526000023, 0, 0.752212405, 0)
+Orbit.UnFlingBox.Size = UDim2.new(0.419999987, 0, 0.0442477874, 0)
+Orbit.UnFlingBox.Font = Enum.Font.SourceSansBold
+Orbit.UnFlingBox.Text = "Enter @username here..."
+Orbit.UnFlingBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.UnFlingBox.TextScaled = true
+Orbit.UnFlingBox.TextSize = 22.000
+Orbit.UnFlingBox.TextWrapped = true
+Orbit.UnFlingBox.TextXAlignment = Enum.TextXAlignment.Left
+
+Orbit.UIPadding_39.Parent = Orbit.UnFlingBox
+Orbit.UIPadding_39.PaddingBottom = UDim.new(0.280000001, 0)
+Orbit.UIPadding_39.PaddingTop = UDim.new(0.280000001, 0)
+
+Orbit.UIAspectRatioConstraint_39.Parent = Orbit.UnFlingBox
+Orbit.UIAspectRatioConstraint_39.AspectRatio = 4.200
+
+Orbit.StickBox.Name = "StickBox"
+Orbit.StickBox.Parent = Orbit.ScrollingFrame
+Orbit.StickBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.StickBox.BackgroundTransparency = 1.000
+Orbit.StickBox.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Orbit.StickBox.BorderSizePixel = 0
+Orbit.StickBox.Position = UDim2.new(0.526000023, 0, 0.796460152, 0)
+Orbit.StickBox.Size = UDim2.new(0.419999987, 0, 0.0442477874, 0)
+Orbit.StickBox.Font = Enum.Font.SourceSansBold
+Orbit.StickBox.Text = "Enter @username here..."
+Orbit.StickBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.StickBox.TextScaled = true
+Orbit.StickBox.TextSize = 22.000
+Orbit.StickBox.TextWrapped = true
+Orbit.StickBox.TextXAlignment = Enum.TextXAlignment.Left
+
+Orbit.UIPadding_40.Parent = Orbit.StickBox
+Orbit.UIPadding_40.PaddingBottom = UDim.new(0.280000001, 0)
+Orbit.UIPadding_40.PaddingTop = UDim.new(0.280000001, 0)
+
+Orbit.UIAspectRatioConstraint_40.Parent = Orbit.StickBox
+Orbit.UIAspectRatioConstraint_40.AspectRatio = 4.200
+
+Orbit.StickLabel.Name = "StickLabel"
+Orbit.StickLabel.Parent = Orbit.ScrollingFrame
+Orbit.StickLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.StickLabel.BackgroundTransparency = 1.000
+Orbit.StickLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Orbit.StickLabel.BorderSizePixel = 0
+Orbit.StickLabel.Position = UDim2.new(0.0460000001, 0, 0.796460152, 0)
+Orbit.StickLabel.Size = UDim2.new(0.463999987, 0, 0.0442477874, 0)
+Orbit.StickLabel.Font = Enum.Font.SourceSansBold
+Orbit.StickLabel.Text = "Bang [@username]"
+Orbit.StickLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.StickLabel.TextScaled = true
+Orbit.StickLabel.TextSize = 22.000
+Orbit.StickLabel.TextWrapped = true
+Orbit.StickLabel.TextXAlignment = Enum.TextXAlignment.Left
+
+Orbit.UIPadding_41.Parent = Orbit.StickLabel
+Orbit.UIPadding_41.PaddingBottom = UDim.new(0.280000001, 0)
+Orbit.UIPadding_41.PaddingTop = UDim.new(0.280000001, 0)
+
+Orbit.UIAspectRatioConstraint_41.Parent = Orbit.StickLabel
+Orbit.UIAspectRatioConstraint_41.AspectRatio = 4.640
+
+Orbit.UnStickBox.Name = "UnStickBox"
+Orbit.UnStickBox.Parent = Orbit.ScrollingFrame
+Orbit.UnStickBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.UnStickBox.BackgroundTransparency = 1.000
+Orbit.UnStickBox.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Orbit.UnStickBox.BorderSizePixel = 0
+Orbit.UnStickBox.Position = UDim2.new(0.526000023, 0, 0.840707958, 0)
+Orbit.UnStickBox.Size = UDim2.new(0.419999987, 0, 0.0442477874, 0)
+Orbit.UnStickBox.Font = Enum.Font.SourceSansBold
+Orbit.UnStickBox.Text = "Enter @username here..."
+Orbit.UnStickBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.UnStickBox.TextScaled = true
+Orbit.UnStickBox.TextSize = 22.000
+Orbit.UnStickBox.TextWrapped = true
+Orbit.UnStickBox.TextXAlignment = Enum.TextXAlignment.Left
+
+Orbit.UIPadding_42.Parent = Orbit.UnStickBox
+Orbit.UIPadding_42.PaddingBottom = UDim.new(0.280000001, 0)
+Orbit.UIPadding_42.PaddingTop = UDim.new(0.280000001, 0)
+
+Orbit.UIAspectRatioConstraint_42.Parent = Orbit.UnStickBox
+Orbit.UIAspectRatioConstraint_42.AspectRatio = 4.200
+
+Orbit.UnStickLabel.Name = "UnStickLabel"
+Orbit.UnStickLabel.Parent = Orbit.ScrollingFrame
+Orbit.UnStickLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.UnStickLabel.BackgroundTransparency = 1.000
+Orbit.UnStickLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Orbit.UnStickLabel.BorderSizePixel = 0
+Orbit.UnStickLabel.Position = UDim2.new(0.0460000001, 0, 0.840707958, 0)
+Orbit.UnStickLabel.Size = UDim2.new(0.463999987, 0, 0.0442477874, 0)
+Orbit.UnStickLabel.Font = Enum.Font.SourceSansBold
+Orbit.UnStickLabel.Text = "Unbang [@username]"
+Orbit.UnStickLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.UnStickLabel.TextScaled = true
+Orbit.UnStickLabel.TextSize = 22.000
+Orbit.UnStickLabel.TextWrapped = true
+Orbit.UnStickLabel.TextXAlignment = Enum.TextXAlignment.Left
+
+Orbit.UIPadding_43.Parent = Orbit.UnStickLabel
+Orbit.UIPadding_43.PaddingBottom = UDim.new(0.280000001, 0)
+Orbit.UIPadding_43.PaddingTop = UDim.new(0.280000001, 0)
+
+Orbit.UIAspectRatioConstraint_43.Parent = Orbit.UnStickLabel
+Orbit.UIAspectRatioConstraint_43.AspectRatio = 4.640
+
+Orbit.EspBox.Name = "EspBox"
+Orbit.EspBox.Parent = Orbit.ScrollingFrame
+Orbit.EspBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.EspBox.BackgroundTransparency = 1.000
+Orbit.EspBox.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Orbit.EspBox.BorderSizePixel = 0
+Orbit.EspBox.Position = UDim2.new(0.526000023, 0, 0.884955764, 0)
+Orbit.EspBox.Size = UDim2.new(0.419999987, 0, 0.0442477874, 0)
+Orbit.EspBox.Font = Enum.Font.SourceSansBold
+Orbit.EspBox.Text = "Enter ON here..."
+Orbit.EspBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.EspBox.TextScaled = true
+Orbit.EspBox.TextSize = 22.000
+Orbit.EspBox.TextWrapped = true
+Orbit.EspBox.TextXAlignment = Enum.TextXAlignment.Left
+
+Orbit.UIPadding_44.Parent = Orbit.EspBox
+Orbit.UIPadding_44.PaddingBottom = UDim.new(0.280000001, 0)
+Orbit.UIPadding_44.PaddingTop = UDim.new(0.280000001, 0)
+
+Orbit.UIAspectRatioConstraint_44.Parent = Orbit.EspBox
+Orbit.UIAspectRatioConstraint_44.AspectRatio = 4.200
+
+Orbit.EspLabel.Name = "EspLabel"
+Orbit.EspLabel.Parent = Orbit.ScrollingFrame
+Orbit.EspLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.EspLabel.BackgroundTransparency = 1.000
+Orbit.EspLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Orbit.EspLabel.BorderSizePixel = 0
+Orbit.EspLabel.Position = UDim2.new(0.0460000001, 0, 0.884955764, 0)
+Orbit.EspLabel.Size = UDim2.new(0.463999987, 0, 0.0442477874, 0)
+Orbit.EspLabel.Font = Enum.Font.SourceSansBold
+Orbit.EspLabel.Text = "ESP [ON]"
+Orbit.EspLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.EspLabel.TextScaled = true
+Orbit.EspLabel.TextSize = 22.000
+Orbit.EspLabel.TextWrapped = true
+Orbit.EspLabel.TextXAlignment = Enum.TextXAlignment.Left
+
+Orbit.UIPadding_45.Parent = Orbit.EspLabel
+Orbit.UIPadding_45.PaddingBottom = UDim.new(0.280000001, 0)
+Orbit.UIPadding_45.PaddingTop = UDim.new(0.280000001, 0)
+
+Orbit.UIAspectRatioConstraint_45.Parent = Orbit.EspLabel
+Orbit.UIAspectRatioConstraint_45.AspectRatio = 4.640
+
+Orbit.UnEspBox.Name = "UnEspBox"
+Orbit.UnEspBox.Parent = Orbit.ScrollingFrame
+Orbit.UnEspBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.UnEspBox.BackgroundTransparency = 1.000
+Orbit.UnEspBox.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Orbit.UnEspBox.BorderSizePixel = 0
+Orbit.UnEspBox.Position = UDim2.new(0.526000023, 0, 0.92920351, 0)
+Orbit.UnEspBox.Size = UDim2.new(0.419999987, 0, 0.0442477874, 0)
+Orbit.UnEspBox.Font = Enum.Font.SourceSansBold
+Orbit.UnEspBox.Text = "Enter OFF here..."
+Orbit.UnEspBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.UnEspBox.TextScaled = true
+Orbit.UnEspBox.TextSize = 22.000
+Orbit.UnEspBox.TextWrapped = true
+Orbit.UnEspBox.TextXAlignment = Enum.TextXAlignment.Left
+
+Orbit.UIPadding_46.Parent = Orbit.UnEspBox
+Orbit.UIPadding_46.PaddingBottom = UDim.new(0.280000001, 0)
+Orbit.UIPadding_46.PaddingTop = UDim.new(0.280000001, 0)
+
+Orbit.UIAspectRatioConstraint_46.Parent = Orbit.UnEspBox
+Orbit.UIAspectRatioConstraint_46.AspectRatio = 4.200
+
+Orbit.UnEspBox_2.Name = "UnEspBox"
+Orbit.UnEspBox_2.Parent = Orbit.ScrollingFrame
+Orbit.UnEspBox_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.UnEspBox_2.BackgroundTransparency = 1.000
+Orbit.UnEspBox_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Orbit.UnEspBox_2.BorderSizePixel = 0
+Orbit.UnEspBox_2.Position = UDim2.new(0.0460000001, 0, 0.92920351, 0)
+Orbit.UnEspBox_2.Size = UDim2.new(0.463999987, 0, 0.0442477874, 0)
+Orbit.UnEspBox_2.Font = Enum.Font.SourceSansBold
+Orbit.UnEspBox_2.Text = "Remove ESP [OFF]"
+Orbit.UnEspBox_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.UnEspBox_2.TextScaled = true
+Orbit.UnEspBox_2.TextSize = 22.000
+Orbit.UnEspBox_2.TextWrapped = true
+Orbit.UnEspBox_2.TextXAlignment = Enum.TextXAlignment.Left
+
+Orbit.UIPadding_47.Parent = Orbit.UnEspBox_2
+Orbit.UIPadding_47.PaddingBottom = UDim.new(0.280000001, 0)
+Orbit.UIPadding_47.PaddingTop = UDim.new(0.280000001, 0)
+
+Orbit.UIAspectRatioConstraint_47.Parent = Orbit.UnEspBox_2
+Orbit.UIAspectRatioConstraint_47.AspectRatio = 4.640
+
+Orbit.UIAspectRatioConstraint_48.Parent = Orbit.ScrollingFrame
+Orbit.UIAspectRatioConstraint_48.AspectRatio = 2.825
+
+Orbit.UIAspectRatioConstraint_49.Parent = Orbit.CommandsFrame
+Orbit.UIAspectRatioConstraint_49.AspectRatio = 2.212
+
+Orbit.Decoration1Label.Name = "Decoration1Label"
+Orbit.Decoration1Label.Parent = Orbit.MainFrame
+Orbit.Decoration1Label.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.Decoration1Label.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Orbit.Decoration1Label.BorderSizePixel = 0
+Orbit.Decoration1Label.Position = UDim2.new(0.162, 0, 0.13333334, 0)
+Orbit.Decoration1Label.Size = UDim2.new(0.00200000009, 0, 0.733333349, 0)
+Orbit.Decoration1Label.Font = Enum.Font.SourceSans
+Orbit.Decoration1Label.Text = ""
+Orbit.Decoration1Label.TextColor3 = Color3.fromRGB(0, 0, 0)
+Orbit.Decoration1Label.TextSize = 14.000
+
+Orbit.UIAspectRatioConstraint_50.Parent = Orbit.Decoration1Label
+Orbit.UIAspectRatioConstraint_50.AspectRatio = 0.018
+
+Orbit.ThemesFrame.Name = "ThemesFrame"
+Orbit.ThemesFrame.Parent = Orbit.MainFrame
+Orbit.ThemesFrame.BackgroundColor3 = Color3.fromRGB(19, 19, 19)
+Orbit.ThemesFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Orbit.ThemesFrame.BorderSizePixel = 0
+Orbit.ThemesFrame.Position = UDim2.new(0, 0, -3.18666673, 0)
+Orbit.ThemesFrame.Size = UDim2.new(1, 0, 3.01333308, 0)
+Orbit.ThemesFrame.Visible = false
+
+Orbit.UICorner_4.CornerRadius = UDim.new(0.132743359, 0)
+Orbit.UICorner_4.Parent = Orbit.ThemesFrame
+
+Orbit.ThemesTitle.Name = "ThemesTitle"
+Orbit.ThemesTitle.Parent = Orbit.ThemesFrame
+Orbit.ThemesTitle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.ThemesTitle.BackgroundTransparency = 1.000
+Orbit.ThemesTitle.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Orbit.ThemesTitle.BorderSizePixel = 0
+Orbit.ThemesTitle.Position = UDim2.new(0.0460000001, 0, 0.03539823, 0)
+Orbit.ThemesTitle.Size = UDim2.new(0.351999998, 0, 0.137168139, 0)
+Orbit.ThemesTitle.Font = Enum.Font.SourceSansBold
+Orbit.ThemesTitle.Text = "Themes"
+Orbit.ThemesTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.ThemesTitle.TextScaled = true
+Orbit.ThemesTitle.TextSize = 20.000
+Orbit.ThemesTitle.TextWrapped = true
+Orbit.ThemesTitle.TextXAlignment = Enum.TextXAlignment.Left
+
+Orbit.UIPadding_48.Parent = Orbit.ThemesTitle
+Orbit.UIPadding_48.PaddingBottom = UDim.new(0.17741935, 0)
+Orbit.UIPadding_48.PaddingTop = UDim.new(0.17741935, 0)
+
+Orbit.UIAspectRatioConstraint_51.Parent = Orbit.ThemesTitle
+Orbit.UIAspectRatioConstraint_51.AspectRatio = 5.677
+
+Orbit.ThemesClose.Name = "ThemesClose"
+Orbit.ThemesClose.Parent = Orbit.ThemesFrame
+Orbit.ThemesClose.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.ThemesClose.BackgroundTransparency = 1.000
+Orbit.ThemesClose.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Orbit.ThemesClose.BorderSizePixel = 0
+Orbit.ThemesClose.Position = UDim2.new(0.899999976, 0, -0.00884955749, 0)
+Orbit.ThemesClose.Size = UDim2.new(0.100000001, 0, 0.221238926, 0)
+Orbit.ThemesClose.Font = Enum.Font.SourceSansBold
+Orbit.ThemesClose.Text = "x"
+Orbit.ThemesClose.TextColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.ThemesClose.TextScaled = true
+Orbit.ThemesClose.TextSize = 30.000
+Orbit.ThemesClose.TextWrapped = true
+
+Orbit.UIPadding_49.Parent = Orbit.ThemesClose
+Orbit.UIPadding_49.PaddingBottom = UDim.new(0.200000003, 0)
+Orbit.UIPadding_49.PaddingTop = UDim.new(0.200000003, 0)
+
+Orbit.UIAspectRatioConstraint_52.Parent = Orbit.ThemesClose
+Orbit.UIAspectRatioConstraint_52.AspectRatio = 1.000
+
+Orbit.ScrollingFrame_2.Parent = Orbit.ThemesFrame
+Orbit.ScrollingFrame_2.Active = true
+Orbit.ScrollingFrame_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.ScrollingFrame_2.BackgroundTransparency = 1.000
+Orbit.ScrollingFrame_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Orbit.ScrollingFrame_2.BorderSizePixel = 0
+Orbit.ScrollingFrame_2.Position = UDim2.new(0, 0, 0.21681416, 0)
+Orbit.ScrollingFrame_2.Size = UDim2.new(1, 0, 0.78318584, 0)
+Orbit.ScrollingFrame_2.CanvasPosition = Vector2.new(0, 700)
+Orbit.ScrollingFrame_2.CanvasSize = UDim2.new(0, 0, 5, 0)
+
+Orbit.UICorner_5.CornerRadius = UDim.new(0.169491529, 0)
+Orbit.UICorner_5.Parent = Orbit.ScrollingFrame_2
+
+Orbit.RedLabel.Name = "RedLabel"
+Orbit.RedLabel.Parent = Orbit.ScrollingFrame_2
+Orbit.RedLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.RedLabel.BackgroundTransparency = 1.000
+Orbit.RedLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Orbit.RedLabel.BorderSizePixel = 0
+Orbit.RedLabel.Position = UDim2.new(0.0340000018, 0, -0.000884955749, 0)
+Orbit.RedLabel.Size = UDim2.new(0.673999965, 0, 0.0442477874, 0)
+Orbit.RedLabel.Font = Enum.Font.SourceSansBold
+Orbit.RedLabel.Text = "Press the button infront to change the colour to red."
+Orbit.RedLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.RedLabel.TextScaled = true
+Orbit.RedLabel.TextSize = 16.000
+Orbit.RedLabel.TextWrapped = true
+Orbit.RedLabel.TextXAlignment = Enum.TextXAlignment.Left
+
+Orbit.UIPadding_50.Parent = Orbit.RedLabel
+Orbit.UIPadding_50.PaddingBottom = UDim.new(0.340000004, 0)
+Orbit.UIPadding_50.PaddingTop = UDim.new(0.340000004, 0)
+
+Orbit.UIAspectRatioConstraint_53.Parent = Orbit.RedLabel
+Orbit.UIAspectRatioConstraint_53.AspectRatio = 6.740
+
+Orbit.Red.Name = "Red"
+Orbit.Red.Parent = Orbit.ScrollingFrame_2
+Orbit.Red.BackgroundColor3 = Color3.fromRGB(203, 0, 0)
+Orbit.Red.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Orbit.Red.BorderSizePixel = 0
+Orbit.Red.Position = UDim2.new(0.741999984, 0, -0.000884955749, 0)
+Orbit.Red.Size = UDim2.new(0.199999988, 0, 0.0442477874, 0)
+Orbit.Red.Font = Enum.Font.SourceSansBold
+Orbit.Red.Text = "Red"
+Orbit.Red.TextColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.Red.TextScaled = true
+Orbit.Red.TextSize = 20.000
+Orbit.Red.TextWrapped = true
+
+Orbit.UICorner_6.CornerRadius = UDim.new(0.600000024, 0)
+Orbit.UICorner_6.Parent = Orbit.Red
+
+Orbit.UIPadding_51.Parent = Orbit.Red
+Orbit.UIPadding_51.PaddingBottom = UDim.new(0.300000012, 0)
+Orbit.UIPadding_51.PaddingTop = UDim.new(0.300000012, 0)
+
+Orbit.UIAspectRatioConstraint_54.Parent = Orbit.Red
+Orbit.UIAspectRatioConstraint_54.AspectRatio = 2.000
+
+Orbit.Orange.Name = "Orange"
+Orbit.Orange.Parent = Orbit.ScrollingFrame_2
+Orbit.Orange.BackgroundColor3 = Color3.fromRGB(255, 128, 0)
+Orbit.Orange.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Orbit.Orange.BorderSizePixel = 0
+Orbit.Orange.Position = UDim2.new(0.741999984, 0, 0.0504424796, 0)
+Orbit.Orange.Size = UDim2.new(0.199999988, 0, 0.0442477874, 0)
+Orbit.Orange.Font = Enum.Font.SourceSansBold
+Orbit.Orange.Text = "Orange"
+Orbit.Orange.TextColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.Orange.TextScaled = true
+Orbit.Orange.TextSize = 20.000
+Orbit.Orange.TextWrapped = true
+
+Orbit.UICorner_7.CornerRadius = UDim.new(0.600000024, 0)
+Orbit.UICorner_7.Parent = Orbit.Orange
+
+Orbit.UIPadding_52.Parent = Orbit.Orange
+Orbit.UIPadding_52.PaddingBottom = UDim.new(0.300000012, 0)
+Orbit.UIPadding_52.PaddingTop = UDim.new(0.300000012, 0)
+
+Orbit.UIAspectRatioConstraint_55.Parent = Orbit.Orange
+Orbit.UIAspectRatioConstraint_55.AspectRatio = 2.000
+
+Orbit.OrangeLabel.Name = "OrangeLabel"
+Orbit.OrangeLabel.Parent = Orbit.ScrollingFrame_2
+Orbit.OrangeLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.OrangeLabel.BackgroundTransparency = 1.000
+Orbit.OrangeLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Orbit.OrangeLabel.BorderSizePixel = 0
+Orbit.OrangeLabel.Position = UDim2.new(0.0340000018, 0, 0.0504424796, 0)
+Orbit.OrangeLabel.Size = UDim2.new(0.673999965, 0, 0.0442477874, 0)
+Orbit.OrangeLabel.Font = Enum.Font.SourceSansBold
+Orbit.OrangeLabel.Text = "Press the button infront to change the colour to orange."
+Orbit.OrangeLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.OrangeLabel.TextScaled = true
+Orbit.OrangeLabel.TextSize = 16.000
+Orbit.OrangeLabel.TextWrapped = true
+Orbit.OrangeLabel.TextXAlignment = Enum.TextXAlignment.Left
+
+Orbit.UIPadding_53.Parent = Orbit.OrangeLabel
+Orbit.UIPadding_53.PaddingBottom = UDim.new(0.340000004, 0)
+Orbit.UIPadding_53.PaddingTop = UDim.new(0.340000004, 0)
+
+Orbit.UIAspectRatioConstraint_56.Parent = Orbit.OrangeLabel
+Orbit.UIAspectRatioConstraint_56.AspectRatio = 6.740
+
+Orbit.Yellow.Name = "Yellow"
+Orbit.Yellow.Parent = Orbit.ScrollingFrame_2
+Orbit.Yellow.BackgroundColor3 = Color3.fromRGB(251, 255, 0)
+Orbit.Yellow.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Orbit.Yellow.BorderSizePixel = 0
+Orbit.Yellow.Position = UDim2.new(0.741999984, 0, 0.101769909, 0)
+Orbit.Yellow.Size = UDim2.new(0.200000003, 0, 0.0442477874, 0)
+Orbit.Yellow.Font = Enum.Font.SourceSansBold
+Orbit.Yellow.Text = "Yellow"
+Orbit.Yellow.TextColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.Yellow.TextScaled = true
+Orbit.Yellow.TextSize = 20.000
+Orbit.Yellow.TextWrapped = true
+
+Orbit.UICorner_8.CornerRadius = UDim.new(0.600000024, 0)
+Orbit.UICorner_8.Parent = Orbit.Yellow
+
+Orbit.UIPadding_54.Parent = Orbit.Yellow
+Orbit.UIPadding_54.PaddingBottom = UDim.new(0.300000012, 0)
+Orbit.UIPadding_54.PaddingTop = UDim.new(0.300000012, 0)
+
+Orbit.UIAspectRatioConstraint_57.Parent = Orbit.Yellow
+Orbit.UIAspectRatioConstraint_57.AspectRatio = 2.000
+
+Orbit.YellowLabel.Name = "YellowLabel"
+Orbit.YellowLabel.Parent = Orbit.ScrollingFrame_2
+Orbit.YellowLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.YellowLabel.BackgroundTransparency = 1.000
+Orbit.YellowLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Orbit.YellowLabel.BorderSizePixel = 0
+Orbit.YellowLabel.Position = UDim2.new(0.0340000018, 0, 0.101769909, 0)
+Orbit.YellowLabel.Size = UDim2.new(0.674000025, 0, 0.0442477874, 0)
+Orbit.YellowLabel.Font = Enum.Font.SourceSansBold
+Orbit.YellowLabel.Text = "Press the button infront to change the colour to yellow."
+Orbit.YellowLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.YellowLabel.TextScaled = true
+Orbit.YellowLabel.TextSize = 16.000
+Orbit.YellowLabel.TextWrapped = true
+Orbit.YellowLabel.TextXAlignment = Enum.TextXAlignment.Left
+
+Orbit.UIPadding_55.Parent = Orbit.YellowLabel
+Orbit.UIPadding_55.PaddingBottom = UDim.new(0.340000004, 0)
+Orbit.UIPadding_55.PaddingTop = UDim.new(0.340000004, 0)
+
+Orbit.UIAspectRatioConstraint_58.Parent = Orbit.YellowLabel
+Orbit.UIAspectRatioConstraint_58.AspectRatio = 6.740
+
+Orbit.Green.Name = "Green"
+Orbit.Green.Parent = Orbit.ScrollingFrame_2
+Orbit.Green.BackgroundColor3 = Color3.fromRGB(0, 170, 0)
+Orbit.Green.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Orbit.Green.BorderSizePixel = 0
+Orbit.Green.Position = UDim2.new(0.741999984, 0, 0.154867262, 0)
+Orbit.Green.Size = UDim2.new(0.200000003, 0, 0.0442477874, 0)
+Orbit.Green.Font = Enum.Font.SourceSansBold
+Orbit.Green.Text = "Green"
+Orbit.Green.TextColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.Green.TextScaled = true
+Orbit.Green.TextSize = 20.000
+Orbit.Green.TextWrapped = true
+
+Orbit.UICorner_9.CornerRadius = UDim.new(0.600000024, 0)
+Orbit.UICorner_9.Parent = Orbit.Green
+
+Orbit.UIPadding_56.Parent = Orbit.Green
+Orbit.UIPadding_56.PaddingBottom = UDim.new(0.300000012, 0)
+Orbit.UIPadding_56.PaddingTop = UDim.new(0.300000012, 0)
+
+Orbit.UIAspectRatioConstraint_59.Parent = Orbit.Green
+Orbit.UIAspectRatioConstraint_59.AspectRatio = 2.000
+
+Orbit.GreenLabel.Name = "GreenLabel"
+Orbit.GreenLabel.Parent = Orbit.ScrollingFrame_2
+Orbit.GreenLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.GreenLabel.BackgroundTransparency = 1.000
+Orbit.GreenLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Orbit.GreenLabel.BorderSizePixel = 0
+Orbit.GreenLabel.Position = UDim2.new(0.0340000018, 0, 0.154867262, 0)
+Orbit.GreenLabel.Size = UDim2.new(0.674000025, 0, 0.0442477874, 0)
+Orbit.GreenLabel.Font = Enum.Font.SourceSansBold
+Orbit.GreenLabel.Text = "Press the button infront to change the colour to green."
+Orbit.GreenLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.GreenLabel.TextScaled = true
+Orbit.GreenLabel.TextSize = 16.000
+Orbit.GreenLabel.TextWrapped = true
+Orbit.GreenLabel.TextXAlignment = Enum.TextXAlignment.Left
+
+Orbit.UIPadding_57.Parent = Orbit.GreenLabel
+Orbit.UIPadding_57.PaddingBottom = UDim.new(0.340000004, 0)
+Orbit.UIPadding_57.PaddingTop = UDim.new(0.340000004, 0)
+
+Orbit.UIAspectRatioConstraint_60.Parent = Orbit.GreenLabel
+Orbit.UIAspectRatioConstraint_60.AspectRatio = 6.740
+
+Orbit.Blue.Name = "Blue"
+Orbit.Blue.Parent = Orbit.ScrollingFrame_2
+Orbit.Blue.BackgroundColor3 = Color3.fromRGB(0, 0, 255)
+Orbit.Blue.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Orbit.Blue.BorderSizePixel = 0
+Orbit.Blue.Position = UDim2.new(0.741999984, 0, 0.206194684, 0)
+Orbit.Blue.Size = UDim2.new(0.200000003, 0, 0.0442477874, 0)
+Orbit.Blue.Font = Enum.Font.SourceSansBold
+Orbit.Blue.Text = "Blue"
+Orbit.Blue.TextColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.Blue.TextScaled = true
+Orbit.Blue.TextSize = 20.000
+Orbit.Blue.TextWrapped = true
+
+Orbit.UICorner_10.CornerRadius = UDim.new(0.600000024, 0)
+Orbit.UICorner_10.Parent = Orbit.Blue
+
+Orbit.UIPadding_58.Parent = Orbit.Blue
+Orbit.UIPadding_58.PaddingBottom = UDim.new(0.300000012, 0)
+Orbit.UIPadding_58.PaddingTop = UDim.new(0.300000012, 0)
+
+Orbit.UIAspectRatioConstraint_61.Parent = Orbit.Blue
+Orbit.UIAspectRatioConstraint_61.AspectRatio = 2.000
+
+Orbit.BlueLabel.Name = "BlueLabel"
+Orbit.BlueLabel.Parent = Orbit.ScrollingFrame_2
+Orbit.BlueLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.BlueLabel.BackgroundTransparency = 1.000
+Orbit.BlueLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Orbit.BlueLabel.BorderSizePixel = 0
+Orbit.BlueLabel.Position = UDim2.new(0.0340000018, 0, 0.206194684, 0)
+Orbit.BlueLabel.Size = UDim2.new(0.674000025, 0, 0.0442477874, 0)
+Orbit.BlueLabel.Font = Enum.Font.SourceSansBold
+Orbit.BlueLabel.Text = "Press the button infront to change the colour to blue."
+Orbit.BlueLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.BlueLabel.TextScaled = true
+Orbit.BlueLabel.TextSize = 16.000
+Orbit.BlueLabel.TextWrapped = true
+Orbit.BlueLabel.TextXAlignment = Enum.TextXAlignment.Left
+
+Orbit.UIPadding_59.Parent = Orbit.BlueLabel
+Orbit.UIPadding_59.PaddingBottom = UDim.new(0.340000004, 0)
+Orbit.UIPadding_59.PaddingTop = UDim.new(0.340000004, 0)
+
+Orbit.UIAspectRatioConstraint_62.Parent = Orbit.BlueLabel
+Orbit.UIAspectRatioConstraint_62.AspectRatio = 6.740
+
+Orbit.PurpleLabel.Name = "PurpleLabel"
+Orbit.PurpleLabel.Parent = Orbit.ScrollingFrame_2
+Orbit.PurpleLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.PurpleLabel.BackgroundTransparency = 1.000
+Orbit.PurpleLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Orbit.PurpleLabel.BorderSizePixel = 0
+Orbit.PurpleLabel.Position = UDim2.new(0.0340000018, 0, 0.257522136, 0)
+Orbit.PurpleLabel.Size = UDim2.new(0.674000025, 0, 0.0442477874, 0)
+Orbit.PurpleLabel.Font = Enum.Font.SourceSansBold
+Orbit.PurpleLabel.Text = "Press the button infront to change the colour to purple."
+Orbit.PurpleLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.PurpleLabel.TextScaled = true
+Orbit.PurpleLabel.TextSize = 16.000
+Orbit.PurpleLabel.TextWrapped = true
+Orbit.PurpleLabel.TextXAlignment = Enum.TextXAlignment.Left
+
+Orbit.UIPadding_60.Parent = Orbit.PurpleLabel
+Orbit.UIPadding_60.PaddingBottom = UDim.new(0.340000004, 0)
+Orbit.UIPadding_60.PaddingTop = UDim.new(0.340000004, 0)
+
+Orbit.UIAspectRatioConstraint_63.Parent = Orbit.PurpleLabel
+Orbit.UIAspectRatioConstraint_63.AspectRatio = 6.740
+
+Orbit.Purple.Name = "Purple"
+Orbit.Purple.Parent = Orbit.ScrollingFrame_2
+Orbit.Purple.BackgroundColor3 = Color3.fromRGB(170, 0, 255)
+Orbit.Purple.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Orbit.Purple.BorderSizePixel = 0
+Orbit.Purple.Position = UDim2.new(0.741999984, 0, 0.257522136, 0)
+Orbit.Purple.Size = UDim2.new(0.200000003, 0, 0.0442477874, 0)
+Orbit.Purple.Font = Enum.Font.SourceSansBold
+Orbit.Purple.Text = "Purple"
+Orbit.Purple.TextColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.Purple.TextScaled = true
+Orbit.Purple.TextSize = 20.000
+Orbit.Purple.TextWrapped = true
+
+Orbit.UICorner_11.CornerRadius = UDim.new(0.600000024, 0)
+Orbit.UICorner_11.Parent = Orbit.Purple
+
+Orbit.UIPadding_61.Parent = Orbit.Purple
+Orbit.UIPadding_61.PaddingBottom = UDim.new(0.300000012, 0)
+Orbit.UIPadding_61.PaddingTop = UDim.new(0.300000012, 0)
+
+Orbit.UIAspectRatioConstraint_64.Parent = Orbit.Purple
+Orbit.UIAspectRatioConstraint_64.AspectRatio = 2.000
+
+Orbit.Pink.Name = "Pink"
+Orbit.Pink.Parent = Orbit.ScrollingFrame_2
+Orbit.Pink.BackgroundColor3 = Color3.fromRGB(255, 170, 255)
+Orbit.Pink.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Orbit.Pink.BorderSizePixel = 0
+Orbit.Pink.Position = UDim2.new(0.741999984, 0, 0.307079643, 0)
+Orbit.Pink.Size = UDim2.new(0.200000003, 0, 0.0442477874, 0)
+Orbit.Pink.Font = Enum.Font.SourceSansBold
+Orbit.Pink.Text = "Pink"
+Orbit.Pink.TextColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.Pink.TextScaled = true
+Orbit.Pink.TextSize = 20.000
+Orbit.Pink.TextWrapped = true
+
+Orbit.UICorner_12.CornerRadius = UDim.new(0.600000024, 0)
+Orbit.UICorner_12.Parent = Orbit.Pink
+
+Orbit.UIPadding_62.Parent = Orbit.Pink
+Orbit.UIPadding_62.PaddingBottom = UDim.new(0.300000012, 0)
+Orbit.UIPadding_62.PaddingTop = UDim.new(0.300000012, 0)
+
+Orbit.UIAspectRatioConstraint_65.Parent = Orbit.Pink
+Orbit.UIAspectRatioConstraint_65.AspectRatio = 2.000
+
+Orbit.PinkLabel.Name = "PinkLabel"
+Orbit.PinkLabel.Parent = Orbit.ScrollingFrame_2
+Orbit.PinkLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.PinkLabel.BackgroundTransparency = 1.000
+Orbit.PinkLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Orbit.PinkLabel.BorderSizePixel = 0
+Orbit.PinkLabel.Position = UDim2.new(0.0340000018, 0, 0.307079643, 0)
+Orbit.PinkLabel.Size = UDim2.new(0.674000025, 0, 0.0442477874, 0)
+Orbit.PinkLabel.Font = Enum.Font.SourceSansBold
+Orbit.PinkLabel.Text = "Press the button infront to change the colour to pink."
+Orbit.PinkLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.PinkLabel.TextScaled = true
+Orbit.PinkLabel.TextSize = 16.000
+Orbit.PinkLabel.TextWrapped = true
+Orbit.PinkLabel.TextXAlignment = Enum.TextXAlignment.Left
+
+Orbit.UIPadding_63.Parent = Orbit.PinkLabel
+Orbit.UIPadding_63.PaddingBottom = UDim.new(0.340000004, 0)
+Orbit.UIPadding_63.PaddingTop = UDim.new(0.340000004, 0)
+
+Orbit.UIAspectRatioConstraint_66.Parent = Orbit.PinkLabel
+Orbit.UIAspectRatioConstraint_66.AspectRatio = 6.740
+
+Orbit.GreyLabel.Name = "GreyLabel"
+Orbit.GreyLabel.Parent = Orbit.ScrollingFrame_2
+Orbit.GreyLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.GreyLabel.BackgroundTransparency = 1.000
+Orbit.GreyLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Orbit.GreyLabel.BorderSizePixel = 0
+Orbit.GreyLabel.Position = UDim2.new(0.0340000018, 0, 0.35929203, 0)
+Orbit.GreyLabel.Size = UDim2.new(0.674000025, 0, 0.0442477874, 0)
+Orbit.GreyLabel.Font = Enum.Font.SourceSansBold
+Orbit.GreyLabel.Text = "Press the button infront to change the colour to grey."
+Orbit.GreyLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.GreyLabel.TextScaled = true
+Orbit.GreyLabel.TextSize = 16.000
+Orbit.GreyLabel.TextWrapped = true
+Orbit.GreyLabel.TextXAlignment = Enum.TextXAlignment.Left
+
+Orbit.UIPadding_64.Parent = Orbit.GreyLabel
+Orbit.UIPadding_64.PaddingBottom = UDim.new(0.340000004, 0)
+Orbit.UIPadding_64.PaddingTop = UDim.new(0.340000004, 0)
+
+Orbit.UIAspectRatioConstraint_67.Parent = Orbit.GreyLabel
+Orbit.UIAspectRatioConstraint_67.AspectRatio = 6.740
+
+Orbit.Grey.Name = "Grey"
+Orbit.Grey.Parent = Orbit.ScrollingFrame_2
+Orbit.Grey.BackgroundColor3 = Color3.fromRGB(76, 76, 76)
+Orbit.Grey.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Orbit.Grey.BorderSizePixel = 0
+Orbit.Grey.Position = UDim2.new(0.741999984, 0, 0.35929203, 0)
+Orbit.Grey.Size = UDim2.new(0.200000003, 0, 0.0442477874, 0)
+Orbit.Grey.Font = Enum.Font.SourceSansBold
+Orbit.Grey.Text = "Grey"
+Orbit.Grey.TextColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.Grey.TextScaled = true
+Orbit.Grey.TextSize = 20.000
+Orbit.Grey.TextWrapped = true
+
+Orbit.UICorner_13.CornerRadius = UDim.new(0.600000024, 0)
+Orbit.UICorner_13.Parent = Orbit.Grey
+
+Orbit.UIPadding_65.Parent = Orbit.Grey
+Orbit.UIPadding_65.PaddingBottom = UDim.new(0.300000012, 0)
+Orbit.UIPadding_65.PaddingTop = UDim.new(0.300000012, 0)
+
+Orbit.UIAspectRatioConstraint_68.Parent = Orbit.Grey
+Orbit.UIAspectRatioConstraint_68.AspectRatio = 2.000
+
+Orbit.BlackLabel.Name = "BlackLabel"
+Orbit.BlackLabel.Parent = Orbit.ScrollingFrame_2
+Orbit.BlackLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.BlackLabel.BackgroundTransparency = 1.000
+Orbit.BlackLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Orbit.BlackLabel.BorderSizePixel = 0
+Orbit.BlackLabel.Position = UDim2.new(0.0340000018, 0, 0.412389368, 0)
+Orbit.BlackLabel.Size = UDim2.new(0.674000025, 0, 0.0442477874, 0)
+Orbit.BlackLabel.Font = Enum.Font.SourceSansBold
+Orbit.BlackLabel.Text = "Press the button infront to change the colour to black."
+Orbit.BlackLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.BlackLabel.TextScaled = true
+Orbit.BlackLabel.TextSize = 16.000
+Orbit.BlackLabel.TextWrapped = true
+Orbit.BlackLabel.TextXAlignment = Enum.TextXAlignment.Left
+
+Orbit.UIPadding_66.Parent = Orbit.BlackLabel
+Orbit.UIPadding_66.PaddingBottom = UDim.new(0.340000004, 0)
+Orbit.UIPadding_66.PaddingTop = UDim.new(0.340000004, 0)
+
+Orbit.UIAspectRatioConstraint_69.Parent = Orbit.BlackLabel
+Orbit.UIAspectRatioConstraint_69.AspectRatio = 6.740
+
+Orbit.Black.Name = "Black"
+Orbit.Black.Parent = Orbit.ScrollingFrame_2
+Orbit.Black.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+Orbit.Black.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Orbit.Black.BorderSizePixel = 0
+Orbit.Black.Position = UDim2.new(0.741999984, 0, 0.412389368, 0)
+Orbit.Black.Size = UDim2.new(0.200000003, 0, 0.0442477874, 0)
+Orbit.Black.Font = Enum.Font.SourceSansBold
+Orbit.Black.Text = "Black"
+Orbit.Black.TextColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.Black.TextScaled = true
+Orbit.Black.TextSize = 20.000
+Orbit.Black.TextWrapped = true
+
+Orbit.UICorner_14.CornerRadius = UDim.new(0.600000024, 0)
+Orbit.UICorner_14.Parent = Orbit.Black
+
+Orbit.UIPadding_67.Parent = Orbit.Black
+Orbit.UIPadding_67.PaddingBottom = UDim.new(0.300000012, 0)
+Orbit.UIPadding_67.PaddingTop = UDim.new(0.300000012, 0)
+
+Orbit.UIAspectRatioConstraint_70.Parent = Orbit.Black
+Orbit.UIAspectRatioConstraint_70.AspectRatio = 2.000
+
+Orbit.WhiteLabel.Name = "WhiteLabel"
+Orbit.WhiteLabel.Parent = Orbit.ScrollingFrame_2
+Orbit.WhiteLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.WhiteLabel.BackgroundTransparency = 1.000
+Orbit.WhiteLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Orbit.WhiteLabel.BorderSizePixel = 0
+Orbit.WhiteLabel.Position = UDim2.new(0.0340000018, 0, 0.466371685, 0)
+Orbit.WhiteLabel.Size = UDim2.new(0.674000025, 0, 0.0442477874, 0)
+Orbit.WhiteLabel.Font = Enum.Font.SourceSansBold
+Orbit.WhiteLabel.Text = "Press the button infront to change the colour to white."
+Orbit.WhiteLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.WhiteLabel.TextScaled = true
+Orbit.WhiteLabel.TextSize = 16.000
+Orbit.WhiteLabel.TextWrapped = true
+Orbit.WhiteLabel.TextXAlignment = Enum.TextXAlignment.Left
+
+Orbit.UIPadding_68.Parent = Orbit.WhiteLabel
+Orbit.UIPadding_68.PaddingBottom = UDim.new(0.340000004, 0)
+Orbit.UIPadding_68.PaddingTop = UDim.new(0.340000004, 0)
+
+Orbit.UIAspectRatioConstraint_71.Parent = Orbit.WhiteLabel
+Orbit.UIAspectRatioConstraint_71.AspectRatio = 6.740
+
+Orbit.White.Name = "White"
+Orbit.White.Parent = Orbit.ScrollingFrame_2
+Orbit.White.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.White.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Orbit.White.BorderSizePixel = 0
+Orbit.White.Position = UDim2.new(0.741999984, 0, 0.466371685, 0)
+Orbit.White.Size = UDim2.new(0.200000003, 0, 0.0442477874, 0)
+Orbit.White.Font = Enum.Font.SourceSansBold
+Orbit.White.Text = "White"
+Orbit.White.TextColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.White.TextScaled = true
+Orbit.White.TextSize = 20.000
+Orbit.White.TextWrapped = true
+
+Orbit.UICorner_15.CornerRadius = UDim.new(0.600000024, 0)
+Orbit.UICorner_15.Parent = Orbit.White
+
+Orbit.UIPadding_69.Parent = Orbit.White
+Orbit.UIPadding_69.PaddingBottom = UDim.new(0.300000012, 0)
+Orbit.UIPadding_69.PaddingTop = UDim.new(0.300000012, 0)
+
+Orbit.UIAspectRatioConstraint_72.Parent = Orbit.White
+Orbit.UIAspectRatioConstraint_72.AspectRatio = 2.000
+
+Orbit.LightBlue.Name = "LightBlue"
+Orbit.LightBlue.Parent = Orbit.ScrollingFrame_2
+Orbit.LightBlue.BackgroundColor3 = Color3.fromRGB(85, 255, 255)
+Orbit.LightBlue.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Orbit.LightBlue.BorderSizePixel = 0
+Orbit.LightBlue.Position = UDim2.new(0.741999984, 0, 0.517699122, 0)
+Orbit.LightBlue.Size = UDim2.new(0.200000003, 0, 0.0442477874, 0)
+Orbit.LightBlue.Font = Enum.Font.SourceSansBold
+Orbit.LightBlue.Text = "Light blue"
+Orbit.LightBlue.TextColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.LightBlue.TextScaled = true
+Orbit.LightBlue.TextSize = 20.000
+Orbit.LightBlue.TextWrapped = true
+
+Orbit.UICorner_16.CornerRadius = UDim.new(0.600000024, 0)
+Orbit.UICorner_16.Parent = Orbit.LightBlue
+
+Orbit.UIPadding_70.Parent = Orbit.LightBlue
+Orbit.UIPadding_70.PaddingBottom = UDim.new(0.300000012, 0)
+Orbit.UIPadding_70.PaddingTop = UDim.new(0.300000012, 0)
+
+Orbit.UIAspectRatioConstraint_73.Parent = Orbit.LightBlue
+Orbit.UIAspectRatioConstraint_73.AspectRatio = 2.000
+
+Orbit.LightBlueLabel.Name = "LightBlueLabel"
+Orbit.LightBlueLabel.Parent = Orbit.ScrollingFrame_2
+Orbit.LightBlueLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.LightBlueLabel.BackgroundTransparency = 1.000
+Orbit.LightBlueLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Orbit.LightBlueLabel.BorderSizePixel = 0
+Orbit.LightBlueLabel.Position = UDim2.new(0.0340000018, 0, 0.517699122, 0)
+Orbit.LightBlueLabel.Size = UDim2.new(0.674000025, 0, 0.0442477874, 0)
+Orbit.LightBlueLabel.Font = Enum.Font.SourceSansBold
+Orbit.LightBlueLabel.Text = "Press the button infront to change the colour to LB."
+Orbit.LightBlueLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.LightBlueLabel.TextScaled = true
+Orbit.LightBlueLabel.TextSize = 16.000
+Orbit.LightBlueLabel.TextWrapped = true
+Orbit.LightBlueLabel.TextXAlignment = Enum.TextXAlignment.Left
+
+Orbit.UIPadding_71.Parent = Orbit.LightBlueLabel
+Orbit.UIPadding_71.PaddingBottom = UDim.new(0.340000004, 0)
+Orbit.UIPadding_71.PaddingTop = UDim.new(0.340000004, 0)
+
+Orbit.UIAspectRatioConstraint_74.Parent = Orbit.LightBlueLabel
+Orbit.UIAspectRatioConstraint_74.AspectRatio = 6.740
+
+Orbit.DarkPinkLabel.Name = "DarkPinkLabel"
+Orbit.DarkPinkLabel.Parent = Orbit.ScrollingFrame_2
+Orbit.DarkPinkLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.DarkPinkLabel.BackgroundTransparency = 1.000
+Orbit.DarkPinkLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Orbit.DarkPinkLabel.BorderSizePixel = 0
+Orbit.DarkPinkLabel.Position = UDim2.new(0.0340000018, 0, 0.57079649, 0)
+Orbit.DarkPinkLabel.Size = UDim2.new(0.674000025, 0, 0.0442477874, 0)
+Orbit.DarkPinkLabel.Font = Enum.Font.SourceSansBold
+Orbit.DarkPinkLabel.Text = "Press the button infront to change the colour to DP."
+Orbit.DarkPinkLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.DarkPinkLabel.TextScaled = true
+Orbit.DarkPinkLabel.TextSize = 16.000
+Orbit.DarkPinkLabel.TextWrapped = true
+Orbit.DarkPinkLabel.TextXAlignment = Enum.TextXAlignment.Left
+
+Orbit.UIPadding_72.Parent = Orbit.DarkPinkLabel
+Orbit.UIPadding_72.PaddingBottom = UDim.new(0.340000004, 0)
+Orbit.UIPadding_72.PaddingTop = UDim.new(0.340000004, 0)
+
+Orbit.UIAspectRatioConstraint_75.Parent = Orbit.DarkPinkLabel
+Orbit.UIAspectRatioConstraint_75.AspectRatio = 6.740
+
+Orbit.DarkPink.Name = "DarkPink"
+Orbit.DarkPink.Parent = Orbit.ScrollingFrame_2
+Orbit.DarkPink.BackgroundColor3 = Color3.fromRGB(255, 0, 255)
+Orbit.DarkPink.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Orbit.DarkPink.BorderSizePixel = 0
+Orbit.DarkPink.Position = UDim2.new(0.741999984, 0, 0.57079649, 0)
+Orbit.DarkPink.Size = UDim2.new(0.200000003, 0, 0.0442477874, 0)
+Orbit.DarkPink.Font = Enum.Font.SourceSansBold
+Orbit.DarkPink.Text = "Dark pink"
+Orbit.DarkPink.TextColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.DarkPink.TextScaled = true
+Orbit.DarkPink.TextSize = 20.000
+Orbit.DarkPink.TextWrapped = true
+
+Orbit.UICorner_17.CornerRadius = UDim.new(0.600000024, 0)
+Orbit.UICorner_17.Parent = Orbit.DarkPink
+
+Orbit.UIPadding_73.Parent = Orbit.DarkPink
+Orbit.UIPadding_73.PaddingBottom = UDim.new(0.300000012, 0)
+Orbit.UIPadding_73.PaddingTop = UDim.new(0.300000012, 0)
+
+Orbit.UIAspectRatioConstraint_76.Parent = Orbit.DarkPink
+Orbit.UIAspectRatioConstraint_76.AspectRatio = 2.000
+
+Orbit.MintLabel.Name = "MintLabel"
+Orbit.MintLabel.Parent = Orbit.ScrollingFrame_2
+Orbit.MintLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.MintLabel.BackgroundTransparency = 1.000
+Orbit.MintLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Orbit.MintLabel.BorderSizePixel = 0
+Orbit.MintLabel.Position = UDim2.new(0.0340000018, 0, 0.624778807, 0)
+Orbit.MintLabel.Size = UDim2.new(0.674000025, 0, 0.0442477874, 0)
+Orbit.MintLabel.Font = Enum.Font.SourceSansBold
+Orbit.MintLabel.Text = "Press the button infront to change the colour to mint."
+Orbit.MintLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.MintLabel.TextScaled = true
+Orbit.MintLabel.TextSize = 16.000
+Orbit.MintLabel.TextWrapped = true
+Orbit.MintLabel.TextXAlignment = Enum.TextXAlignment.Left
+
+Orbit.UIPadding_74.Parent = Orbit.MintLabel
+Orbit.UIPadding_74.PaddingBottom = UDim.new(0.340000004, 0)
+Orbit.UIPadding_74.PaddingTop = UDim.new(0.340000004, 0)
+
+Orbit.UIAspectRatioConstraint_77.Parent = Orbit.MintLabel
+Orbit.UIAspectRatioConstraint_77.AspectRatio = 6.740
+
+Orbit.Mint.Name = "Mint"
+Orbit.Mint.Parent = Orbit.ScrollingFrame_2
+Orbit.Mint.BackgroundColor3 = Color3.fromRGB(143, 255, 169)
+Orbit.Mint.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Orbit.Mint.BorderSizePixel = 0
+Orbit.Mint.Position = UDim2.new(0.741999984, 0, 0.624778807, 0)
+Orbit.Mint.Size = UDim2.new(0.200000003, 0, 0.0442477874, 0)
+Orbit.Mint.Font = Enum.Font.SourceSansBold
+Orbit.Mint.Text = "Mint"
+Orbit.Mint.TextColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.Mint.TextScaled = true
+Orbit.Mint.TextSize = 20.000
+Orbit.Mint.TextWrapped = true
+
+Orbit.UICorner_18.CornerRadius = UDim.new(0.600000024, 0)
+Orbit.UICorner_18.Parent = Orbit.Mint
+
+Orbit.UIPadding_75.Parent = Orbit.Mint
+Orbit.UIPadding_75.PaddingBottom = UDim.new(0.300000012, 0)
+Orbit.UIPadding_75.PaddingTop = UDim.new(0.300000012, 0)
+
+Orbit.UIAspectRatioConstraint_78.Parent = Orbit.Mint
+Orbit.UIAspectRatioConstraint_78.AspectRatio = 2.000
+
+Orbit.MintLabel_2.Name = "MintLabel"
+Orbit.MintLabel_2.Parent = Orbit.ScrollingFrame_2
+Orbit.MintLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.MintLabel_2.BackgroundTransparency = 1.000
+Orbit.MintLabel_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Orbit.MintLabel_2.BorderSizePixel = 0
+Orbit.MintLabel_2.Position = UDim2.new(0.0340000018, 0, 0.676991224, 0)
+Orbit.MintLabel_2.Size = UDim2.new(0.674000025, 0, 0.0442477874, 0)
+Orbit.MintLabel_2.Font = Enum.Font.SourceSansBold
+Orbit.MintLabel_2.Text = "Press the button infront to change the colour back."
+Orbit.MintLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.MintLabel_2.TextScaled = true
+Orbit.MintLabel_2.TextSize = 16.000
+Orbit.MintLabel_2.TextWrapped = true
+Orbit.MintLabel_2.TextXAlignment = Enum.TextXAlignment.Left
+
+Orbit.UIPadding_76.Parent = Orbit.MintLabel_2
+Orbit.UIPadding_76.PaddingBottom = UDim.new(0.340000004, 0)
+Orbit.UIPadding_76.PaddingTop = UDim.new(0.340000004, 0)
+
+Orbit.UIAspectRatioConstraint_79.Parent = Orbit.MintLabel_2
+Orbit.UIAspectRatioConstraint_79.AspectRatio = 6.740
+
+Orbit.Norbit.Name = "Norbit"
+Orbit.Norbit.Parent = Orbit.ScrollingFrame_2
+Orbit.Norbit.BackgroundColor3 = Color3.fromRGB(19, 19, 19)
+Orbit.Norbit.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Orbit.Norbit.BorderSizePixel = 0
+Orbit.Norbit.Position = UDim2.new(0.741999984, 0, 0.676991224, 0)
+Orbit.Norbit.Size = UDim2.new(0.200000003, 0, 0.0442477874, 0)
+Orbit.Norbit.Font = Enum.Font.SourceSansBold
+Orbit.Norbit.Text = "Normal"
+Orbit.Norbit.TextColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.Norbit.TextScaled = true
+Orbit.Norbit.TextSize = 20.000
+Orbit.Norbit.TextWrapped = true
+
+Orbit.UICorner_19.CornerRadius = UDim.new(0.600000024, 0)
+Orbit.UICorner_19.Parent = Orbit.Norbit
+
+Orbit.UIPadding_77.Parent = Orbit.Norbit
+Orbit.UIPadding_77.PaddingBottom = UDim.new(0.300000012, 0)
+Orbit.UIPadding_77.PaddingTop = UDim.new(0.300000012, 0)
+
+Orbit.UIAspectRatioConstraint_80.Parent = Orbit.Norbit
+Orbit.UIAspectRatioConstraint_80.AspectRatio = 2.000
+
+Orbit.UIAspectRatioConstraint_81.Parent = Orbit.ScrollingFrame_2
+Orbit.UIAspectRatioConstraint_81.AspectRatio = 2.825
+
+Orbit.UIAspectRatioConstraint_82.Parent = Orbit.ThemesFrame
+Orbit.UIAspectRatioConstraint_82.AspectRatio = 2.212
+
+Orbit.ProfilePictureImageLabel.Name = "ProfilePictureImageLabel"
+Orbit.ProfilePictureImageLabel.Parent = Orbit.MainFrame
+Orbit.ProfilePictureImageLabel.BackgroundColor3 = Color3.fromRGB(12, 12, 12)
+Orbit.ProfilePictureImageLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Orbit.ProfilePictureImageLabel.BorderSizePixel = 0
+Orbit.ProfilePictureImageLabel.Position = UDim2.new(0.0240000002, 0, 0.134358719, 0)
+Orbit.ProfilePictureImageLabel.Size = UDim2.new(0.109999999, 0, 0.733333349, 0)
+Orbit.ProfilePictureImageLabel.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
+
+Orbit.UICorner_20.CornerRadius = UDim.new(1, 0)
+Orbit.UICorner_20.Parent = Orbit.ProfilePictureImageLabel
+
+Orbit.UIAspectRatioConstraint_83.Parent = Orbit.ProfilePictureImageLabel
+
+Orbit.Decoration2Label.Name = "Decoration2Label"
+Orbit.Decoration2Label.Parent = Orbit.MainFrame
+Orbit.Decoration2Label.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.Decoration2Label.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Orbit.Decoration2Label.BorderSizePixel = 0
+Orbit.Decoration2Label.Position = UDim2.new(0.838, 0, 0.132999673, 0)
+Orbit.Decoration2Label.Size = UDim2.new(0.00200000009, 0, 0.733333349, 0)
+Orbit.Decoration2Label.Font = Enum.Font.SourceSans
+Orbit.Decoration2Label.Text = ""
+Orbit.Decoration2Label.TextColor3 = Color3.fromRGB(0, 0, 0)
+Orbit.Decoration2Label.TextSize = 14.000
+
+Orbit.UIAspectRatioConstraint_84.Parent = Orbit.Decoration2Label
+Orbit.UIAspectRatioConstraint_84.AspectRatio = 0.018
+
+Orbit.CreditsFrame.Name = "CreditsFrame"
+Orbit.CreditsFrame.Parent = Orbit.MainFrame
+Orbit.CreditsFrame.BackgroundColor3 = Color3.fromRGB(19, 19, 19)
+Orbit.CreditsFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Orbit.CreditsFrame.BorderSizePixel = 0
+Orbit.CreditsFrame.Position = UDim2.new(0, 0, -3.18666673, 0)
+Orbit.CreditsFrame.Size = UDim2.new(1, 0, 3.01333308, 0)
+Orbit.CreditsFrame.Visible = false
+
+Orbit.UICorner_21.CornerRadius = UDim.new(0.132743359, 0)
+Orbit.UICorner_21.Parent = Orbit.CreditsFrame
+
+Orbit.CreditsTitle.Name = "CreditsTitle"
+Orbit.CreditsTitle.Parent = Orbit.CreditsFrame
+Orbit.CreditsTitle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.CreditsTitle.BackgroundTransparency = 1.000
+Orbit.CreditsTitle.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Orbit.CreditsTitle.BorderSizePixel = 0
+Orbit.CreditsTitle.Position = UDim2.new(0.0460000001, 0, 0.03539823, 0)
+Orbit.CreditsTitle.Size = UDim2.new(0.351999998, 0, 0.137168139, 0)
+Orbit.CreditsTitle.Font = Enum.Font.SourceSansBold
+Orbit.CreditsTitle.Text = "Credits"
+Orbit.CreditsTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.CreditsTitle.TextScaled = true
+Orbit.CreditsTitle.TextSize = 20.000
+Orbit.CreditsTitle.TextWrapped = true
+Orbit.CreditsTitle.TextXAlignment = Enum.TextXAlignment.Left
+
+Orbit.UIPadding_78.Parent = Orbit.CreditsTitle
+Orbit.UIPadding_78.PaddingBottom = UDim.new(0.17741935, 0)
+Orbit.UIPadding_78.PaddingTop = UDim.new(0.17741935, 0)
+
+Orbit.UIAspectRatioConstraint_85.Parent = Orbit.CreditsTitle
+Orbit.UIAspectRatioConstraint_85.AspectRatio = 5.677
+
+Orbit.CreditsClose.Name = "CreditsClose"
+Orbit.CreditsClose.Parent = Orbit.CreditsFrame
+Orbit.CreditsClose.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.CreditsClose.BackgroundTransparency = 1.000
+Orbit.CreditsClose.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Orbit.CreditsClose.BorderSizePixel = 0
+Orbit.CreditsClose.Position = UDim2.new(0.899999976, 0, -0.00884955749, 0)
+Orbit.CreditsClose.Size = UDim2.new(0.100000001, 0, 0.221238926, 0)
+Orbit.CreditsClose.Font = Enum.Font.SourceSansBold
+Orbit.CreditsClose.Text = "x"
+Orbit.CreditsClose.TextColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.CreditsClose.TextScaled = true
+Orbit.CreditsClose.TextSize = 30.000
+Orbit.CreditsClose.TextWrapped = true
+
+Orbit.UIPadding_79.Parent = Orbit.CreditsClose
+Orbit.UIPadding_79.PaddingBottom = UDim.new(0.200000003, 0)
+Orbit.UIPadding_79.PaddingTop = UDim.new(0.200000003, 0)
+
+Orbit.UIAspectRatioConstraint_86.Parent = Orbit.CreditsClose
+Orbit.UIAspectRatioConstraint_86.AspectRatio = 1.000
+
+Orbit.CreditsToKynexl.Name = "CreditsToKynexl"
+Orbit.CreditsToKynexl.Parent = Orbit.CreditsFrame
+Orbit.CreditsToKynexl.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.CreditsToKynexl.BackgroundTransparency = 1.000
+Orbit.CreditsToKynexl.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Orbit.CreditsToKynexl.BorderSizePixel = 0
+Orbit.CreditsToKynexl.Position = UDim2.new(0.0219999999, 0, 0.340707958, 0)
+Orbit.CreditsToKynexl.Size = UDim2.new(0.815999985, 0, 0.123893805, 0)
+Orbit.CreditsToKynexl.Font = Enum.Font.SourceSansBold
+Orbit.CreditsToKynexl.Text = "Credits to Kynexl who has been scripting and making the UI."
+Orbit.CreditsToKynexl.TextColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.CreditsToKynexl.TextScaled = true
+Orbit.CreditsToKynexl.TextSize = 16.000
+Orbit.CreditsToKynexl.TextWrapped = true
+Orbit.CreditsToKynexl.TextXAlignment = Enum.TextXAlignment.Left
+
+Orbit.UIPadding_80.Parent = Orbit.CreditsToKynexl
+Orbit.UIPadding_80.PaddingBottom = UDim.new(0.214285716, 0)
+Orbit.UIPadding_80.PaddingTop = UDim.new(0.214285716, 0)
+
+Orbit.UIAspectRatioConstraint_87.Parent = Orbit.CreditsToKynexl
+Orbit.UIAspectRatioConstraint_87.AspectRatio = 14.571
+
+Orbit.CreditsToKia.Name = "CreditsToKia"
+Orbit.CreditsToKia.Parent = Orbit.CreditsFrame
+Orbit.CreditsToKia.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.CreditsToKia.BackgroundTransparency = 1.000
+Orbit.CreditsToKia.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Orbit.CreditsToKia.BorderSizePixel = 0
+Orbit.CreditsToKia.Position = UDim2.new(0.0219999999, 0, 0.21238938, 0)
+Orbit.CreditsToKia.Size = UDim2.new(0.878000021, 0, 0.132743359, 0)
+Orbit.CreditsToKia.Font = Enum.Font.SourceSansBold
+Orbit.CreditsToKia.Text = "Credits to Kai who has gave out this UI idea and is the Founder of Orbit."
+Orbit.CreditsToKia.TextColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.CreditsToKia.TextScaled = true
+Orbit.CreditsToKia.TextSize = 16.000
+Orbit.CreditsToKia.TextWrapped = true
+Orbit.CreditsToKia.TextXAlignment = Enum.TextXAlignment.Left
+
+Orbit.UIPadding_81.Parent = Orbit.CreditsToKia
+Orbit.UIPadding_81.PaddingBottom = UDim.new(0.233333334, 0)
+Orbit.UIPadding_81.PaddingTop = UDim.new(0.233333334, 0)
+
+Orbit.UIAspectRatioConstraint_88.Parent = Orbit.CreditsToKia
+Orbit.UIAspectRatioConstraint_88.AspectRatio = 14.633
+
+Orbit.justsscriptsImageLabel.Name = "justsscriptsImageLabel"
+Orbit.justsscriptsImageLabel.Parent = Orbit.CreditsFrame
+Orbit.justsscriptsImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.justsscriptsImageLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Orbit.justsscriptsImageLabel.BorderSizePixel = 0
+Orbit.justsscriptsImageLabel.Position = UDim2.new(0.0240000002, 0, 0.707964599, 0)
+Orbit.justsscriptsImageLabel.Size = UDim2.new(0.109999999, 0, 0.243362814, 0)
+Orbit.justsscriptsImageLabel.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
+
+Orbit.UICorner_22.CornerRadius = UDim.new(1, 0)
+Orbit.UICorner_22.Parent = Orbit.justsscriptsImageLabel
+
+Orbit.UIAspectRatioConstraint_89.Parent = Orbit.justsscriptsImageLabel
+Orbit.UIAspectRatioConstraint_89.AspectRatio = 1.000
+
+Orbit.Sub2KaiXImageLabel.Name = " Sub2KaiXImageLabel"
+Orbit.Sub2KaiXImageLabel.Parent = Orbit.CreditsFrame
+Orbit.Sub2KaiXImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.Sub2KaiXImageLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Orbit.Sub2KaiXImageLabel.BorderSizePixel = 0
+Orbit.Sub2KaiXImageLabel.Position = UDim2.new(0.150000006, 0, 0.707964599, 0)
+Orbit.Sub2KaiXImageLabel.Size = UDim2.new(0.109999999, 0, 0.243362814, 0)
+Orbit.Sub2KaiXImageLabel.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
+
+Orbit.UICorner_23.CornerRadius = UDim.new(1, 0)
+Orbit.UICorner_23.Parent = Orbit.Sub2KaiXImageLabel
+
+Orbit.UIAspectRatioConstraint_90.Parent = Orbit.Sub2KaiXImageLabel
+Orbit.UIAspectRatioConstraint_90.AspectRatio = 1.000
+
+Orbit.J2Y50NImageLabel.Name = "J2Y50NImageLabel"
+Orbit.J2Y50NImageLabel.Parent = Orbit.CreditsFrame
+Orbit.J2Y50NImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.J2Y50NImageLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Orbit.J2Y50NImageLabel.BorderSizePixel = 0
+Orbit.J2Y50NImageLabel.Position = UDim2.new(0.275999993, 0, 0.707964599, 0)
+Orbit.J2Y50NImageLabel.Size = UDim2.new(0.109999999, 0, 0.243362814, 0)
+Orbit.J2Y50NImageLabel.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
+
+Orbit.UICorner_24.CornerRadius = UDim.new(1, 0)
+Orbit.UICorner_24.Parent = Orbit.J2Y50NImageLabel
+
+Orbit.UIAspectRatioConstraint_91.Parent = Orbit.J2Y50NImageLabel
+Orbit.UIAspectRatioConstraint_91.AspectRatio = 1.000
+
+Orbit.CreditsToJ2Y50N.Name = "CreditsToJ2Y50N"
+Orbit.CreditsToJ2Y50N.Parent = Orbit.CreditsFrame
+Orbit.CreditsToJ2Y50N.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.CreditsToJ2Y50N.BackgroundTransparency = 1.000
+Orbit.CreditsToJ2Y50N.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Orbit.CreditsToJ2Y50N.BorderSizePixel = 0
+Orbit.CreditsToJ2Y50N.Position = UDim2.new(0.0219999999, 0, 0.464601755, 0)
+Orbit.CreditsToJ2Y50N.Size = UDim2.new(0.878000021, 0, 0.132743359, 0)
+Orbit.CreditsToJ2Y50N.Font = Enum.Font.SourceSansBold
+Orbit.CreditsToJ2Y50N.Text = "Credits to J2Y50N who has helped scripting all the commands."
+Orbit.CreditsToJ2Y50N.TextColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.CreditsToJ2Y50N.TextScaled = true
+Orbit.CreditsToJ2Y50N.TextSize = 16.000
+Orbit.CreditsToJ2Y50N.TextWrapped = true
+Orbit.CreditsToJ2Y50N.TextXAlignment = Enum.TextXAlignment.Left
+
+Orbit.UIPadding_82.Parent = Orbit.CreditsToJ2Y50N
+Orbit.UIPadding_82.PaddingBottom = UDim.new(0.233333334, 0)
+Orbit.UIPadding_82.PaddingTop = UDim.new(0.233333334, 0)
+
+Orbit.UIAspectRatioConstraint_92.Parent = Orbit.CreditsToJ2Y50N
+Orbit.UIAspectRatioConstraint_92.AspectRatio = 14.633
+
+Orbit.UIAspectRatioConstraint_93.Parent = Orbit.CreditsFrame
+Orbit.UIAspectRatioConstraint_93.AspectRatio = 2.212
+
+Orbit.StopwatchFrame.Name = "StopwatchFrame"
+Orbit.StopwatchFrame.Parent = Orbit.MainFrame
+Orbit.StopwatchFrame.BackgroundColor3 = Color3.fromRGB(19, 19, 19)
+Orbit.StopwatchFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Orbit.StopwatchFrame.BorderSizePixel = 0
+Orbit.StopwatchFrame.Position = UDim2.new(0, 0, -3.18666673, 0)
+Orbit.StopwatchFrame.Size = UDim2.new(1, 0, 3.01333308, 0)
+Orbit.StopwatchFrame.Visible = false
+
+Orbit.UICorner_25.CornerRadius = UDim.new(0.132743359, 0)
+Orbit.UICorner_25.Parent = Orbit.StopwatchFrame
+
+Orbit.StopWatchTitle.Name = "StopWatchTitle"
+Orbit.StopWatchTitle.Parent = Orbit.StopwatchFrame
+Orbit.StopWatchTitle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.StopWatchTitle.BackgroundTransparency = 1.000
+Orbit.StopWatchTitle.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Orbit.StopWatchTitle.BorderSizePixel = 0
+Orbit.StopWatchTitle.Position = UDim2.new(0.0460000001, 0, 0.03539823, 0)
+Orbit.StopWatchTitle.Size = UDim2.new(0.351999998, 0, 0.137168139, 0)
+Orbit.StopWatchTitle.Font = Enum.Font.SourceSansBold
+Orbit.StopWatchTitle.Text = "Clock"
+Orbit.StopWatchTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.StopWatchTitle.TextScaled = true
+Orbit.StopWatchTitle.TextSize = 20.000
+Orbit.StopWatchTitle.TextWrapped = true
+Orbit.StopWatchTitle.TextXAlignment = Enum.TextXAlignment.Left
+
+Orbit.UIPadding_83.Parent = Orbit.StopWatchTitle
+Orbit.UIPadding_83.PaddingBottom = UDim.new(0.17741935, 0)
+Orbit.UIPadding_83.PaddingTop = UDim.new(0.17741935, 0)
+
+Orbit.UIAspectRatioConstraint_94.Parent = Orbit.StopWatchTitle
+Orbit.UIAspectRatioConstraint_94.AspectRatio = 5.677
+
+Orbit.StopWatchClose.Name = "StopWatchClose"
+Orbit.StopWatchClose.Parent = Orbit.StopwatchFrame
+Orbit.StopWatchClose.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.StopWatchClose.BackgroundTransparency = 1.000
+Orbit.StopWatchClose.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Orbit.StopWatchClose.BorderSizePixel = 0
+Orbit.StopWatchClose.Position = UDim2.new(0.899999976, 0, -0.00884955749, 0)
+Orbit.StopWatchClose.Size = UDim2.new(0.100000001, 0, 0.221238926, 0)
+Orbit.StopWatchClose.Font = Enum.Font.SourceSansBold
+Orbit.StopWatchClose.Text = "x"
+Orbit.StopWatchClose.TextColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.StopWatchClose.TextScaled = true
+Orbit.StopWatchClose.TextSize = 30.000
+Orbit.StopWatchClose.TextWrapped = true
+
+Orbit.UIPadding_84.Parent = Orbit.StopWatchClose
+Orbit.UIPadding_84.PaddingBottom = UDim.new(0.200000003, 0)
+Orbit.UIPadding_84.PaddingTop = UDim.new(0.200000003, 0)
+
+Orbit.UIAspectRatioConstraint_95.Parent = Orbit.StopWatchClose
+Orbit.UIAspectRatioConstraint_95.AspectRatio = 1.000
+
+Orbit.TimeLabel.Name = " TimeLabel"
+Orbit.TimeLabel.Parent = Orbit.StopwatchFrame
+Orbit.TimeLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.TimeLabel.BackgroundTransparency = 1.000
+Orbit.TimeLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Orbit.TimeLabel.BorderSizePixel = 0
+Orbit.TimeLabel.Position = UDim2.new(0.300000012, 0, 0.21238938, 0)
+Orbit.TimeLabel.Size = UDim2.new(0.400000006, 0, 0.221238926, 0)
+Orbit.TimeLabel.Font = Enum.Font.SourceSansBold
+Orbit.TimeLabel.Text = "00:00.00"
+Orbit.TimeLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.TimeLabel.TextScaled = true
+Orbit.TimeLabel.TextSize = 40.000
+Orbit.TimeLabel.TextWrapped = true
+
+Orbit.UIPadding_85.Parent = Orbit.TimeLabel
+Orbit.UIPadding_85.PaddingBottom = UDim.new(0.100000001, 0)
+Orbit.UIPadding_85.PaddingTop = UDim.new(0.100000001, 0)
+
+Orbit.UIAspectRatioConstraint_96.Parent = Orbit.TimeLabel
+Orbit.UIAspectRatioConstraint_96.AspectRatio = 4.000
+
+Orbit.Start.Name = "Start"
+Orbit.Start.Parent = Orbit.StopwatchFrame
+Orbit.Start.BackgroundColor3 = Color3.fromRGB(38, 38, 38)
+Orbit.Start.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Orbit.Start.BorderSizePixel = 0
+Orbit.Start.Position = UDim2.new(0.300000012, 0, 0.473451316, 0)
+Orbit.Start.Size = UDim2.new(0.400000006, 0, 0.123893805, 0)
+Orbit.Start.Font = Enum.Font.SourceSansBold
+Orbit.Start.Text = "Start"
+Orbit.Start.TextColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.Start.TextScaled = true
+Orbit.Start.TextSize = 20.000
+Orbit.Start.TextWrapped = true
+
+Orbit.UICorner_26.CornerRadius = UDim.new(1.07142854, 0)
+Orbit.UICorner_26.Parent = Orbit.Start
+
+Orbit.UIPadding_86.Parent = Orbit.Start
+Orbit.UIPadding_86.PaddingBottom = UDim.new(0.142857149, 0)
+Orbit.UIPadding_86.PaddingTop = UDim.new(0.142857149, 0)
+
+Orbit.UIAspectRatioConstraint_97.Parent = Orbit.Start
+Orbit.UIAspectRatioConstraint_97.AspectRatio = 7.143
+
+Orbit.Stop.Name = "Stop"
+Orbit.Stop.Parent = Orbit.StopwatchFrame
+Orbit.Stop.BackgroundColor3 = Color3.fromRGB(38, 38, 38)
+Orbit.Stop.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Orbit.Stop.BorderSizePixel = 0
+Orbit.Stop.Position = UDim2.new(0.300000012, 0, 0.628318608, 0)
+Orbit.Stop.Size = UDim2.new(0.400000006, 0, 0.123893805, 0)
+Orbit.Stop.Font = Enum.Font.SourceSansBold
+Orbit.Stop.Text = "Stop"
+Orbit.Stop.TextColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.Stop.TextScaled = true
+Orbit.Stop.TextSize = 20.000
+Orbit.Stop.TextWrapped = true
+
+Orbit.UICorner_27.CornerRadius = UDim.new(1.07142854, 0)
+Orbit.UICorner_27.Parent = Orbit.Stop
+
+Orbit.UIPadding_87.Parent = Orbit.Stop
+Orbit.UIPadding_87.PaddingBottom = UDim.new(0.142857149, 0)
+Orbit.UIPadding_87.PaddingTop = UDim.new(0.142857149, 0)
+
+Orbit.UIAspectRatioConstraint_98.Parent = Orbit.Stop
+Orbit.UIAspectRatioConstraint_98.AspectRatio = 7.143
+
+Orbit.Reset.Name = "Reset"
+Orbit.Reset.Parent = Orbit.StopwatchFrame
+Orbit.Reset.BackgroundColor3 = Color3.fromRGB(38, 38, 38)
+Orbit.Reset.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Orbit.Reset.BorderSizePixel = 0
+Orbit.Reset.Position = UDim2.new(0.300000012, 0, 0.778761089, 0)
+Orbit.Reset.Size = UDim2.new(0.400000006, 0, 0.123893805, 0)
+Orbit.Reset.Font = Enum.Font.SourceSansBold
+Orbit.Reset.Text = "Reset"
+Orbit.Reset.TextColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.Reset.TextScaled = true
+Orbit.Reset.TextSize = 20.000
+Orbit.Reset.TextWrapped = true
+
+Orbit.UICorner_28.CornerRadius = UDim.new(1.07142854, 0)
+Orbit.UICorner_28.Parent = Orbit.Reset
+
+Orbit.UIPadding_88.Parent = Orbit.Reset
+Orbit.UIPadding_88.PaddingBottom = UDim.new(0.142857149, 0)
+Orbit.UIPadding_88.PaddingTop = UDim.new(0.142857149, 0)
+
+Orbit.UIAspectRatioConstraint_99.Parent = Orbit.Reset
+Orbit.UIAspectRatioConstraint_99.AspectRatio = 7.143
+
+Orbit.UIAspectRatioConstraint_100.Parent = Orbit.StopwatchFrame
+Orbit.UIAspectRatioConstraint_100.AspectRatio = 2.212
+
+Orbit.BrightnessFrame.Name = "BrightnessFrame"
+Orbit.BrightnessFrame.Parent = Orbit.MainFrame
+Orbit.BrightnessFrame.BackgroundColor3 = Color3.fromRGB(19, 19, 19)
+Orbit.BrightnessFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Orbit.BrightnessFrame.BorderSizePixel = 0
+Orbit.BrightnessFrame.Position = UDim2.new(0, 0, -3.18666673, 0)
+Orbit.BrightnessFrame.Size = UDim2.new(1, 0, 3.01333308, 0)
+Orbit.BrightnessFrame.Visible = false
+
+Orbit.UICorner_29.CornerRadius = UDim.new(0.132743359, 0)
+Orbit.UICorner_29.Parent = Orbit.BrightnessFrame
+
+Orbit.BrightnessTitle.Name = "BrightnessTitle"
+Orbit.BrightnessTitle.Parent = Orbit.BrightnessFrame
+Orbit.BrightnessTitle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.BrightnessTitle.BackgroundTransparency = 1.000
+Orbit.BrightnessTitle.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Orbit.BrightnessTitle.BorderSizePixel = 0
+Orbit.BrightnessTitle.Position = UDim2.new(0.0460000001, 0, 0.03539823, 0)
+Orbit.BrightnessTitle.Size = UDim2.new(0.351999998, 0, 0.137168139, 0)
+Orbit.BrightnessTitle.Font = Enum.Font.SourceSansBold
+Orbit.BrightnessTitle.Text = "Brightness"
+Orbit.BrightnessTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.BrightnessTitle.TextScaled = true
+Orbit.BrightnessTitle.TextSize = 20.000
+Orbit.BrightnessTitle.TextWrapped = true
+Orbit.BrightnessTitle.TextXAlignment = Enum.TextXAlignment.Left
+
+Orbit.UIPadding_89.Parent = Orbit.BrightnessTitle
+Orbit.UIPadding_89.PaddingBottom = UDim.new(0.17741935, 0)
+Orbit.UIPadding_89.PaddingTop = UDim.new(0.17741935, 0)
+
+Orbit.UIAspectRatioConstraint_101.Parent = Orbit.BrightnessTitle
+Orbit.UIAspectRatioConstraint_101.AspectRatio = 5.677
+
+Orbit.BrightnessClose.Name = "BrightnessClose"
+Orbit.BrightnessClose.Parent = Orbit.BrightnessFrame
+Orbit.BrightnessClose.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.BrightnessClose.BackgroundTransparency = 1.000
+Orbit.BrightnessClose.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Orbit.BrightnessClose.BorderSizePixel = 0
+Orbit.BrightnessClose.Position = UDim2.new(0.899999976, 0, -0.00884955749, 0)
+Orbit.BrightnessClose.Size = UDim2.new(0.100000001, 0, 0.221238926, 0)
+Orbit.BrightnessClose.Font = Enum.Font.SourceSansBold
+Orbit.BrightnessClose.Text = "x"
+Orbit.BrightnessClose.TextColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.BrightnessClose.TextScaled = true
+Orbit.BrightnessClose.TextSize = 30.000
+Orbit.BrightnessClose.TextWrapped = true
+
+Orbit.UIPadding_90.Parent = Orbit.BrightnessClose
+Orbit.UIPadding_90.PaddingBottom = UDim.new(0.200000003, 0)
+Orbit.UIPadding_90.PaddingTop = UDim.new(0.200000003, 0)
+
+Orbit.UIAspectRatioConstraint_102.Parent = Orbit.BrightnessClose
+Orbit.UIAspectRatioConstraint_102.AspectRatio = 1.000
+
+Orbit.BrightnessBar.Name = "BrightnessBar"
+Orbit.BrightnessBar.Parent = Orbit.BrightnessFrame
+Orbit.BrightnessBar.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.BrightnessBar.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Orbit.BrightnessBar.BorderSizePixel = 0
+Orbit.BrightnessBar.Position = UDim2.new(0.0560000017, 0, 0.389380544, 0)
+Orbit.BrightnessBar.Size = UDim2.new(0.888000011, 0, 0.221238926, 0)
+
+Orbit.UICorner_30.CornerRadius = UDim.new(0.600000024, 0)
+Orbit.UICorner_30.Parent = Orbit.BrightnessBar
+
+Orbit.BrightnessKnob.Name = "BrightnessKnob"
+Orbit.BrightnessKnob.Parent = Orbit.BrightnessBar
+Orbit.BrightnessKnob.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.BrightnessKnob.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Orbit.BrightnessKnob.BorderSizePixel = 0
+Orbit.BrightnessKnob.Position = UDim2.new(0.887387395, 0, 0, 0)
+Orbit.BrightnessKnob.Size = UDim2.new(0.112612613, 0, 1, 0)
+Orbit.BrightnessKnob.Font = Enum.Font.SourceSans
+Orbit.BrightnessKnob.Text = ""
+Orbit.BrightnessKnob.TextColor3 = Color3.fromRGB(0, 0, 0)
+Orbit.BrightnessKnob.TextSize = 14.000
+
+Orbit.UICorner_31.CornerRadius = UDim.new(0.600000024, 0)
+Orbit.UICorner_31.Parent = Orbit.BrightnessKnob
+
+Orbit.UIAspectRatioConstraint_103.Parent = Orbit.BrightnessKnob
+Orbit.UIAspectRatioConstraint_103.AspectRatio = 1.000
+
+Orbit.BrightnessBar_2.Name = "BrightnessBar"
+Orbit.BrightnessBar_2.Parent = Orbit.BrightnessBar
+Orbit.BrightnessBar_2.BackgroundColor3 = Color3.fromRGB(76, 76, 76)
+Orbit.BrightnessBar_2.BackgroundTransparency = 1.000
+Orbit.BrightnessBar_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Orbit.BrightnessBar_2.BorderSizePixel = 0
+Orbit.BrightnessBar_2.Position = UDim2.new(-0.000306275528, 0, -0.0106188962, 0)
+Orbit.BrightnessBar_2.Size = UDim2.new(1, 0, 1, 0)
+
+Orbit.UICorner_32.CornerRadius = UDim.new(0.600000024, 0)
+Orbit.UICorner_32.Parent = Orbit.BrightnessBar_2
+
+Orbit.UIAspectRatioConstraint_104.Parent = Orbit.BrightnessBar_2
+Orbit.UIAspectRatioConstraint_104.AspectRatio = 8.880
+
+Orbit.UIAspectRatioConstraint_105.Parent = Orbit.BrightnessBar
+Orbit.UIAspectRatioConstraint_105.AspectRatio = 8.880
+
+Orbit.BrightnessValue.Name = "BrightnessValue"
+Orbit.BrightnessValue.Parent = Orbit.BrightnessFrame
+Orbit.BrightnessValue.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.BrightnessValue.BackgroundTransparency = 1.000
+Orbit.BrightnessValue.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Orbit.BrightnessValue.BorderSizePixel = 0
+Orbit.BrightnessValue.Position = UDim2.new(0.300000012, 0, 0.172566369, 0)
+Orbit.BrightnessValue.Size = UDim2.new(0.400000006, 0, 0.154867262, 0)
+Orbit.BrightnessValue.Font = Enum.Font.SourceSansBold
+Orbit.BrightnessValue.Text = "50%"
+Orbit.BrightnessValue.TextColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.BrightnessValue.TextScaled = true
+Orbit.BrightnessValue.TextSize = 30.000
+Orbit.BrightnessValue.TextWrapped = true
+
+Orbit.UIPadding_91.Parent = Orbit.BrightnessValue
+Orbit.UIPadding_91.PaddingBottom = UDim.new(0.0714285746, 0)
+Orbit.UIPadding_91.PaddingTop = UDim.new(0.0714285746, 0)
+
+Orbit.UIAspectRatioConstraint_106.Parent = Orbit.BrightnessValue
+Orbit.UIAspectRatioConstraint_106.AspectRatio = 5.714
+
+Orbit.UIAspectRatioConstraint_107.Parent = Orbit.BrightnessFrame
+Orbit.UIAspectRatioConstraint_107.AspectRatio = 2.212
+
+Orbit.CommandsButton.Name = "CommandsButton"
+Orbit.CommandsButton.Parent = Orbit.MainFrame
+Orbit.CommandsButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.CommandsButton.BackgroundTransparency = 1.000
+Orbit.CommandsButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Orbit.CommandsButton.BorderSizePixel = 0
+Orbit.CommandsButton.Position = UDim2.new(0.219999999, 0, 0.186666667, 0)
+Orbit.CommandsButton.Size = UDim2.new(0.0900000036, 0, 0.600000024, 0)
+Orbit.CommandsButton.Image = "rbxassetid://76379794433751"
+
+Orbit.UIAspectRatioConstraint_108.Parent = Orbit.CommandsButton
+
+Orbit.ThemesButton.Name = "ThemesButton"
+Orbit.ThemesButton.Parent = Orbit.MainFrame
+Orbit.ThemesButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.ThemesButton.BackgroundTransparency = 1.000
+Orbit.ThemesButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Orbit.ThemesButton.BorderSizePixel = 0
+Orbit.ThemesButton.Position = UDim2.new(0.340000004, 0, 0.186666667, 0)
+Orbit.ThemesButton.Size = UDim2.new(0.0900000036, 0, 0.600000024, 0)
+Orbit.ThemesButton.Image = "rbxassetid://109562396587910"
+
+Orbit.UIAspectRatioConstraint_109.Parent = Orbit.ThemesButton
+
+Orbit.StopWatchButton.Name = "StopWatchButton"
+Orbit.StopWatchButton.Parent = Orbit.MainFrame
+Orbit.StopWatchButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.StopWatchButton.BackgroundTransparency = 1.000
+Orbit.StopWatchButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Orbit.StopWatchButton.BorderSizePixel = 0
+Orbit.StopWatchButton.Position = UDim2.new(0.453999996, 0, 0.186666667, 0)
+Orbit.StopWatchButton.Size = UDim2.new(0.0900000036, 0, 0.600000024, 0)
+Orbit.StopWatchButton.Image = "rbxassetid://95679995673444"
+
+Orbit.UIAspectRatioConstraint_110.Parent = Orbit.StopWatchButton
+
+Orbit.BrightnessButton.Name = "BrightnessButton"
+Orbit.BrightnessButton.Parent = Orbit.MainFrame
+Orbit.BrightnessButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.BrightnessButton.BackgroundTransparency = 1.000
+Orbit.BrightnessButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Orbit.BrightnessButton.BorderSizePixel = 0
+Orbit.BrightnessButton.Position = UDim2.new(0.568000019, 0, 0.186666667, 0)
+Orbit.BrightnessButton.Size = UDim2.new(0.0900000036, 0, 0.600000024, 0)
+Orbit.BrightnessButton.Image = "rbxassetid://126586940539489"
+
+Orbit.UIAspectRatioConstraint_111.Parent = Orbit.BrightnessButton
+
+Orbit.CreditsButton.Name = "CreditsButton"
+Orbit.CreditsButton.Parent = Orbit.MainFrame
+Orbit.CreditsButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.CreditsButton.BackgroundTransparency = 1.000
+Orbit.CreditsButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Orbit.CreditsButton.BorderSizePixel = 0
+Orbit.CreditsButton.Position = UDim2.new(0.688000023, 0, 0.186666667, 0)
+Orbit.CreditsButton.Size = UDim2.new(0.0900000036, 0, 0.600000024, 0)
+Orbit.CreditsButton.Image = "rbxassetid://108354491624012"
+
+Orbit.UIAspectRatioConstraint_112.Parent = Orbit.CreditsButton
+
+Orbit.UIAspectRatioConstraint_113.Parent = Orbit.MainFrame
+Orbit.UIAspectRatioConstraint_113.AspectRatio = 6.667
+
+Orbit.Notification.Name = "Notification"
+Orbit.Notification.Parent = Orbit.Orbit
+Orbit.Notification.BackgroundColor3 = Color3.fromRGB(19, 19, 19)
+Orbit.Notification.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Orbit.Notification.BorderSizePixel = 0
+Orbit.Notification.Position = UDim2.new(0.341972172, 0, 0.0189155098, 0)
+Orbit.Notification.Size = UDim2.new(0.316055626, 0, 0.136191681, 0)
+Orbit.Notification.Visible = false
+
+Orbit.UICorner_33.CornerRadius = UDim.new(0.277777791, 0)
+Orbit.UICorner_33.Parent = Orbit.Notification
+
+Orbit.TextLabel.Parent = Orbit.Notification
+Orbit.TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.TextLabel.BackgroundTransparency = 1.000
+Orbit.TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Orbit.TextLabel.BorderSizePixel = 0
+Orbit.TextLabel.Position = UDim2.new(0.0359999985, 0, 0.0833333358, 0)
+Orbit.TextLabel.Size = UDim2.new(0.927999973, 0, 0.82407409, 0)
+Orbit.TextLabel.Font = Enum.Font.SourceSansBold
+Orbit.TextLabel.Text = "Notification here..."
+Orbit.TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+Orbit.TextLabel.TextScaled = true
+Orbit.TextLabel.TextSize = 30.000
+Orbit.TextLabel.TextWrapped = true
+Orbit.TextLabel.TextXAlignment = Enum.TextXAlignment.Left
+
+Orbit.UIPadding_92.Parent = Orbit.TextLabel
+Orbit.UIPadding_92.PaddingBottom = UDim.new(0.331460685, 0)
+Orbit.UIPadding_92.PaddingTop = UDim.new(0.331460685, 0)
+
+Orbit.UIAspectRatioConstraint_114.Parent = Orbit.TextLabel
+Orbit.UIAspectRatioConstraint_114.AspectRatio = 5.213
+
+Orbit.UIAspectRatioConstraint_115.Parent = Orbit.Notification
+Orbit.UIAspectRatioConstraint_115.AspectRatio = 4.630
+
+-- Scripts:
+
+local function RBPYZ_fake_script() -- Orbit.Local.LocalTimeScript 
+	local script = Instance.new('LocalScript', Orbit.Local)
+
+	local textLabel = script.Parent
+	
+	while true do
+		local time = os.date("*t")
+		textLabel.Text = string.format("%02d:%02d", time.hour, time.min)
+		task.wait(1)
+	end
+end
+coroutine.wrap(RBPYZ_fake_script)()
+local function GNRTM_fake_script() -- Orbit.CommandsClose.CommandsCloseScript 
+	local script = Instance.new('LocalScript', Orbit.CommandsClose)
+
+	local button = script.Parent
+	local frame = button.Parent
+	
+	button.MouseButton1Click:Connect(function()
+		frame.Visible = false
+	end)
+end
+coroutine.wrap(GNRTM_fake_script)()
+local function ZIAZ_fake_script() -- Orbit.SpeedBox.SpeedScript 
+	local script = Instance.new('LocalScript', Orbit.SpeedBox)
+
+	local Players = game:GetService("Players")
+	
+	local player = Players.LocalPlayer
+	local textBox = script.Parent
+	
+	textBox.FocusLost:Connect(function()
+		local speed = tonumber(textBox.Text)
+	
+		if not speed then
+			return
+		end
+	
+		speed = math.clamp(speed, 0, 10000000000000)
+	
+		local character = player.Character or player.CharacterAdded:Wait()
+		local humanoid = character:WaitForChild("Humanoid")
+	
+		humanoid.WalkSpeed = speed
+	
+		if _G.CommandNotification then
+			_G.CommandNotification("Speed changed to " .. speed)
+		end
+	end)
+end
+coroutine.wrap(ZIAZ_fake_script)()
+local function VOWU_fake_script() -- Orbit.JumpBox.JumpScript 
+	local script = Instance.new('LocalScript', Orbit.JumpBox)
+
+	local Players = game:GetService("Players")
+	
+	local player = Players.LocalPlayer
+	local textBox = script.Parent
+	
+	textBox.FocusLost:Connect(function()
+		local jumpPower = tonumber(textBox.Text)
+	
+		if not jumpPower then
+			return
+		end
+	
+		jumpPower = math.clamp(jumpPower, 0, 1000000000000000000)
+	
+		local character = player.Character or player.CharacterAdded:Wait()
+		local humanoid = character:WaitForChild("Humanoid")
+	
+		humanoid.UseJumpPower = true
+		humanoid.JumpPower = jumpPower
+	
+		if _G.CommandNotification then
+			_G.CommandNotification("JumpPower changed to " .. jumpPower)
+		end
+	end)
+end
+coroutine.wrap(VOWU_fake_script)()
+local function QCQJSJ_fake_script() -- Orbit.GravityBox.GravityScript 
+	local script = Instance.new('LocalScript', Orbit.GravityBox)
+
+	local Workspace = game:GetService("Workspace")
+	
+	local textBox = script.Parent
+	
+	textBox.FocusLost:Connect(function()
+		local gravity = tonumber(textBox.Text)
+	
+		if not gravity then
+			return
+		end
+	
+		gravity = math.clamp(gravity, 0, 10000000000000)
+	
+		Workspace.Gravity = gravity
+	
+		if _G.CommandNotification then
+			_G.CommandNotification("Gravity changed to " .. gravity)
+		end
+	end)
+end
+coroutine.wrap(QCQJSJ_fake_script)()
+local function VGUPQ_fake_script() -- Orbit.HipHeightBox.HipScript 
+	local script = Instance.new('LocalScript', Orbit.HipHeightBox)
+
+	local Players = game:GetService("Players")
+	
+	local player = Players.LocalPlayer
+	local textBox = script.Parent
+	
+	textBox.FocusLost:Connect(function()
+		local hipHeight = tonumber(textBox.Text)
+	
+		if not hipHeight then
+			return
+		end
+	
+		hipHeight = math.clamp(hipHeight, 0, 100000000000)
+	
+		local character = player.Character or player.CharacterAdded:Wait()
+		local humanoid = character:WaitForChild("Humanoid")
+	
+		humanoid.HipHeight = hipHeight
+	
+		if _G.CommandNotification then
+			_G.CommandNotification("HipHeight changed to " .. hipHeight)
+		end
+	end)
+end
+coroutine.wrap(VGUPQ_fake_script)()
+local function GUDCE_fake_script() -- Orbit.HealthBox.HealthScript 
+	local script = Instance.new('LocalScript', Orbit.HealthBox)
+
+	local Players = game:GetService("Players")
+	
+	local player = Players.LocalPlayer
+	local textBox = script.Parent
+	
+	textBox.FocusLost:Connect(function()
+		local health = tonumber(textBox.Text)
+	
+		if not health then
+			return
+		end
+	
+		health = math.clamp(health, 0, 100000000000000)
+	
+		local character = player.Character or player.CharacterAdded:Wait()
+		local humanoid = character:WaitForChild("Humanoid")
+	
+		humanoid.Health = health
+	
+		if _G.CommandNotification then
+			_G.CommandNotification("Health changed to " .. health)
+		end
+	end)
+end
+coroutine.wrap(GUDCE_fake_script)()
+local function WVFWN_fake_script() -- Orbit.NoclipBox.NoclipScript 
+	local script = Instance.new('LocalScript', Orbit.NoclipBox)
+
+	local Players = game:GetService("Players")
+	local RunService = game:GetService("RunService")
+	
+	local player = Players.LocalPlayer
+	local textBox = script.Parent
+	
+	local noclip = false
+	
+	local function setNoclip(enabled)
+		noclip = enabled
+	end
+	
+	textBox.FocusLost:Connect(function()
+		local text = string.lower(textBox.Text)
+	
+		if text == "true" or text == "on" or text == "1" then
+			setNoclip(true)
+			textBox.Text = "ON"
+	
+			if _G.CommandNotification then
+				_G.CommandNotification("Noclip enabled")
+			end
+	
+		elseif text == "false" or text == "off" or text == "0" then
+			setNoclip(false)
+			textBox.Text = "OFF"
+	
+			if _G.CommandNotification then
+				_G.CommandNotification("Noclip disabled")
+			end
+		end
+	end)
+	
+	RunService.Stepped:Connect(function()
+		if not noclip then
+			return
+		end
+	
+		local character = player.Character
+	
+		if character then
+			for _, part in ipairs(character:GetDescendants()) do
+				if part:IsA("BasePart") then
+					part.CanCollide = false
+				end
+			end
+		end
+	end)
+end
+coroutine.wrap(WVFWN_fake_script)()
+local function IIJW_fake_script() -- Orbit.SpinBox.SpinScript 
+	local script = Instance.new('LocalScript', Orbit.SpinBox)
+
+	local Players = game:GetService("Players")
+	local RunService = game:GetService("RunService")
+	
+	local player = Players.LocalPlayer
+	local textBox = script.Parent
+	
+	local spinning = false
+	local spinSpeed = 0
+	
+	textBox.FocusLost:Connect(function()
+		local text = string.lower(textBox.Text)
+	
+		if text == "off" or text == "0" then
+			spinning = false
+			spinSpeed = 0
+			textBox.Text = "OFF"
+	
+			if _G.CommandNotification then
+				_G.CommandNotification("Spin disabled")
+			end
+	
+			return
+		end
+	
+		local speed = tonumber(text)
+	
+		if speed then
+			spinning = true
+			spinSpeed = speed
+	
+			if _G.CommandNotification then
+				_G.CommandNotification("Spin enabled: " .. speed)
+			end
+		end
+	end)
+	
+	RunService.RenderStepped:Connect(function()
+		if not spinning then
+			return
+		end
+	
+		local character = player.Character
+	
+		if not character then
+			return
+		end
+	
+		local rootPart = character:FindFirstChild("HumanoidRootPart")
+	
+		if rootPart then
+			rootPart.CFrame =
+				rootPart.CFrame * CFrame.Angles(0, math.rad(spinSpeed), 0)
+		end
+	end)
+end
+coroutine.wrap(IIJW_fake_script)()
+local function YJQLWBE_fake_script() -- Orbit.ResetBox.ResetScript 
+	local script = Instance.new('LocalScript', Orbit.ResetBox)
+
+	local Players = game:GetService("Players")
+	
+	local player = Players.LocalPlayer
+	local textBox = script.Parent
+	
+	textBox.FocusLost:Connect(function()
+		local text = string.lower(textBox.Text)
+	
+		if text == "reset" or text == "1" then
+			local character = player.Character
+	
+			if character then
+				local humanoid = character:FindFirstChildOfClass("Humanoid")
+	
+				if humanoid then
+					humanoid.Health = 0
+				end
+			end
+	
+			textBox.Text = ""
+	
+			if _G.CommandNotification then
+				_G.CommandNotification("Character reset")
+			end
+		end
+	end)
+end
+coroutine.wrap(YJQLWBE_fake_script)()
+local function RDTOGXK_fake_script() -- Orbit.FlyBox.FlyScript 
+	local script = Instance.new('LocalScript', Orbit.FlyBox)
+
+	local Players = game:GetService("Players")
+	local UserInputService = game:GetService("UserInputService")
+	local RunService = game:GetService("RunService")
+	
+	local player = Players.LocalPlayer
+	local textBox = script.Parent
+	
+	local flying = false
+	local speed = 60
+	
+	local flyConnection
+	local upHeld = false
+	local downHeld = false
+	
+	local playerGui = player:WaitForChild("PlayerGui")
+	
+	local flyGui = Instance.new("ScreenGui")
+	flyGui.Name = "FlyControls"
+	flyGui.ResetOnSpawn = false
+	flyGui.Enabled = false
+	flyGui.Parent = playerGui
+	
+	local upButton = Instance.new("TextButton")
+	upButton.Name = "Up"
+	upButton.Size = UDim2.new(0, 70, 0, 70)
+	upButton.Position = UDim2.new(1, -170, 1, -180)
+	upButton.Text = "▲"
+	upButton.TextScaled = true
+	upButton.BackgroundTransparency = 0.2
+	upButton.Parent = flyGui
+	
+	local downButton = Instance.new("TextButton")
+	downButton.Name = "Down"
+	downButton.Size = UDim2.new(0, 70, 0, 70)
+	downButton.Position = UDim2.new(1, -170, 1, -95)
+	downButton.Text = "▼"
+	downButton.TextScaled = true
+	downButton.BackgroundTransparency = 0.2
+	downButton.Parent = flyGui
+	
+	upButton.MouseButton1Down:Connect(function()
+		upHeld = true
+	end)
+	
+	upButton.MouseButton1Up:Connect(function()
+		upHeld = false
+	end)
+	
+	upButton.MouseLeave:Connect(function()
+		upHeld = false
+	end)
+	
+	downButton.MouseButton1Down:Connect(function()
+		downHeld = true
+	end)
+	
+	downButton.MouseButton1Up:Connect(function()
+		downHeld = false
+	end)
+	
+	downButton.MouseLeave:Connect(function()
+		downHeld = false
+	end)
+	
+	local function stopFlying()
+		flying = false
+		upHeld = false
+		downHeld = false
+	
+		if flyConnection then
+			flyConnection:Disconnect()
+			flyConnection = nil
+		end
+	
+		flyGui.Enabled = false
+	
+		local character = player.Character
+	
+		if character then
+			local humanoid = character:FindFirstChildOfClass("Humanoid")
+	
+			if humanoid then
+				humanoid.PlatformStand = false
+			end
+		end
+	end
+	
+	local function startFlying()
+		if flying then
+			return
+		end
+	
+		flying = true
+		flyGui.Enabled = UserInputService.TouchEnabled
+	
+		flyConnection = RunService.RenderStepped:Connect(function()
+			local character = player.Character
+	
+			if not character then
+				return
+			end
+	
+			local humanoid = character:FindFirstChildOfClass("Humanoid")
+			local rootPart = character:FindFirstChild("HumanoidRootPart")
+	
+			if not humanoid or not rootPart then
+				return
+			end
+	
+			local camera = workspace.CurrentCamera
+	
+			humanoid.PlatformStand = true
+	
+			local moveDirection = humanoid.MoveDirection
+	
+			local horizontalDirection = Vector3.new(
+				moveDirection.X,
+				0,
+				moveDirection.Z
+			)
+	
+			local vertical = 0
+	
+			if upHeld then
+				vertical = 1
+			elseif downHeld then
+				vertical = -1
+			end
+	
+			if UserInputService:IsKeyDown(Enum.KeyCode.Space) then
+				vertical = 1
+			elseif UserInputService:IsKeyDown(Enum.KeyCode.LeftShift) then
+				vertical = -1
+			end
+	
+			local velocity = horizontalDirection * speed
+	
+			velocity = Vector3.new(
+				velocity.X,
+				vertical * speed,
+				velocity.Z
+			)
+	
+			rootPart.AssemblyLinearVelocity = velocity
+	
+			local lookDirection = Vector3.new(
+				camera.CFrame.LookVector.X,
+				0,
+				camera.CFrame.LookVector.Z
+			)
+	
+			if lookDirection.Magnitude > 0 then
+				rootPart.CFrame = CFrame.lookAt(
+					rootPart.Position,
+					rootPart.Position + lookDirection
+				)
+			end
+		end)
+	end
+	
+	textBox.FocusLost:Connect(function()
+		local text = string.lower(textBox.Text)
+	
+		if text == "on" or text == "true" or text == "1" then
+			textBox.Text = "ON"
+			startFlying()
+	
+			if _G.CommandNotification then
+				_G.CommandNotification("Fly enabled")
+			end
+	
+		elseif text == "off" or text == "false" or text == "0" then
+			textBox.Text = "OFF"
+			stopFlying()
+	
+			if _G.CommandNotification then
+				_G.CommandNotification("Fly disabled")
+			end
+		end
+	end)
+	
+	player.CharacterAdded:Connect(function()
+		if flying then
+			task.wait(1)
+			startFlying()
+		end
+	end)
+end
+coroutine.wrap(RDTOGXK_fake_script)()
+local function VKLMIFG_fake_script() -- Orbit.TeleportBox.TeleportScript 
+	local script = Instance.new('LocalScript', Orbit.TeleportBox)
+
+	local Players = game:GetService("Players")
+	
+	local player = Players.LocalPlayer
+	local textBox = script.Parent
+	
+	local function findPlayer(name)
+		name = string.lower(name)
+	
+		for _, target in ipairs(Players:GetPlayers()) do
+			if string.lower(target.Name):sub(1, #name) == name then
+				return target
+			end
+		end
+	
+		return nil
+	end
+	
+	textBox.FocusLost:Connect(function()
+		local target = findPlayer(textBox.Text)
+	
+		if not target then
+			if _G.CommandNotification then
+				_G.CommandNotification("Player not found")
+			end
+			return
+		end
+	
+		local character = player.Character
+		local targetCharacter = target.Character
+	
+		if character and targetCharacter then
+			local root = character:FindFirstChild("HumanoidRootPart")
+			local targetRoot = targetCharacter:FindFirstChild("HumanoidRootPart")
+	
+			if root and targetRoot then
+				root.CFrame = targetRoot.CFrame + Vector3.new(0, 3, 0)
+	
+				if _G.CommandNotification then
+					_G.CommandNotification("Teleported to " .. target.Name)
+				end
+			end
+		end
+	end)
+end
+coroutine.wrap(VKLMIFG_fake_script)()
+local function ZNZB_fake_script() -- Orbit.ViewBox.ViewScript 
+	local script = Instance.new('LocalScript', Orbit.ViewBox)
+
+	local Players = game:GetService("Players")
+	
+	local player = Players.LocalPlayer
+	local textBox = script.Parent
+	
+	local function findPlayer(name)
+		name = string.lower(name)
+	
+		for _, target in ipairs(Players:GetPlayers()) do
+			if string.lower(target.Name):sub(1, #name) == name then
+				return target
+			end
+		end
+	
+		return nil
+	end
+	
+	textBox.FocusLost:Connect(function()
+		local target = findPlayer(textBox.Text)
+	
+		if not target then
+			if _G.CommandNotification then
+				_G.CommandNotification("Player not found")
+			end
+			return
+		end
+	
+		local character = target.Character
+		local humanoid = character and character:FindFirstChildOfClass("Humanoid")
+	
+		if humanoid then
+			workspace.CurrentCamera.CameraSubject = humanoid
+	
+			if _G.CommandNotification then
+				_G.CommandNotification("Viewing " .. target.Name)
+			end
+		end
+	end)
+end
+coroutine.wrap(ZNZB_fake_script)()
+local function AWAKO_fake_script() -- Orbit.UnViewBox.UnviewScript 
+	local script = Instance.new('LocalScript', Orbit.UnViewBox)
+
+	local Players = game:GetService("Players")
+	
+	local player = Players.LocalPlayer
+	local textBox = script.Parent
+	
+	textBox.FocusLost:Connect(function()
+		local character = player.Character
+		local humanoid = character and character:FindFirstChildOfClass("Humanoid")
+	
+		if humanoid then
+			workspace.CurrentCamera.CameraSubject = humanoid
+	
+			if _G.CommandNotification then
+				_G.CommandNotification("Stopped viewing player")
+			end
+		end
+	
+		textBox.Text = ""
+	end)
+end
+coroutine.wrap(AWAKO_fake_script)()
+local function NCTZS_fake_script() -- Orbit.HealBox.HealScript 
+	local script = Instance.new('LocalScript', Orbit.HealBox)
+
+	local Players = game:GetService("Players")
+	
+	local player = Players.LocalPlayer
+	local textBox = script.Parent
+	
+	textBox.FocusLost:Connect(function()
+		local character = player.Character
+	
+		if not character then
+			return
+		end
+	
+		local humanoid = character:FindFirstChildOfClass("Humanoid")
+	
+		if not humanoid then
+			return
+		end
+	
+		humanoid.Health = humanoid.MaxHealth
+	
+		textBox.Text = ""
+	
+		if _G.CommandNotification then
+			_G.CommandNotification("You have been healed")
+		end
+	end)
+end
+coroutine.wrap(NCTZS_fake_script)()
+local function MYOWRAV_fake_script() -- Orbit.FreezeBox.FreezeScript 
+	local script = Instance.new('LocalScript', Orbit.FreezeBox)
+
+	local Players = game:GetService("Players")
+	
+	local player = Players.LocalPlayer
+	local textBox = script.Parent
+	
+	textBox.FocusLost:Connect(function()
+		local text = string.lower(textBox.Text)
+	
+		if text == "on" or text == "true" or text == "1" then
+			local character = player.Character
+			local root = character and character:FindFirstChild("HumanoidRootPart")
+	
+			if root then
+				root.Anchored = true
+				textBox.Text = "ON"
+	
+				if _G.CommandNotification then
+					_G.CommandNotification("You are frozen")
+				end
+			end
+		end
+	end)
+end
+coroutine.wrap(MYOWRAV_fake_script)()
+local function PIMYCZA_fake_script() -- Orbit.UnFreezeBox.UnfreezeScript 
+	local script = Instance.new('LocalScript', Orbit.UnFreezeBox)
+
+	local Players = game:GetService("Players")
+	
+	local player = Players.LocalPlayer
+	local textBox = script.Parent
+	
+	textBox.FocusLost:Connect(function()
+		local character = player.Character
+		local root = character and character:FindFirstChild("HumanoidRootPart")
+	
+		if root then
+			root.Anchored = false
+	
+			textBox.Text = ""
+	
+			if _G.CommandNotification then
+				_G.CommandNotification("You are unfrozen")
+			end
+		end
+	end)
+end
+coroutine.wrap(PIMYCZA_fake_script)()
+local function TWIV_fake_script() -- Orbit.SitBox.SitScript 
+	local script = Instance.new('LocalScript', Orbit.SitBox)
+
+	local Players = game:GetService("Players")
+	
+	local player = Players.LocalPlayer
+	local textBox = script.Parent
+	
+	local function findPlayer(name)
+		name = string.lower(name)
+	
+		for _, target in ipairs(Players:GetPlayers()) do
+			if string.lower(target.Name):sub(1, #name) == name then
+				return target
+			end
+		end
+	
+		return nil
+	end
+	
+	textBox.FocusLost:Connect(function()
+		local target = findPlayer(textBox.Text)
+	
+		if not target then
+			if _G.CommandNotification then
+				_G.CommandNotification("Player not found")
+			end
+			return
+		end
+	
+		local character = target.Character
+		local humanoid = character and character:FindFirstChildOfClass("Humanoid")
+	
+		if humanoid then
+			humanoid.Sit = true
+	
+			if _G.CommandNotification then
+				_G.CommandNotification(target.Name .. " is sitting")
+			end
+		end
+	end)
+end
+coroutine.wrap(TWIV_fake_script)()
+local function HQXYWNN_fake_script() -- Orbit.FlingBox.FlingScript 
+	local script = Instance.new('LocalScript', Orbit.FlingBox)
+
+	local Players = game:GetService("Players")
+	
+	local player = Players.LocalPlayer
+	local textBox = script.Parent
+	
+	local function findPlayer(name)
+		name = string.lower(name)
+	
+		for _, target in ipairs(Players:GetPlayers()) do
+			if target ~= player and string.lower(target.Name):sub(1, #name) == name then
+				return target
+			end
+		end
+	
+		return nil
+	end
+	
+	textBox.FocusLost:Connect(function()
+		local target = findPlayer(textBox.Text)
+	
+		if not target then
+			if _G.CommandNotification then
+				_G.CommandNotification("Player not found")
+			end
+			return
+		end
+	
+		local character = target.Character
+		local root = character and character:FindFirstChild("HumanoidRootPart")
+	
+		if root then
+			root.AssemblyLinearVelocity = Vector3.new(0, 250, 0)
+	
+			if _G.CommandNotification then
+				_G.CommandNotification("Flung " .. target.Name)
+			end
+		end
+	end)
+end
+coroutine.wrap(HQXYWNN_fake_script)()
+local function PZBN_fake_script() -- Orbit.UnFlingBox.UnFlingScript 
+	local script = Instance.new('LocalScript', Orbit.UnFlingBox)
+
+	local Players = game:GetService("Players")
+	
+	local player = Players.LocalPlayer
+	local textBox = script.Parent
+	
+	local function findPlayer(name)
+		name = string.lower(name)
+	
+		for _, target in ipairs(Players:GetPlayers()) do
+			if target ~= player and string.lower(target.Name):sub(1, #name) == name then
+				return target
+			end
+		end
+	
+		return nil
+	end
+	
+	textBox.FocusLost:Connect(function()
+		local target = findPlayer(textBox.Text)
+	
+		if not target then
+			if _G.CommandNotification then
+				_G.CommandNotification("Player not found")
+			end
+			return
+		end
+	
+		local character = target.Character
+		local root = character and character:FindFirstChild("HumanoidRootPart")
+	
+		if root then
+			root.AssemblyLinearVelocity = Vector3.zero
+			root.AssemblyAngularVelocity = Vector3.zero
+	
+			if _G.CommandNotification then
+				_G.CommandNotification("Unflung " .. target.Name)
+			end
+		end
+	end)
+	
+end
+coroutine.wrap(PZBN_fake_script)()
+local function VZOUEFC_fake_script() -- Orbit.StickBox.BangScript 
+	local script = Instance.new('LocalScript', Orbit.StickBox)
+
+	local Players = game:GetService("Players")
+	local RunService = game:GetService("RunService")
+	
+	local player = Players.LocalPlayer
+	local textBox = script.Parent
+	
+	-- Shared state
+	_G.StickTarget = nil
+	_G.StickConnection = nil
+	
+	local function findPlayer(name)
+		name = string.lower(name)
+	
+		if name == "" then
+			return nil
+		end
+	
+		-- Exact username first
+		for _, target in ipairs(Players:GetPlayers()) do
+			if target ~= player and string.lower(target.Name) == name then
+				return target
+			end
+		end
+	
+		-- Partial username
+		for _, target in ipairs(Players:GetPlayers()) do
+			if target ~= player and string.lower(target.Name):sub(1, #name) == name then
+				return target
+			end
+		end
+	
+		return nil
+	end
+	
+	local function stopStick()
+		_G.StickTarget = nil
+	
+		if _G.StickConnection then
+			_G.StickConnection:Disconnect()
+			_G.StickConnection = nil
+		end
+	end
+	
+	local function startStick(target)
+		stopStick()
+	
+		_G.StickTarget = target
+	
+		_G.StickConnection = RunService.RenderStepped:Connect(function()
+			if _G.StickTarget ~= target then
+				return
+			end
+	
+			if not target.Parent then
+				stopStick()
+	
+				if _G.CommandNotification then
+					_G.CommandNotification("Player left - Stick stopped")
+				end
+	
+				return
+			end
+	
+			local myCharacter = player.Character
+			local targetCharacter = target.Character
+	
+			if not myCharacter or not targetCharacter then
+				return
+			end
+	
+			local myRoot = myCharacter:FindFirstChild("HumanoidRootPart")
+			local targetRoot = targetCharacter:FindFirstChild("HumanoidRootPart")
+	
+			if not myRoot or not targetRoot then
+				return
+			end
+	
+			-- Stay 3 studs behind the target
+			local targetCFrame = targetRoot.CFrame
+			local targetPosition = targetCFrame.Position
+			- targetCFrame.LookVector * 3
+	
+			-- Smoothly follow the target
+			local newPosition = myRoot.Position:Lerp(
+				targetPosition,
+				0.35
+			)
+	
+			myRoot.CFrame = CFrame.lookAt(
+				newPosition,
+				targetRoot.Position
+			)
+		end)
+	end
+	
+	textBox.FocusLost:Connect(function()
+		local target = findPlayer(textBox.Text)
+	
+		if not target then
+			if _G.CommandNotification then
+				_G.CommandNotification("Player not found")
+			end
+	
+			return
+		end
+	
+		startStick(target)
+	
+		if _G.CommandNotification then
+			_G.CommandNotification("Sticking to " .. target.Name)
+		end
+	end)
+end
+coroutine.wrap(VZOUEFC_fake_script)()
+local function JUZVDY_fake_script() -- Orbit.UnStickBox.UnBangScript 
+	local script = Instance.new('LocalScript', Orbit.UnStickBox)
+
+	local textBox = script.Parent
+	
+	textBox.FocusLost:Connect(function()
+		if _G.StickConnection then
+			_G.StickConnection:Disconnect()
+			_G.StickConnection = nil
+		end
+	
+		_G.StickTarget = nil
+	
+		textBox.Text = ""
+	
+		if _G.CommandNotification then
+			_G.CommandNotification("Unstuck")
+		end
+	end)
+end
+coroutine.wrap(JUZVDY_fake_script)()
+local function LGRJ_fake_script() -- Orbit.EspBox.EspScript 
+	local script = Instance.new('LocalScript', Orbit.EspBox)
+
+	local Players = game:GetService("Players")
+	
+	local player = Players.LocalPlayer
+	local textBox = script.Parent
+	
+	local ESP_NAME = "CommandESP"
+	
+	local function addESP(target)
+		if target == player then
+			return
+		end
+	
+		local character = target.Character
+	
+		if not character then
+			return
+		end
+	
+		-- Don't create duplicates
+		if character:FindFirstChild(ESP_NAME) then
+			return
+		end
+	
+		local highlight = Instance.new("Highlight")
+		highlight.Name = ESP_NAME
+	
+		highlight.FillColor = Color3.fromRGB(170, 255, 255)
+		highlight.OutlineColor = Color3.fromRGB(170, 255, 255)
+	
+		highlight.FillTransparency = 0.5
+		highlight.OutlineTransparency = 0
+	
+		highlight.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
+	
+		highlight.Parent = character
+	end
+	
+	local function enableESP()
+		for _, target in ipairs(Players:GetPlayers()) do
+			addESP(target)
+		end
+	end
+	
+	-- Add ESP to players who join later
+	Players.PlayerAdded:Connect(function(target)
+		if _G.AllESPEnabled then
+			target.CharacterAdded:Connect(function()
+				task.wait(0.5)
+				addESP(target)
+			end)
+		end
+	end)
+	
+	-- Add ESP when characters respawn
+	for _, target in ipairs(Players:GetPlayers()) do
+		if target ~= player then
+			target.CharacterAdded:Connect(function()
+				if _G.AllESPEnabled then
+					task.wait(0.5)
+					addESP(target)
+				end
+			end)
+		end
+	end
+	
+	textBox.FocusLost:Connect(function()
+		local text = string.lower(textBox.Text)
+	
+		if text == "on" or text == "true" or text == "1" then
+			_G.AllESPEnabled = true
+	
+			enableESP()
+	
+			textBox.Text = "ON"
+	
+			if _G.CommandNotification then
+				_G.CommandNotification("ESP enabled for all players")
+			end
+		end
+	end)
+end
+coroutine.wrap(LGRJ_fake_script)()
+local function HXKIX_fake_script() -- Orbit.UnEspBox.UnEspScript 
+	local script = Instance.new('LocalScript', Orbit.UnEspBox)
+
+	local Players = game:GetService("Players")
+	
+	local textBox = script.Parent
+	
+	local ESP_NAME = "CommandESP"
+	
+	textBox.FocusLost:Connect(function()
+		local text = string.lower(textBox.Text)
+	
+		if text == "off" or text == "false" or text == "0" then
+			_G.AllESPEnabled = false
+	
+			for _, target in ipairs(Players:GetPlayers()) do
+				local character = target.Character
+	
+				if character then
+					local highlight = character:FindFirstChild(ESP_NAME)
+	
+					if highlight then
+						highlight:Destroy()
+					end
+				end
+			end
+	
+			textBox.Text = "OFF"
+	
+			if _G.CommandNotification then
+				_G.CommandNotification("ESP disabled for all players")
+			end
+		end
+	end)
+end
+coroutine.wrap(HXKIX_fake_script)()
+local function TPRBBPP_fake_script() -- Orbit.ThemesClose.ThemesCloseScript 
+	local script = Instance.new('LocalScript', Orbit.ThemesClose)
+
+	local button = script.Parent
+	local frame = button.Parent
+	
+	button.MouseButton1Click:Connect(function()
+		frame.Visible = false
+	end)
+end
+coroutine.wrap(TPRBBPP_fake_script)()
+local function OOSKRL_fake_script() -- Orbit.ScrollingFrame_2.ThemesChanger 
+	local script = Instance.new('LocalScript', Orbit.ScrollingFrame_2)
+
+	local scrollingFrame = script.Parent
+	
+	-- Find MainFrame automatically
+	local mainFrame = scrollingFrame:FindFirstAncestor("MainFrame")
+	
+	if not mainFrame then
+		warn("MainFrame was not found!")
+		return
+	end
+	
+	local colors = {
+		Red = Color3.fromRGB(203, 0, 0),
+		Orange = Color3.fromRGB(255, 170, 0),
+		Yellow = Color3.fromRGB(255, 255, 0),
+		Green = Color3.fromRGB(0, 170, 0),
+		Blue = Color3.fromRGB(0, 0, 255),
+		Purple = Color3.fromRGB(170, 0, 255),
+		Pink = Color3.fromRGB(255, 170, 255),
+		Grey = Color3.fromRGB(90, 90, 90),
+		Black = Color3.fromRGB(0, 0, 0),
+		White = Color3.fromRGB(255,255,255),
+		DarkPink = Color3.fromRGB(255, 0, 255),
+		Mint = Color3.fromRGB(143, 255, 169),
+		Norbit = Color3.fromRGB(19,19,19),
+		LightBlue = Color3.fromRGB(85, 255, 255)
+	}
+	local function changeTheme(color)
+		-- Change every Frame inside MainFrame
+		for _, object in ipairs(mainFrame:GetDescendants()) do
+			if object:IsA("Frame") then
+				object.BackgroundColor3 = color
+			end
+		end
+	
+		-- Change MainFrame itself
+		mainFrame.BackgroundColor3 = color
+	end
+	
+	for buttonName, color in pairs(colors) do
+		local button = scrollingFrame:FindFirstChild(buttonName)
+	
+		if button and button:IsA("TextButton") then
+	
+			button.Activated:Connect(function()
+				changeTheme(color)
+	
+				-- Notification
+				if _G.CommandNotification then
+					_G.CommandNotification(buttonName .. " theme selected")
+				end
+			end)
+	
+		else
+			warn(buttonName .. " TextButton was not found!")
+		end
+	end
+end
+coroutine.wrap(OOSKRL_fake_script)()
+local function LYJB_fake_script() -- Orbit.ProfilePictureImageLabel.ProfilePictureScript 
+	local script = Instance.new('LocalScript', Orbit.ProfilePictureImageLabel)
+
+	local Players = game:GetService("Players")
+	
+	local player = Players.LocalPlayer
+	local imageLabel = script.Parent
+	
+	local userId = player.UserId
+	
+	local imageUrl = "https://www.roblox.com/headshot-thumbnail/image?userId="
+		.. userId
+		.. "&width=420&height=420&format=png"
+	
+	imageLabel.Image = imageUrl
+end
+coroutine.wrap(LYJB_fake_script)()
+local function LUQZ_fake_script() -- Orbit.CreditsClose.CreditsCloseScript 
+	local script = Instance.new('LocalScript', Orbit.CreditsClose)
+
+	local button = script.Parent
+	local frame = button.Parent
+	
+	button.MouseButton1Click:Connect(function()
+		frame.Visible = false
+	end)
+end
+coroutine.wrap(LUQZ_fake_script)()
+local function GGNHNY_fake_script() -- Orbit.justsscriptsImageLabel.justsscripts 
+	local script = Instance.new('LocalScript', Orbit.justsscriptsImageLabel)
+
+	local Players = game:GetService("Players")
+	
+	local imageLabel = script.Parent
+	
+	local username = "justsscripts"
+	
+	local success, userId = pcall(function()
+		return Players:GetUserIdFromNameAsync(username)
+	end)
+	
+	if success then
+		local image = Players:GetUserThumbnailAsync(
+			userId,
+			Enum.ThumbnailType.HeadShot,
+			Enum.ThumbnailSize.Size420x420
+		)
+	
+		imageLabel.Image = image
+	else
+		warn("Could not find Roblox user: " .. username)
+	end
+end
+coroutine.wrap(GGNHNY_fake_script)()
+local function EIVUV_fake_script() -- Orbit.Sub2KaiXImageLabel. Sub2KaiX 
+	local script = Instance.new('LocalScript', Orbit.Sub2KaiXImageLabel)
+
+	local Players = game:GetService("Players")
+	
+	local imageLabel = script.Parent
+	
+	local username = "Sub2KaiX"
+	
+	local success, userId = pcall(function()
+		return Players:GetUserIdFromNameAsync(username)
+	end)
+	
+	if success then
+		local image = Players:GetUserThumbnailAsync(
+			userId,
+			Enum.ThumbnailType.HeadShot,
+			Enum.ThumbnailSize.Size420x420
+		)
+	
+		imageLabel.Image = image
+	else
+		warn("Could not find Roblox user: " .. username)
+	end
+end
+coroutine.wrap(EIVUV_fake_script)()
+local function NJQGUFK_fake_script() -- Orbit.J2Y50NImageLabel.J2Y50N 
+	local script = Instance.new('LocalScript', Orbit.J2Y50NImageLabel)
+
+	local Players = game:GetService("Players")
+	
+	local imageLabel = script.Parent
+	
+	local username = "J2Y50N"
+	
+	local success, userId = pcall(function()
+		return Players:GetUserIdFromNameAsync(username)
+	end)
+	
+	if success then
+		local image = Players:GetUserThumbnailAsync(
+			userId,
+			Enum.ThumbnailType.HeadShot,
+			Enum.ThumbnailSize.Size420x420
+		)
+	
+		imageLabel.Image = image
+	else
+		warn("Could not find Roblox user: " .. username)
+	end
+end
+coroutine.wrap(NJQGUFK_fake_script)()
+local function PGQL_fake_script() -- Orbit.StopwatchFrame.StopWatchScript 
+	local script = Instance.new('LocalScript', Orbit.StopwatchFrame)
+
+	local RunService = game:GetService("RunService")
+	
+	local frame = script.Parent
+	
+	-- Find the timer label automatically
+	local timeLabel
+	
+	for _, object in ipairs(frame:GetDescendants()) do
+		if object:IsA("TextLabel") then
+			if string.find(string.lower(object.Name), "time")
+				or string.find(string.lower(object.Text), ":") then
+				timeLabel = object
+				break
+			end
+		end
+	end
+	
+	-- If it can't find one, create it automatically
+	if not timeLabel then
+		timeLabel = Instance.new("TextLabel")
+		timeLabel.Name = "TimeLabel"
+		timeLabel.Size = UDim2.new(1, 0, 0, 50)
+		timeLabel.Position = UDim2.new(0, 0, 0, 10)
+		timeLabel.BackgroundTransparency = 1
+		timeLabel.TextScaled = true
+		timeLabel.Text = "00:00.00"
+		timeLabel.Parent = frame
+	end
+	
+	local running = false
+	local elapsed = 0
+	local startTime = 0
+	local connection
+	
+	local function updateDisplay()
+		local currentTime = elapsed
+	
+		if running then
+			currentTime = elapsed + (os.clock() - startTime)
+		end
+	
+		local minutes = math.floor(currentTime / 60)
+		local seconds = math.floor(currentTime % 60)
+		local milliseconds = math.floor((currentTime % 1) * 100)
+	
+		timeLabel.Text = string.format(
+			"%02d:%02d.%02d",
+			minutes,
+			seconds,
+			milliseconds
+		)
+	end
+	
+	local function startStopwatch()
+		if running then
+			return
+		end
+	
+		running = true
+		startTime = os.clock()
+	
+		if connection then
+			connection:Disconnect()
+		end
+	
+		connection = RunService.RenderStepped:Connect(updateDisplay)
+	end
+	
+	local function stopStopwatch()
+		if not running then
+			return
+		end
+	
+		elapsed += os.clock() - startTime
+		running = false
+	
+		if connection then
+			connection:Disconnect()
+			connection = nil
+		end
+	
+		updateDisplay()
+	end
+	
+	local function resetStopwatch()
+		running = false
+		elapsed = 0
+		startTime = 0
+	
+		if connection then
+			connection:Disconnect()
+			connection = nil
+		end
+	
+		updateDisplay()
+	end
+	
+	-- Automatically detect your buttons
+	for _, object in ipairs(frame:GetDescendants()) do
+		if object:IsA("TextButton") then
+	
+			local buttonText = string.lower(object.Text)
+	
+			if string.find(buttonText, "start") then
+	
+				object.Activated:Connect(function()
+					startStopwatch()
+				end)
+	
+			elseif string.find(buttonText, "stop") then
+	
+				object.Activated:Connect(function()
+					stopStopwatch()
+				end)
+	
+			elseif string.find(buttonText, "reset") then
+	
+				object.Activated:Connect(function()
+					resetStopwatch()
+				end)
+			end
+		end
+	end
+	
+	updateDisplay()
+end
+coroutine.wrap(PGQL_fake_script)()
+local function EIXMKX_fake_script() -- Orbit.StopWatchClose.StopWatchCloseScript 
+	local script = Instance.new('LocalScript', Orbit.StopWatchClose)
+
+	local button = script.Parent
+	local frame = button.Parent
+	
+	button.MouseButton1Click:Connect(function()
+		frame.Visible = false
+	end)
+end
+coroutine.wrap(EIXMKX_fake_script)()
+local function NHCAHKP_fake_script() -- Orbit.BrightnessClose.BrightnessCloseScript 
+	local script = Instance.new('LocalScript', Orbit.BrightnessClose)
+
+	local button = script.Parent
+	local frame = button.Parent
+	
+	button.MouseButton1Click:Connect(function()
+		frame.Visible = false
+	end)
+end
+coroutine.wrap(NHCAHKP_fake_script)()
+local function NXUNN_fake_script() -- Orbit.BrightnessFrame.BrightnessScript 
+	local script = Instance.new('LocalScript', Orbit.BrightnessFrame)
+
+	local UserInputService = game:GetService("UserInputService")
+	local Lighting = game:GetService("Lighting")
+	
+	local frame = script.Parent
+	local bar = frame:WaitForChild("BrightnessBar")
+	local knob = bar:WaitForChild("BrightnessKnob")
+	local valueLabel = frame:WaitForChild("BrightnessValue")
+	
+	local dragging = false
+	
+	-- Make sure the knob is positioned relative to the bar
+	knob.AnchorPoint = Vector2.new(0.5, 0.5)
+	
+	local function setBrightnessFromX(x)
+	
+		local barWidth = bar.AbsoluteSize.X
+		local knobWidth = knob.AbsoluteSize.X
+	
+		if barWidth <= knobWidth then
+			return
+		end
+	
+		-- Keep the CENTER of the knob inside the bar
+		local left = knobWidth / 2
+		local right = barWidth - (knobWidth / 2)
+	
+		-- Convert mouse position to position inside bar
+		local relativeX = x - bar.AbsolutePosition.X
+	
+		-- Clamp it
+		relativeX = math.clamp(relativeX, left, right)
+	
+		-- Calculate percentage
+		local percentage = (relativeX - left) / (right - left)
+	
+		percentage = math.clamp(percentage, 0, 1)
+	
+		-- Move knob
+		knob.Position = UDim2.new(
+			0,
+			relativeX,
+			0.5,
+			0
+		)
+	
+		-- Change brightness
+		Lighting.Brightness = percentage * 10
+	
+		-- Update text
+		valueLabel.Text = math.floor(percentage * 100) .. "%"
+	end
+	
+	-- Start dragging from the bar
+	bar.InputBegan:Connect(function(input)
+	
+		if input.UserInputType == Enum.UserInputType.MouseButton1
+			or input.UserInputType == Enum.UserInputType.Touch then
+	
+			dragging = true
+	
+			setBrightnessFromX(input.Position.X)
+		end
+	end)
+	
+	-- Start dragging from the knob
+	knob.InputBegan:Connect(function(input)
+	
+		if input.UserInputType == Enum.UserInputType.MouseButton1
+			or input.UserInputType == Enum.UserInputType.Touch then
+	
+			dragging = true
+		end
+	end)
+	
+	-- Move knob
+	UserInputService.InputChanged:Connect(function(input)
+	
+		if not dragging then
+			return
+		end
+	
+		if input.UserInputType == Enum.UserInputType.MouseMovement
+			or input.UserInputType == Enum.UserInputType.Touch then
+	
+			setBrightnessFromX(input.Position.X)
+		end
+	end)
+	
+	-- Stop dragging
+	UserInputService.InputEnded:Connect(function(input)
+	
+		if input.UserInputType == Enum.UserInputType.MouseButton1
+			or input.UserInputType == Enum.UserInputType.Touch then
+	
+			dragging = false
+		end
+	end)
+	
+	-- Start at 50%
+	task.wait()
+	
+	setBrightnessFromX(
+		bar.AbsolutePosition.X + (bar.AbsoluteSize.X / 2)
+	)
+end
+coroutine.wrap(NXUNN_fake_script)()
+local function ZHWVPM_fake_script() -- Orbit.CommandsButton.CommandsOpenScript 
+	local script = Instance.new('LocalScript', Orbit.CommandsButton)
+
+	local imagelabel = script.Parent
+	local screenGui = imagelabel.Parent
+	
+	local frame = screenGui:WaitForChild("CommandsFrame")
+	
+	imagelabel.MouseButton1Click:Connect(function()
+		frame.Visible = true
+	end)
+	
+end
+coroutine.wrap(ZHWVPM_fake_script)()
+local function ILXD_fake_script() -- Orbit.ThemesButton.ThemesOpenScript 
+	local script = Instance.new('LocalScript', Orbit.ThemesButton)
+
+	local imagelabel = script.Parent
+	local screenGui = imagelabel.Parent
+	
+	local frame = screenGui:WaitForChild("ThemesFrame")
+	
+	imagelabel.MouseButton1Click:Connect(function()
+		frame.Visible = true
+	end)
+	
+end
+coroutine.wrap(ILXD_fake_script)()
+local function ORIU_fake_script() -- Orbit.StopWatchButton.StopWatchOpenScript 
+	local script = Instance.new('LocalScript', Orbit.StopWatchButton)
+
+	local imagelabel = script.Parent
+	local screenGui = imagelabel.Parent
+	
+	local frame = screenGui:WaitForChild("StopwatchFrame")
+	
+	imagelabel.MouseButton1Click:Connect(function()
+		frame.Visible = true
+	end)
+	
+end
+coroutine.wrap(ORIU_fake_script)()
+local function FVTVCS_fake_script() -- Orbit.BrightnessButton.BrightnessOpenScript 
+	local script = Instance.new('LocalScript', Orbit.BrightnessButton)
+
+	local imagelabel = script.Parent
+	local screenGui = imagelabel.Parent
+	
+	local frame = screenGui:WaitForChild("BrightnessFrame")
+	
+	imagelabel.MouseButton1Click:Connect(function()
+		frame.Visible = true
+	end)
+	
+end
+coroutine.wrap(FVTVCS_fake_script)()
+local function VJGIZQ_fake_script() -- Orbit.CreditsButton.CreditsOpenScript 
+	local script = Instance.new('LocalScript', Orbit.CreditsButton)
+
+	local imagelabel = script.Parent
+	local screenGui = imagelabel.Parent
+	
+	local frame = screenGui:WaitForChild("CreditsFrame")
+	
+	imagelabel.MouseButton1Click:Connect(function()
+		frame.Visible = true
+	end)
+	
+end
+coroutine.wrap(VJGIZQ_fake_script)()
+local function XDWVR_fake_script() -- Orbit.Notification.Notifications 
+	local script = Instance.new('LocalScript', Orbit.Notification)
+
+	local TweenService = game:GetService("TweenService")
+	
+	local notification = script.Parent
+	local textLabel = notification:WaitForChild("TextLabel")
+	
+	local shownPosition = UDim2.new(0.5, 0, 0, 20)
+	local hiddenPosition = UDim2.new(0.5, 0, 0, -80)
+	
+	local fadeInInfo = TweenInfo.new(
+		0.35,
+		Enum.EasingStyle.Quint,
+		Enum.EasingDirection.Out
+	)
+	
+	local fadeOutInfo = TweenInfo.new(
+		0.3,
+		Enum.EasingStyle.Quint,
+		Enum.EasingDirection.In
+	)
+	
+	notification.AnchorPoint = Vector2.new(0.5, 0)
+	notification.Position = hiddenPosition
+	notification.Visible = false
+	
+	local currentNotification = 0
+	
+	local function setTransparency(value)
+		notification.BackgroundTransparency = value
+	
+		for _, object in ipairs(notification:GetDescendants()) do
+			if object:IsA("TextLabel") or object:IsA("TextButton") then
+				object.TextTransparency = value
+			elseif object:IsA("ImageLabel") or object:IsA("ImageButton") then
+				object.ImageTransparency = value
+			elseif object:IsA("UIStroke") then
+				object.Transparency = value
+			end
+		end
+	end
+	
+	local function showNotification(message)
+		currentNotification += 1
+		local thisNotification = currentNotification
+	
+		textLabel.Text = message
+	
+		notification.Visible = true
+		notification.Position = hiddenPosition
+		setTransparency(1)
+	
+		-- Smooth slide + fade in
+		local fadeIn = TweenService:Create(
+			notification,
+			fadeInInfo,
+			{
+				Position = shownPosition,
+				BackgroundTransparency = 0
+			}
+		)
+	
+		fadeIn:Play()
+	
+		for _, object in ipairs(notification:GetDescendants()) do
+			if object:IsA("TextLabel") or object:IsA("TextButton") then
+				TweenService:Create(
+					object,
+					fadeInInfo,
+					{TextTransparency = 0}
+				):Play()
+	
+			elseif object:IsA("ImageLabel") or object:IsA("ImageButton") then
+				TweenService:Create(
+					object,
+					fadeInInfo,
+					{ImageTransparency = 0}
+				):Play()
+	
+			elseif object:IsA("UIStroke") then
+				TweenService:Create(
+					object,
+					fadeInInfo,
+					{Transparency = 0}
+				):Play()
+			end
+		end
+	
+		-- Stay visible for 2 seconds
+		task.wait(2)
+	
+		-- Don't hide a newer notification
+		if thisNotification ~= currentNotification then
+			return
+		end
+	
+		-- Smooth slide + fade out
+		local fadeOut = TweenService:Create(
+			notification,
+			fadeOutInfo,
+			{
+				Position = hiddenPosition,
+				BackgroundTransparency = 1
+			}
+		)
+	
+		fadeOut:Play()
+	
+		for _, object in ipairs(notification:GetDescendants()) do
+			if object:IsA("TextLabel") or object:IsA("TextButton") then
+				TweenService:Create(
+					object,
+					fadeOutInfo,
+					{TextTransparency = 1}
+				):Play()
+	
+			elseif object:IsA("ImageLabel") or object:IsA("ImageButton") then
+				TweenService:Create(
+					object,
+					fadeOutInfo,
+					{ImageTransparency = 1}
+				):Play()
+	
+			elseif object:IsA("UIStroke") then
+				TweenService:Create(
+					object,
+					fadeOutInfo,
+					{Transparency = 1}
+				):Play()
+			end
+		end
+	
+		fadeOut.Completed:Wait()
+	
+		if thisNotification == currentNotification then
+			notification.Visible = false
+		end
+	end
+	
+	_G.CommandNotification = showNotification
+end
+coroutine.wrap(XDWVR_fake_script)()
+
+
+
